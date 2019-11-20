@@ -16,7 +16,16 @@
 		<!-- Site Title -->
 		<title>Fitness</title>
 
-		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+		<script
+			  src="https://code.jquery.com/jquery-3.4.1.js"
+			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+			  crossorigin="anonymous"></script>
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css">
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
 			<!--
 			CSS
 			============================================= -->
@@ -29,16 +38,20 @@
 			<link rel="stylesheet" href="{{asset('css/owl.carousel.css')}}">			
 			<link rel="stylesheet" href="{{asset('css/jquery-ui.css')}}">			
 			<link rel="stylesheet" href="{{asset('css/main.css')}}">
+			
 		</head>
 		<body>	
 			
 			@include('part.header')  
 
-			 @yield('content')
+			@yield('content')
 
-			<script src="{{asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
+			@include('part.footer')
+
+		
+			<script src="{{asset('js/vendor/bootstrap.min.js')}}"></script>		
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-			<script src="{{asset('js/vendor/bootstrap.min.js')}}"></script>			
+				
 			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
   			<script src="{{asset('js/easing.min.js')}}"></script>			
 			<script src="{{asset('js/hoverIntent.js')}}"></script>

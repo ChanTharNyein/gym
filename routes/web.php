@@ -14,5 +14,10 @@
 Route::get('/', function () {
     return view('index');
 });
+Route::get('/trainers', 'TrainersController@index');
+Route::get('/classes', 'ClassesController@index');
+Route::get('/bloghome', 'BlogController@index');
+Route::get('/blogpost', 'BlogpostController@index');
+Route::get('/contact', 'ContactController@index');
 
 
