@@ -1,33 +1,33 @@
-<!-- 
+<!--
 <header id="header">
 		<div class="header-top">
 			<div class="container">
 	  		<div class="row align-items-center justify-content-center">
 	  			<div class="col-md-4 col-4 header-top-left no-padding">
 	        		<a href="mailto:support@colorlib.com"><span class="lnr lnr-location"></span></a>
-	        		<a class="contact-texts" href="mailto:support@colorlib.com">support@colorlib.com</a>		
+	        		<a class="contact-texts" href="mailto:support@colorlib.com">support@colorlib.com</a>
 	  			</div>
 	  			<div class="col-md-4 col-4 header-top-bottom no-padding">
-	        		<a href="index.html"><img class="img-fluid" src="{{asset('img/logo.png')}}" alt="" title="" /></a>			
+	        		<a href="index.html"><img class="img-fluid" src="{{asset('img/logo.png')}}" alt="" title="" /></a>
 	  			</div>
 	  			<div class="col-md-4 col-4 header-top-right no-padding">
 	        		<a class="contact-texts" href="tel:+440 123 12 658 439">+440 123 12 658 439</a>
 	        		<a href="tel:+440 123 12 658 439"><span class="lnr lnr-phone-handset"></span></a>
-	  			</div>				  							  			
-	  		</div>			  					
+	  			</div>
+	  		</div>
 			</div>
 	</div>
 	<div class="container main-menu">
-		<div class="row align-items-center justify-content-center">	
+		<div class="row align-items-center justify-content-center">
 			<nav id="nav-menu-container">
 				<ul class="nav-menu">
 				  <li class="menu-active"><a href="">Home</a></li>
 				  <li><a href="">Trainers</a></li>
 				  <li><a href="">Classes</a></li>
 				  <li><a href="">Blog</a></li>
-				  <li><a href="">Contact</a></li>				  
+				  <li><a href="">Contact</a></li>
 				</ul>
-			</nav>		
+			</nav>
 		</div>
 	</div>
 </header> -->
@@ -54,7 +54,7 @@
           <a class="nav-link" href="#">Trainers</a>
         </li>
       </ul>
-      <a class="navbar-brand d-none d-lg-block" href="#"><img class="gymlogo" src="{{asset('./img/gymlogo.png')}}" alt=""></a>  
+      <a class="navbar-brand d-none d-lg-block" href="#"><img class="gymlogo" src="{{asset('./img/gymlogo.png')}}" alt=""></a>
       <ul class="navbar-nav ml-5 mr-5">
         <li class="nav-item">
           <a class="nav-link" href="#">Classes</a>
@@ -65,6 +65,12 @@
         <li class="nav-item">
           <a class="nav-link" href="#">About</a>
         </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+          </li>
       </ul>
     </div>
   </nav>
