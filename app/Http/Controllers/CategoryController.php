@@ -5,9 +5,8 @@ use App\Post;
 use App\Category;
 use Illuminate\Http\Request;
 
-class BlogController extends Controller
+class CategoryController extends Controller
 {
-
     /**
      * Display a listing of the resource.
      *
@@ -15,9 +14,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $post = Post::all();
         $category = Category::all();
-        return view('bloghome',compact('category','post'));
+        return view('Admin.Category.category',compact('category'));
     }
 
     /**
@@ -27,7 +25,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        //
+        return view('Admin.Category.createcategory');
     }
 
     /**
@@ -38,7 +36,14 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request);
+        $request->validate([
+            'category_name' => 'required|min:5',
+        ]);
+        $category = new Category;
+        $category->name = request('category_name');
+        $category->save();
+        return redirect()->route('category.index')->with('status','Successfully Inserted');
     }
 
     /**
@@ -60,7 +65,8 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        //
+        $category = Category::find($id);
+        return view('Admin.Category.editcategory',compact('category'));
     }
 
     /**
@@ -72,7 +78,13 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'category_name' => 'required|min:5',
+        ]);
+        $category = Category::find($id);
+        $category->name = request('category_name');
+        $category->save();
+        return redirect()->route('category.index');
     }
 
     /**
@@ -83,6 +95,10 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $category = Category::find($id);
+        $posts = Post::where('category_id',$category->id)->get();
+        $category->posts()->delete();
+        $category->delete();
+        return redirect()->route('category.index');
     }
 }

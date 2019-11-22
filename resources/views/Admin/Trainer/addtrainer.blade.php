@@ -4,7 +4,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 offset-lg-3">
-                <form action="#" method="post" enctype="multipart/form-data">
+                <form action="{{route('trainer.store')}}" method="post" enctype="multipart/form-data">
+                    @csrf
                     <h3 class="text-center text-capitalize">Add Trainer</h3>
                     <div class="form-group">
                         <label for="trainer_name">Trainer Name</label>

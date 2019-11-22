@@ -1,13 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Post;
-use App\Category;
+
 use Illuminate\Http\Request;
 
-class BlogController extends Controller
+class CommentController extends Controller
 {
-
     /**
      * Display a listing of the resource.
      *
@@ -15,9 +13,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $post = Post::all();
-        $category = Category::all();
-        return view('bloghome',compact('category','post'));
+        //
     }
 
     /**
@@ -38,7 +34,12 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $comment = new Comment();
+        $comment->body = request('body');
+        $comment->post_id = request('pid');
+        $comment->user_id = Auth::id();
+        $comment->save();
+        return 'Successfully Inserted';
     }
 
     /**
@@ -84,5 +85,10 @@ class BlogController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function getcomments(Request $request){
+        $pid = request('pid');
+        $comments = Comment::where('post_id',$pid)->get();
+        return CommentResource::collection($comments);
     }
 }
