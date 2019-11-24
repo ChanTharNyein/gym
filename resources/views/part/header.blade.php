@@ -51,7 +51,7 @@
           <a class="nav-link" href="/bloghome">Blog</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/trainers">Trainers</a>
+          <a class="nav-link" href="#">Trainers</a>
         </li>
       </ul>
 
@@ -63,43 +63,39 @@
         <li class="nav-item">
           <a class="nav-link" href="/contact">Contact</a>
         </li>
+          @guest
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Join
           </a>
           <div class="dropdown-menu dropdown-menu-right animated" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/login">Login</a>
-            <a class="dropdown-item" href="/register">Register</a>
+
+              <a class="nav-link" href="{{route('login')}}">Login</a>
+              <a class="nav-link" href="{{route('register')}}">Register</a>
+              @else
           </div>
         </li>
-
-          @guest
-              <li class="nav-item">
-                  <a class="nav-link" href="{{route('login')}}">Login</a>
-              </li>
-
-              <li class="nav-item">
-                  <a class="nav-link" href="{{route('register')}}">Register</a>
-              </li>
-          @else
               <li class="dropdown nav-item">
                   <a class=" nav-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       {{Auth::user()->name}}
                   </a>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">Profile</a>
+                      @hasrole('admin')
+                      <a class="nav-link" href="{{route('admin.index')}}">Admin Pannel</a>
+                      @endhasrole
                       <a class="dropdown-item" href="{{route('logout')}}"onclick="event.preventDefault();document.getElementById('logout-form').submit();">Log Out</a>
+
                       <form id="logout-form" action="{{route('logout')}}" method="post" style="display: none;">
                           @csrf
                       </form>
                   </div>
               </li>
           @endguest
-          @hasrole('admin')
+
           <li class="nav-item">
-              <a class="nav-link" href="{{route('admin.index')}}">Admin Pannel</a>
+
           </li>
-          @endhasrole
+
       </ul>
     </div>
   </nav>
@@ -120,7 +116,7 @@
     width:80px;
     height: 60px;
   }
-  
+
   .navbar {
     padding-top: 5px;
     padding-bottom: 5px;
@@ -147,7 +143,7 @@
   .custom-toggler.navbar-toggler {
     border-color:white;
   }
- 
+
   .dropdown-menu{
     background-color:black;
   }

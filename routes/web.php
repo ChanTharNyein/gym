@@ -39,7 +39,12 @@ Route::resource('/admin/package','PackageController');
 Route::resource('/admin/category','CategoryController');
 Route::resource('/admin/trainer','TrainersController');
 Route::resource('/admin/orderpackage','OrderPackageController');
-
+Route::get('/trainers',function (){
+   return view('trainers');
+});
+Route::get('/bloghome',function (){
+    return view('bloghome');
+});
 Route::group(['middleware'=>['role:admin']],function (){
     Route::resource('/admin','AdminController');
 });
