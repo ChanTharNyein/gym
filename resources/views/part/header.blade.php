@@ -68,19 +68,13 @@
             Join
           </a>
           <div class="dropdown-menu dropdown-menu-right animated" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/login">Login</a>
-            <a class="dropdown-item" href="/register">Register</a>
+            <!-- <a class="dropdown-item" href="/login">Login</a>
+            <a class="dropdown-item" href="/register">Register</a> -->
+            @guest
+                  <a class=" dropdown-item" href="{{route('login')}}">Login</a>
+                  <a class=" dropdown-item" href="{{route('register')}}">Register</a>
           </div>
         </li>
-
-          @guest
-              <li class="nav-item">
-                  <a class="nav-link" href="{{route('login')}}">Login</a>
-              </li>
-
-              <li class="nav-item">
-                  <a class="nav-link" href="{{route('register')}}">Register</a>
-              </li>
           @else
               <li class="dropdown nav-item">
                   <a class=" nav-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
