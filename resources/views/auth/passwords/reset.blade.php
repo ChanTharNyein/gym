@@ -1,7 +1,20 @@
-@extends('layouts.app')
+@extends('template')
 
 @section('content')
-<div class="container">
+<section class="banner-area relative" id="home" style="background-image: url({{asset('./img/home3.jpg')}});">   
+    <div class="overlay overlay-bg"></div>
+    <div class="container">             
+        <div class="row d-flex align-items-center justify-content-center">
+            <div class="about-content col-lg-12">
+                <h1 class="text-white">
+                    Login Page               
+                </h1>   
+                <p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span><a href="blog-home.html">Login </a></p>
+            </div>  
+        </div>
+    </div>
+</section>
+<div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">

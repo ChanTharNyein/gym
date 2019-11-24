@@ -1,7 +1,7 @@
 @extends('template')
 @section('content')
 <!-- start banner Area -->
-<section class="banner-area relative" id="home" style="background-image: url('../img/banner-bg.jpg');">	
+<section class="banner-area relative" id="home" style="background-image: url({{asset('./img/home3.jpg')}});">	
     <div class="overlay overlay-bg"></div>
     <div class="container">				
        <div class="row d-flex align-items-center justify-content-center">
@@ -14,17 +14,29 @@
     </div>
 </div>
 </section>
-<!-- End banner Area -->					  
+<!-- End banner Area -->	
+
+<!-- Section Three -->
+      <div class="container-fluid sectionthree" style="background-color: #f2f0f0;">
+          <div class="row" style="padding-top: 50px;" >
+              <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+                  <h2 style="font-family:'Poppins'; font-weight: normal;">Technical…Practical…Theoretically Interesting</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis placeat dolor, dolorem tempora maiores obcaecati, reiciendis
+                  </p>
+              </div>
+          </div>
+      </div>
+      <!-- End of Section Three -->				  
 
 <!-- Start post-content Area -->
-<section class="post-content-area single-post-area">
+<section class="post-content-area single-post-area" style="background-color: #f2f0f0;">
     <div class="container">
        <div class="row">
           <div class="col-lg-8 posts-list">
              <div class="single-post row">
                 <div class="col-lg-12">
                    <div class="feature-img">
-                      <img class="img-fluid" src="img/feature-img1.jpg" alt="">
+                      <img class="img-fluid" src="img/home3.jpg" alt="">
                   </div>									
               </div>
               <div class="col-lg-3  col-md-3 meta-details">
@@ -34,12 +46,12 @@
                   <p class="date col-lg-12 col-md-12 col-6"><a href="#">12 Dec, 2017</a> <span class="lnr lnr-calendar-full"></span></p>
                   
                   <p class="comments col-lg-12 col-md-12 col-6"><a href="#">06 Comments</a> <span class="lnr lnr-bubble"></span></p>
-                  <ul class="social-links col-lg-12 col-md-12 col-6">
+                  <!-- <ul class="social-links col-lg-12 col-md-12 col-6">
                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                      <li><a href="#"><i class="fa fa-github"></i></a></li>
                      <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                 </ul>																				
+                 </ul> -->																				
              </div>
          </div>
          <div class="col-lg-9 col-md-9">
@@ -59,28 +71,28 @@
   <div class="navigation-area">
     <div class="row">
        <div class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
-          <div class="thumb">
+          <!-- <div class="thumb">
              <a href="#"><img class="img-fluid" src="img/prev.jpg" alt=""></a>
-         </div>
-         <div class="arrow">
+         </div> -->
+         <!-- <div class="arrow">
              <a href="#"><span class="lnr text-white lnr-arrow-left"></span></a>
-         </div>
-         <div class="detials">
+         </div> -->
+         <!-- <div class="detials">
              <p>Prev Post</p>
              <a href="#"><h4 class="text-dark">Space The Final Frontier</h4></a>
-         </div>
+         </div> -->
      </div>
      <div class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
-      <div class="detials">
+      <!-- <div class="detials">
          <p>Next Post</p>
          <a href="#"><h4 class="text-dark">Telescopes 101</h4></a>
-     </div>
-     <div class="arrow">
+     </div> -->
+    <!--  <div class="arrow">
          <a href="#"><span class="lnr text-white lnr-arrow-right"></span></a>
-     </div>
-     <div class="thumb">
+     </div> -->
+     <!-- <div class="thumb">
          <a href="#"><img class="img-fluid" src="img/next.jpg" alt=""></a>
-     </div>										
+     </div>	 -->									
  </div>									
 </div>
 </div>
@@ -100,13 +112,13 @@
                     </p>
                 </div>
             </div>
-            <div class="reply-btn">
+            <!-- <div class="reply-btn">
              <a href="" class="btn-reply text-uppercase">reply</a> 
-         </div>
+         </div> -->
      </div>
  </div>                                     				
 </div>
-<div class="comment-form">
+<div class="comment-form mb-5">
     <h4 class="text-dark">Leave a Comment</h4>
     <form>
        <div class="form-group form-inline">
@@ -128,7 +140,7 @@
 </div>
 </div>
 <div class="col-lg-4 sidebar-widgets">
- <div class="widget-wrap">
+ <div class="widget-wrap" style="background-color: #f1f1f1;">
     <div class="single-sidebar-widget popular-post-widget">
        <h4 class="popular-title">Popular Posts</h4>
        <div class="popular-post-list">

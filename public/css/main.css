@@ -3024,7 +3024,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 .callto-area p {
   max-width: 850px;
   color: #fff;
-  margin: 30px;
+  /*margin: 30px;*/
+  margin-top: 20px;
 }
 
 .callto-area .overlay-bg {
@@ -3044,7 +3045,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .about-banner {
-  background: url(../img/top-banner.jpg) right no-repeat;
+  background: url() right no-repeat;
   background-size: cover;
 }
 
@@ -3062,7 +3063,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .about-content h1 {
   font-size: 48px;
-  font-weight: 600;
+  font-family: 'Poppins';
+  font-weight: normal;
 }
 
 .about-content a {
@@ -3485,7 +3487,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .post-content-area .single-post .date a:hover,
 .post-content-area .single-post .view a:hover,
 .post-content-area .single-post .comments a:hover {
-  color: #f6214b;
+  color: red;
 }
 
 .post-content-area .single-post .user-name .lnr,
@@ -3493,7 +3495,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .post-content-area .single-post .view .lnr,
 .post-content-area .single-post .comments .lnr {
   font-weight: 900;
-  color: #222;
+  color: red;
 }
 
 .post-content-area .single-post .feature-img img {
@@ -3501,6 +3503,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .post-content-area .single-post .posts-title h3 {
+  font-family: 'Poppins';
+  font-weight: normal;
+  color:#343a40;
   margin: 20px 0px;
 }
 
@@ -3509,18 +3514,25 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .post-content-area .single-post .primary-btn {
-  background: #fff !important;
-  color: #222 !important;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  border-radius: 0px !important;
+  background-color: transparent;
+    display: inline-block;
+    border:1px solid red;
+    color: red;
+    padding:5px 10px;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 20px;
+    border-radius: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .post-content-area .single-post .primary-btn:hover {
-  background: #f6214b !important;
-  color: #fff !important;
+  color:#fff;
+    border-radius: 5px;
+    transition-duration: 0.2s;
+    background-color: red;
+    color:#fff;
 }
 
 /*.blog-pagination {
@@ -3542,7 +3554,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .blog-pagination .page-item.active .page-link {
-  background-color: #f6214b;
+  background-color: red;
   border-color: transparent;
   color: #fff;
 }
@@ -3684,7 +3696,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .widget-wrap .popular-post-widget .popular-title {
-  background: #f6214b;
+  background: red;
+  font-family: 'Poppins';
   color: #fff;
   text-align: center;
   padding: 12px 0px;
@@ -3728,7 +3741,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .widget-wrap .post-category-widget .category-title {
-  background: #f6214b;
+  background: red;
+  font-family: 'Poppins';
   color: #fff;
   text-align: center;
   padding: 12px 0px;
@@ -3767,7 +3781,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .widget-wrap .newsletter-widget .newsletter-title {
-  background: #f6214b;
+  background: red;
+  font-family: 'Poppins';
   color: #fff;
   text-align: center;
   padding: 12px 0px;
@@ -3783,7 +3798,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .widget-wrap .newsletter-widget .bbtns {
-  background: #f6214b;
+  background: red;
+  font-family: 'Poppins';
   color: #fff;
   font-size: 12px;
   font-weight: 500;
@@ -3881,7 +3897,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 /*============ End Blog Home Styles  =============*/
 /*============ Start Blog Single Styles  =============*/
 .single-post-area {
-  padding-top: 80px;
+  padding-top: 50px;
   /*padding-bottom: 80px;*/
 }
 
@@ -4161,16 +4177,25 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .comment-form .primary-btn {
-  border-radius: 0px !important;
-  border: 1px solid transparent;
-  color: #fff;
-  font-weight: 600;
+  background-color: transparent;
+    display: inline-block;
+    border:1px solid red;
+    color: red;
+    padding:5px 10px;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 20px;
+    border-radius: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .comment-form .primary-btn:hover {
-  background: transparent;
-  border-color: #f6214b !important;
-  color: #f6214b !important;
+  color:#fff;
+    border-radius: 5px;
+    transition-duration: 0.2s;
+    background-color: red;
+    color:#fff;
 }
 
 /*============ End Blog Single Styles  =============*/

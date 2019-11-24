@@ -13,7 +13,13 @@ class ClassesController extends Controller
      */
     public function index()
     {
-        return view('classes');
+        $classes = [
+            'name' => 'My Class',
+            'price' => 100000,
+            'desc' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, tempora?',
+            'trainer' => 'Mr. Trainer'
+        ];
+        return view('classes', compact('classes'));
     }
 
     /**

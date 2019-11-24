@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- start banner Area -->
-			<section class="banner-area relative" id="home" style="background-image: url('../img/banner-bg.jpg');">	
+			<section class="banner-area relative" id="home" style="background-image: url({{asset('./img/home3.jpg')}});">	
 				<div class="overlay overlay-bg"></div>
 				<div class="container">				
 					<div class="row d-flex align-items-center justify-content-center">
@@ -17,8 +17,21 @@
 				</div>
 			</section>
 			<!-- End banner Area -->
+
+			<!-- Section Three -->
+			<div class="container-fluid sectionthree" style="background-color: #f2f0f0;">
+			    <div class="row" style="padding-top: 50px;" >
+			        <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+			            <h2 style="font-family:'Poppins'; font-weight: normal;">Technical…Practical…Theoretically Interesting</h2>
+			            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis placeat dolor, dolorem tempora maiores obcaecati, reiciendis
+			            </p>
+			        </div>
+			    </div>
+			</div>
+			<!-- End of Section Three -->
+
 			<!-- Start post-content Area -->
-			<section class="post-content-area mt-5">
+			<section class="post-content-area pt-5" style="background-color: #f2f0f0;">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-8 posts-list">
@@ -26,15 +39,15 @@
 								<div class="col-lg-3  col-md-3 meta-details">
 									
 									<div class="user-details row">
-										<p class="user-name col-lg-12 col-md-12 col-6"><a href="#">Mark wiens</a> <span class="lnr lnr-user"></span></p>
-										<p class="date col-lg-12 col-md-12 col-6"><a href="#">12 Dec, 2017</a> <span class="lnr lnr-calendar-full"></span></p>
+										<p class="user-name col-lg-12 col-md-12 col-6"><a href="#">Mark wiens</a> <span class="lnr lnr-user" style="color:red;"></span></p>
+										<p class="date col-lg-12 col-md-12 col-6"><a href="#">12 Dec, 2017</a> <span class="lnr lnr-calendar-full" style="color:red;"></span></p>
 										
-										<p class="comments col-lg-12 col-md-12 col-6"><a href="#">06 Comments</a> <span class="lnr lnr-bubble"></span></p>						
+										<p class="comments col-lg-12 col-md-12 col-6"><a href="#">06 Comments</a> <span class="lnr lnr-bubble" style="color:red;"></span></p>						
 									</div>
 								</div>
 								<div class="col-lg-9 col-md-9 ">
 									<div class="feature-img">
-										<img class="img-fluid" src="img/feature-img1.jpg" alt="">
+										<img class="img-fluid" src="img/home3.jpg" alt="">
 									</div>
 									<a class="posts-title" href="blog-single.html"><h3 class="text-dark">Astronomy Binoculars A Great Alternative</h3></a>
 									<p class="excert">
@@ -44,7 +57,7 @@
 								</div>
 							</div>
 																				
-		                    <nav class="blog-pagination justify-content-center d-flex">
+		                    <!-- <nav class="blog-pagination justify-content-center d-flex">
 		                        <ul class="pagination">
 		                            <li class="page-item">
 		                                <a href="#" class="page-link" aria-label="Previous">
@@ -66,10 +79,10 @@
 		                                </a>
 		                            </li>
 		                        </ul>
-		                    </nav>
+		                    </nav> -->
 						</div>
 						<div class="col-lg-4 sidebar-widgets">
-							<div class="widget-wrap">
+							<div class="widget-wrap"  style="background-color: #f1f1f1;">
 								<div class="single-sidebar-widget popular-post-widget">
 									<h4 class="popular-title">Popular Posts</h4>
 									<div class="popular-post-list">
@@ -124,4 +137,5 @@
 				</div>	
 			</section>
 			<!-- End post-content Area -->
+
 @endsection

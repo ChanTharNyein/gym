@@ -36,34 +36,40 @@
 
 <div class="container-fluid">
 	<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <a class="navbar-brand d-lg-none" href="#"><img class="gymlogo" src="{{asset('./img/gymlogo.png')}}" alt=""></a>
+    <a class="navbar-brand d-lg-none" href="/"><img class="gymlogo" src="{{asset('./img/gymlogo.png')}}" alt=""></a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-between" id="navbarToggle">
 
-      <ul class="navbar-nav ml-5 mr-5">
+      <ul class="navbar-nav"> <!-- ml-5 mr-5 -->
         <li class="nav-item">
-          <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Blog</a>
+          <a class="nav-link" href="/bloghome">Blog</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Trainers</a>
+          <a class="nav-link" href="/trainers">Trainers</a>
         </li>
       </ul>
       <a class="navbar-brand d-none d-lg-block" href="#"><img class="gymlogo" src="{{asset('./img/gymlogo.png')}}" alt=""></a>  
-      <ul class="navbar-nav ml-5 mr-5">
+      <ul class="navbar-nav "> <!-- ml-5 mr-5 -->
         <li class="nav-item">
-          <a class="nav-link" href="#">Classes</a>
+          <a class="nav-link" href="/classes">Classes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="/contact">Contact</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Join
+          </a>
+          <div class="dropdown-menu dropdown-menu-right animated" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/login">Login</a>
+            <a class="dropdown-item" href="/register">Register</a>
+          </div>
         </li>
       </ul>
     </div>
@@ -72,11 +78,20 @@
 <style>
 
   .navbar-brand{
-    margin:0 40px;
+    margin:0 20px;
+  }
+  .navbar-nav{
+    margin:0 50px;
   }
   .nav-item{
-    margin: 0 40px;
+    margin: 0 20px;
+    font-size: 16px;
   }
+  .gymlogo{
+    width:80px;
+    height: 60px;
+  }
+  
   .navbar {
     padding-top: 5px;
     padding-bottom: 5px;
@@ -103,10 +118,15 @@
   .custom-toggler.navbar-toggler {
     border-color:white;
   }
-  .gymlogo{
-    width: 80px;
-    height:80px;
+ 
+  .dropdown-menu{
+    background-color:black;
   }
+  .dropdown-menu .dropdown-item:hover{
+    background-color:transparent;
+  }
+
+
 </style>
 <script>
   $(document).ready(function() {
@@ -119,4 +139,17 @@
     });
   });
 
+</script>
+<script>
+  $(document).ready(function(){
+     // Add slideDown animation to Bootstrap dropdown when expanding.
+  $('.dropdown').on('show.bs.dropdown', function() {
+    $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
+  });
+
+  // Add slideUp animation to Bootstrap dropdown when collapsing.
+  $('.dropdown').on('hide.bs.dropdown', function() {
+    $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
+  });
+  })
 </script>

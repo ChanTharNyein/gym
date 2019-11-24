@@ -1,8 +1,8 @@
-<div class="footer mt-5 pt-5">
+<div class="footer pt-5">
   <div class="container">
     <div class="row">
       <div class="col-lg-3 col-md-6 col-sm-12 pb-3">
-        <h3>3 Fitness</h3>
+        <h3 class="mb-3" style="font-size: 30px;color: red;">Olympia</h3>
         <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto animi neque at</p>
         <button class="joinbtn">Get In Touch</button>
       </div>
@@ -19,11 +19,11 @@
       <div class="col-lg-3 col-md-6 col-sm-12 pb-3">
         <h4>Useful Links</h4>
         <ul class="list">
-          <li>Home</li>
-          <li>Blog</li>
-          <li>Classes</li>
-          <li>Trainers</li>
-          <li>Contact</li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/bloghome">Blog</a></li>
+          <li><a href="/classes">Classes</a></li>
+          <li><a href="/trainers">Trainers</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
       <div class="col-lg-3 col-md-6 col-sm-12 pb-3">
@@ -88,6 +88,27 @@
   h4,h3,h5{
     color:white;
   }
+  .joinbtn{
+    background-color: transparent;
+    display: inline-block;
+        border:1px solid red;
+        color: #fff;
+        padding:5px 10px;
+        text-decoration: none;
+        font-size: 16px;
+        padding: 5px 20px;
+        border-radius: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .joinbtn:hover{
+        color:#fff;
+        border-radius: 5px;
+        transition-duration: 0.2s;
+        background-color: red;
+        color:#fff;
+        transition:0.3s;
+    }
   .form-control {
     border-left: none !important;
     border-right: none !important;
