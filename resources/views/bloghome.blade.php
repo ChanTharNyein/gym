@@ -1,18 +1,18 @@
-
 @extends('template')
 @section('content')
 
 <!-- start banner Area -->
 			<section class="banner-area relative" id="home" style="background-image: url({{asset('./img/home3.jpg')}});">	
+
 				<div class="overlay overlay-bg"></div>
-				<div class="container">				
+				<div class="container">
 					<div class="row d-flex align-items-center justify-content-center">
 						<div class="about-content col-lg-12">
 							<h1 class="text-white">
-								Blog Page				
-							</h1>	
+								Blog Page
+							</h1>
 							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span><a href="blog-home.html">Blog </a></p>
-						</div>	
+						</div>
 					</div>
 				</div>
 			</section>
@@ -34,10 +34,12 @@
 			<section class="post-content-area pt-5" style="background-color: #f2f0f0;">
 				<div class="container">
 					<div class="row">
+
 						<div class="col-lg-8 posts-list">
 							<div class="single-post row">
+                                @foreach($post as $post)
 								<div class="col-lg-3  col-md-3 meta-details">
-									
+
 									<div class="user-details row">
 										<p class="user-name col-lg-12 col-md-12 col-6"><a href="#">Mark wiens</a> <span class="lnr lnr-user" style="color:red;"></span></p>
 										<p class="date col-lg-12 col-md-12 col-6"><a href="#">12 Dec, 2017</a> <span class="lnr lnr-calendar-full" style="color:red;"></span></p>
@@ -49,14 +51,14 @@
 									<div class="feature-img">
 										<img class="img-fluid" src="img/home3.jpg" alt="">
 									</div>
-									<a class="posts-title" href="blog-single.html"><h3 class="text-dark">Astronomy Binoculars A Great Alternative</h3></a>
+									<a class="posts-title" href="blog-single.html"><h3 class="text-dark">{{$post->title}}</h3></a>
 									<p class="excert">
-										MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.
+										{{$post->decription}}
 									</p>
-									<a href="blog-single.html" class="primary-btn">View More</a>
+									<a href="{{route('postid',$post->id)}}" class="primary-btn">View More</a>
 								</div>
+                                @endforeach
 							</div>
-																				
 		                    <!-- <nav class="blog-pagination justify-content-center d-flex">
 		                        <ul class="pagination">
 		                            <li class="page-item">
@@ -81,6 +83,7 @@
 		                        </ul>
 		                    </nav> -->
 						</div>
+
 						<div class="col-lg-4 sidebar-widgets">
 							<div class="widget-wrap"  style="background-color: #f1f1f1;">
 								<div class="single-sidebar-widget popular-post-widget">
@@ -94,21 +97,23 @@
 												<a href="blog-single.html"><h6>Space The Final Frontier</h6></a>
 												<p>02 Hours ago</p>
 											</div>
-										</div>											
+										</div>
 									</div>
 								</div>
-								
+
 								<div class="single-sidebar-widget post-category-widget">
 									<h4 class="category-title">Post Catgories</h4>
 									<ul class="cat-list">
+                                        @foreach($category as $category)
 										<li>
-											<a href="#" class="d-flex justify-content-between">
-												<p>Technology</p>
+											<a href="{{route('categoryid',$category->id)}}" class="d-flex justify-content-between">
+												<p>{{$category->name}}</p>
 												<p>37</p>
 											</a>
-										</li>											
+										</li>
+                                        @endforeach
 									</ul>
-								</div>	
+								</div>
 								<div class="single-sidebar-widget newsletter-widget">
 									<h4 class="newsletter-title">Newsletter</h4>
 									<p>
@@ -126,15 +131,15 @@
 									      </div>
 									    </div>
 									    <a href="#" class="bbtns">Subcribe</a>
-									</div>	
+									</div>
 									<p class="text-bottom">
 										You can unsubscribe at any time
-									</p>								
-								</div>								
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>	
+				</div>
 			</section>
 			<!-- End post-content Area -->
 

@@ -13,7 +13,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{route('admin.index')}}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
@@ -34,8 +34,8 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{url('admin/category')}}">Categories Table</a>
-                <a class="collapse-item" href="{{url('admin/createcategory')}}">Create Category</a>
+                <a class="collapse-item" href="{{route('category.index')}}">Categories Table</a>
+                <a class="collapse-item" href="{{route('category.create')}}">Create Category</a>
             </div>
         </div>
     </li>
@@ -48,10 +48,12 @@
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{url('admin/class')}}">Class Table</a>
-                <a class="collapse-item" href="{{url('admin/createclass')}}">Create Class</a>
-                <a class="collapse-item" href="{{url('admin/package')}}">Packages Table</a>
-                <a class="collapse-item" href="{{url('admin/createpackage')}}">Create Packages</a>
+                <a class="collapse-item" href="{{route('tableclass')}}">Class Table</a>
+                <a class="collapse-item" href="{{route('class.create')}}">Create Class</a>
+                <div class="collapse-divider"></div>
+                <h2 class="collapse-header">Package</h2>
+                <a class="collapse-item" href="{{route('package.index')}}">Packages Table</a>
+                <a class="collapse-item" href="{{route('package.create')}}">Create Packages</a>
             </div>
         </div>
     </li>
@@ -72,12 +74,13 @@
         </a>
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{url('admin/trainer')}}">Trainers Table</a>
-                <a class="collapse-item" href="{{url('admin/addtrainer')}}">Add Trainer</a>
+                <a class="collapse-item" href="{{route('trainer.index')}}">Trainers Table</a>
+                <a class="collapse-item" href="{{route('trainer.create')}}">Add Trainer</a>
                {{-- <a class="collapse-item" href="forgot-password.html">Blog Post</a>--}}
                 <div class="collapse-divider"></div>
                 <h2 class="collapse-header">Blog Posts</h2>
-                <a class="collapse-item" href="{{url('admin/addpost')}}">Create Post</a>
+                <a class="collapse-item" href="{{route('bloghome.create')}}">Create Post</a>
+                <a class="collapse-item" href="{{route('table')}}">Posts Table</a>
 {{--                <a class="collapse-item" href="blank.html">Blank Page</a>--}}
             </div>
         </div>

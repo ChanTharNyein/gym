@@ -4,7 +4,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 offset-lg-3">
-                <form action="#" method="post" enctype="multipart/form-data">
+                <form action="{{route('class.store')}}" method="post" enctype="multipart/form-data">
+                    @csrf
                     <h3 class="text-center text-capitalize">Create Class</h3>
                     <div class="form-group">
                         <label for="class_name">Class Name</label>
@@ -19,7 +20,9 @@
                         <textarea  name="class_desc" id="class_desc" class="form-control"></textarea>
                         <label for="trainer_id">Trainer ID</label>
                         <select name="trainer_id" id="trainer_id" class="custom-select">
-                            <option value="1">One</option>
+                            @foreach($trainer as $trainers)
+                                <option value="{{$trainers->id}}">{{$trainers->name}}</option>
+                            @endforeach
                         </select>
                     </div>
                     <div class="form-group " >

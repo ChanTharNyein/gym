@@ -2,15 +2,16 @@
 @section('content')
 <!-- start banner Area -->
 <section class="banner-area relative" id="home" style="background-image: url({{asset('./img/home3.jpg')}});">	
+
     <div class="overlay overlay-bg"></div>
-    <div class="container">				
+    <div class="container">
        <div class="row d-flex align-items-center justify-content-center">
           <div class="about-content col-lg-12">
              <h1 class="text-white">
-                Blog Details Page				
-            </h1>	
+                Blog Details Page
+            </h1>
             <p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span><a href="blog-home.html">Blog </a> <span class="lnr lnr-arrow-right"></span> <a href="blog-single.html"> Blog Details Page</a></p>
-        </div>	
+        </div>
     </div>
 </div>
 </section>
@@ -28,11 +29,12 @@
       </div>
       <!-- End of Section Three -->				  
 
+
 <!-- Start post-content Area -->
 <section class="post-content-area single-post-area" style="background-color: #f2f0f0;">
     <div class="container">
        <div class="row">
-          <div class="col-lg-8 posts-list">
+          <div class="col-lg-8 posts-list offset-lg-2">
              <div class="single-post row">
                 <div class="col-lg-12">
                    <div class="feature-img">
@@ -40,7 +42,7 @@
                   </div>									
               </div>
               <div class="col-lg-3  col-md-3 meta-details">
-               
+
                <div class="user-details row">
                   <p class="user-name col-lg-12 col-md-12 col-6"><a href="#">Mark wiens</a> <span class="lnr lnr-user"></span></p>
                   <p class="date col-lg-12 col-md-12 col-6"><a href="#">12 Dec, 2017</a> <span class="lnr lnr-calendar-full"></span></p>
@@ -55,18 +57,12 @@
              </div>
          </div>
          <div class="col-lg-9 col-md-9">
-           <a class="posts-title" href="#"><h3>Astronomy Binoculars A Great Alternative</h3></a>
+           <h3 class="posts- text-black mt-3 mb-5">{{$post->title}}</h3>
            <p class="excert">
-              MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.
-          </p>
-          <p>
-              Boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually sit through a self-imposed
-          </p>
-          <p>
-              Boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually sit through a self-imposed
+              {{$post->description}}
           </p>
       </div>
-      
+
   </div>
   <div class="navigation-area">
     <div class="row">
@@ -156,44 +152,56 @@
     </div>
 </div>
 
-<div class="single-sidebar-widget post-category-widget">
-   <h4 class="category-title">Post Catgories</h4>
-   <ul class="cat-list">
-      <li>
-         <a href="#" class="d-flex justify-content-between">
-            <p>Technology</p>
-            <p>37</p>
-        </a>
-    </li>	
-</ul>
-</div>	
-<div class="single-sidebar-widget newsletter-widget">
-   <h4 class="newsletter-title">Newsletter</h4>
-   <p>
-      Here, I focus on a range of items and features that we use in life without
-      giving them a second thought.
-  </p>
-  <div class="form-group d-flex flex-row">
-    <div class="col-autos">
-     <div class="input-group">
-       <div class="input-group-prepend">
-         <div class="input-group-text"><i class="fa fa-envelope" aria-hidden="true"></i>
-         </div>
-     </div>
-     <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email'" >
- </div>
-</div>
-<a href="#" class="bbtns">Subcribe</a>
-</div>	
-<p class="text-bottom">
-  You can unsubscribe at any time
-</p>								
-</div>
 
+
+        <input type="hidden" id="pid" name="pid" value="{{$post->id}}">
+    </div>
+    <button class="btn btn-primary click" type="submit" name="submit">Submit</button>
+    {{--</form>--}}
 </div>
 </div>
 </div>
-</div>	
+</div>
 </section>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        var pid = $('#pid').val();
+
+        $('.click').click(function () {
+            var body = $('#body').val();
+            if(body==''){
+                alert("Text Body is Empty Please Enter One Word");
+            }
+
+            $.post("{{route('comment.store')}}",{body:body,pid:pid},function (response) {
+                //alert(response);
+                $('#body').val('');
+            });
+            getComments(pid);
+        });
+        getComments(pid);
+        function getComments(pid) {
+            $.post("{{route('getcomments')}}",{pid:pid},function (response) {
+                console.log(response);
+                var html='';
+                $.each(response,function (i,v) {
+                    html+=`<div class="media mb-4">
+                              <div class="media-body">
+                                <h5 class="mt-0">${v.user_id.name}</h5>
+                                ${v.body}
+                              </div>
+                            </div>`;
+                });
+                $('#showcomments').html(html);
+            });
+        }
+
+    });
+</script>
 <!-- End post-content Area -->
-@endsection	
+@endsection

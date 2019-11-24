@@ -1,10 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\Resources\OrderPackageResource as OrderPackageResource;
+use App\OrderPackage;
+use http\Client\Curl\User;
 use Illuminate\Http\Request;
 
-class ClassesController extends Controller
+class OrderPackageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,13 +15,21 @@ class ClassesController extends Controller
      */
     public function index()
     {
-        $classes = [
-            'name' => 'My Class',
-            'price' => 100000,
-            'desc' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, tempora?',
-            'trainer' => 'Mr. Trainer'
-        ];
-        return view('classes', compact('classes'));
+//        $packages = OrderPackage::all();
+//        //dd($orderpackage);
+//        $name=[];
+//        foreach ($packages->user as $username){
+//            $namepush=$username->name;
+//            array_push($name,$namepush);
+//
+//        }
+//        dd($name);
+//
+//        $orderpackage= OrderPackageResource::collection(OrderPackage::all());
+//        //dd($orderpackage);
+//        return view('Admin.OrderPackage.orderpackage',compact('orderpackage'));
+        $orderpackages = OrderPackage::all();
+        return view('Admin.OrderPackage.orderpackage', compact('orderpackages'));
     }
 
     /**
