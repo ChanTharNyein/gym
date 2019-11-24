@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class PackageController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware ('role:admin');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -37,13 +41,13 @@ class PackageController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            "title" => 'required|min:1',
+            "title" => 'required|min:3',
             "price" => 'required|min:1',
-            "serviceid1" => 'required',
-            "serviceid2" => 'required',
-            "serviceid3" => 'required',
-            "serviceid4" => 'required',
-            "serviceid5" => 'required'
+            "serviceid1" => 'required|min:3',
+            "serviceid2" => 'required|min:3',
+            "serviceid3" => 'required|min:3',
+            "serviceid4" => 'required|min:3',
+            "serviceid5" => 'required|min:3'
         ]);
         $package = new Package;
         //dd($package);
@@ -91,13 +95,13 @@ class PackageController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            "title" => 'required|min:1',
+            "title" => 'required|min:3',
             "price" => 'required|min:1',
-            "serviceid1" => 'required',
-            "serviceid2" => 'required',
-            "serviceid3" => 'required',
-            "serviceid4" => 'required',
-            "serviceid5" => 'required'
+            "serviceid1" => 'required|min:3',
+            "serviceid2" => 'required|min:3',
+            "serviceid3" => 'required|min:3',
+            "serviceid4" => 'required|min:3',
+            "serviceid5" => 'required|min:3'
         ]);
         $package = Package::find($id);
         //dd($package);

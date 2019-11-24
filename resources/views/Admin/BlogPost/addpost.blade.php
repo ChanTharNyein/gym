@@ -9,11 +9,26 @@
                     <h3 class="text-center text-capitalize">Create Post</h3>
                     <div class="form-group">
                         <label for="post_title">Post Title</label>
-                        <input type="text" name="post_title" id="post_title" class="form-control">
+                        <input type="text" name="post_title" id="post_title" class="form-control @error('post_title') is-invalid @enderror">
+                        @error('post_title')
+                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                        @enderror
                         <label for="post_image">Image</label>
-                        <input type="file" name="post_image" id="post_image" class="form-control-file">
+                        <input type="file" name="post_image" id="post_image" class="form-control-file @error('post_image') is-invalid @enderror">
+                        @error('post_image')
+                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                        @enderror
                         <label for="post_desc">Description</label>
-                        <textarea type="text" name="post_desc" id="post_desc" class="form-control"></textarea>
+                        <textarea type="text" name="post_desc" id="post_desc" class="form-control @error('post_desc') is-invalid @enderror"></textarea>
+                        @error('post_desc')
+                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="trainer_id">Trainer ID</label>

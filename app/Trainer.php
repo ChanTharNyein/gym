@@ -13,4 +13,7 @@ class Trainer extends Model
     public function posts($value=''){
         return $this->hasMany('App\Post');
     }
+    public function orderpackage($value=''){
+        return $this->belongsToMany('App\OrderPackage');
+    }
 }

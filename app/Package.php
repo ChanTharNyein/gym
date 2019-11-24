@@ -9,4 +9,7 @@ class Package extends Model
      protected $fillable = [
         'title', 'price', 'service1','service2','service3','service4','service5'
     ];
+    public function orderpackage($value=''){
+        return $this->belongsToMany('App\OrderPackage');
+    }
 }

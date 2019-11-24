@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware ('role:admin');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -38,7 +42,7 @@ class CategoryController extends Controller
     {
         //dd($request);
         $request->validate([
-            'category_name' => 'required|min:5',
+            'category_name' => 'required|min:3',
         ]);
         $category = new Category;
         $category->name = request('category_name');
@@ -79,7 +83,7 @@ class CategoryController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'category_name' => 'required|min:5',
+            'category_name' => 'required|min:3',
         ]);
         $category = Category::find($id);
         $category->name = request('category_name');

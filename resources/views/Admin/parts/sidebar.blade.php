@@ -48,8 +48,8 @@
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{url('admin/class')}}">Class Table</a>
-                <a class="collapse-item" href="{{url('admin/createclass')}}">Create Class</a>
+                <a class="collapse-item" href="{{route('tableclass')}}">Class Table</a>
+                <a class="collapse-item" href="{{route('class.create')}}">Create Class</a>
                 <div class="collapse-divider"></div>
                 <h2 class="collapse-header">Package</h2>
                 <a class="collapse-item" href="{{route('package.index')}}">Packages Table</a>

@@ -12,7 +12,7 @@ class BlogpostController extends Controller
 {
     public function __construct()
     {
-        $this->middleware ('role:admin',['except'=>['index','postid']]);
+        $this->middleware ('role:admin',['except'=>['index','postid','categoryid']]);
     }
 
 
@@ -178,6 +178,6 @@ class BlogpostController extends Controller
         $post=Post::where('category_id',$id)->get();
         $category=Category::all();
         //dd($post);
-        return view('blogpost',compact('post','category'    ));
+        return view('bloghome',compact('post','category'));
     }
 }

@@ -14,7 +14,8 @@
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/classes', 'ClassesController@index');
+Route::resource('/class','ClassController');
+Route::get('/showclass','ClassController@showclass')->name('tableclass');
 Route::resource('/bloghome', 'BlogpostController');
 Route::get('/blogposttable', 'BlogpostController@showtable')->name('table');
 Route::get('/blogpost/{id}', 'BlogpostController@postid')->name('postid');
@@ -37,7 +38,8 @@ Route::get('/index', 'HomeController@index');
 Route::resource('/admin/package','PackageController');
 Route::resource('/admin/category','CategoryController');
 Route::resource('/admin/trainer','TrainersController');
+Route::resource('/admin/orderpackage','OrderPackageController');
+
 Route::group(['middleware'=>['role:admin']],function (){
     Route::resource('/admin','AdminController');
 });
-
