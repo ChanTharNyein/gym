@@ -21,9 +21,9 @@
 <!-- Start offred Area -->
 <section class="offred-area section-gap">
 	<div class="container">
-		<div class="row section-title">
+		<div class="row section-title mb-4">
 			<h1>If you appreciate quality, then we are for you.</h1>
-			<p>Who are in extremely love with eco friendly system.</p>
+			<p class="col-lg-8 offset-lg-2">We are in extremely love with eco friendly system. Tomorrow is the first blank page of a 365 page book. Write a good one. Once you can control your mind, you can control your body</p>
 		</div>					
 		<div class="row pl-2 pr-2">	
       <div class="col-lg-4 col-md-6  mb-5 p-lg-4 mb-md-5">
@@ -33,15 +33,15 @@
             <div class="overlay"><br>
               <ul class="hovereffect-grid-ul-child">
                 <li>Mon</li>
-                <li>2:30am</li>
+                <li style="background-color: #fff;border:1px solid red">2:30am</li>
               </ul><br>
               <ul class="hovereffect-grid-ul-child ">
                 <li>Sun</li>
-                <li>2:30am</li>
+                <li style="background-color: #fff;border:1px solid red">2:30am</li>
               </ul>
               
-              <a class="joinbtn" href="" data-toggle="modal" data-target="#modalDetail">Detail</a>
-              <a href="" class="joinbtn" data-toggle="modal" data-target="#modalJoin">Join Now</a>
+              <a class="joinbtn pb-1" href="" data-toggle="modal" data-target="#modalDetail">Detail</a>
+              <a href="" class="joinbtn pb-1" data-toggle="modal" data-target="#modalJoin">Join Now</a>
 
             </div>
           </div>
@@ -51,11 +51,11 @@
               <li class="pl-5 classprice"><sup>$</sup><span>39.99</span></li>
             </ul>
             <div style="border-bottom: 2px solid #777777; width: 100%; padding-top: 10px;"></div>
-            <p style="padding-top: 10px; text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum debitis voluptates, quam animi autem sequi?</p>
+            <p style="padding-top: 10px; text-align: justify;">Experience mind and body connection through a series of disciplined physical postures, breathing exercises and relaxation.</p>
             <ul class="classlist">
              <!--  <li><i class="fa fa-user fa-2x pr-4" style="color:red;"></i></li> -->
-             <li><img src="{{asset('./img/trainericon.png')}}" width="50" height="50"></li>
-             <li><h3 class="pl-4">Ilona Jeklain</h3></li>
+             <li><img src="{{asset('./img/trainericon.png')}}" width="40" height="40"></li>
+             <li><h3 class="pl-4">Lucy</h3></li>
            </ul>
          </div>
        </div>
@@ -77,7 +77,7 @@
 			<div class="call-wrap mx-auto">
 				<h1>It's never late to start, join us today!</h1>
 				<p>
-					Thinking about overseas adventure travel? Have you put any thought into the best places to go when it comes to overseas adventure travel? Nepal is one of the most popular places of all.
+					Everything you want is outside of your comfort zone. Push harder than yesterday if you want a different tomorrow. We provide solutions for moving better and feeling healthier.
 				</p>
 				<a href="#" class="joinbtn">Become a Member</a>
      </div>
@@ -96,37 +96,37 @@
       <div class="modal-body">
         <div class="container classdetail">
           <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12 " style="padding:0;">
+            <div class="col-lg-6 col-md-6 col-sm-12 my-md-auto" style="padding:0;">
               <img src="{{asset('./img/youga2.jpg')}}" class="img-fluid" alt="">
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="col-lg-6 col-md-6 col-sm-12 my-md-auto">
               <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-md-6">
                   <ul>
-                    <li style="float: left;"><h4>Youga</h4></li>
+                    <li><h4>Youga</h4></li>
                   </ul>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-md-6">
                   <ul>
-                    <li style="float: right;"><h4><sup>$</sup>39.99</h4></li>
+                    <li><h4><sup>$</sup>39.99</h4></li>
                   </ul>
                 </div>
               </div>
               <div class="row mt-3">
-                <div class="col-lg-6">
-                  <ul class="hovereffect-grid-ul-child" style="float: left;border:1px solid red">
+                <div class="col-lg-6" style="padding-bottom: 5px;">
+                  <ul class="hovereffect-grid-ul-child">
                     <li>Mon</li>
-                    <li>2:30am</li>
+                    <li style="background-color: transparent; border:1px solid red">2:30am</li>
                   </ul>
                 </div>
-                <div class="col-lg-6">
-                  <ul class="hovereffect-grid-ul-child" style="float: right;border:1px solid red">
+                <div class="col-lg-6" style="padding-bottom: 5px;">
+                  <ul class="hovereffect-grid-ul-child">
                     <li>Fri</li>
-                    <li>2:30am</li>
+                    <li style="background-color: transparent;border:1px solid red;">2:30am</li>
                   </ul>
                 </div>
               </div>
-              <p><span style="font-size: 18px; color:red; font-weight:bold;">Ilona Jeklain </span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam officiis neque fugiat consequatur laudantium possimus asperiores dicta corporis praesentium tempore! Laboriosam expedita repellendus quisquam deserunt dignissimos corrupti illo eligendi consequuntur.</p>
+              <p><span style="font-size: 18px; color:red; font-weight:bold;">Lucy</span>&nbsp;Experience mind and body connection through a series of disciplined physical postures, breathing exercises and relaxation. You’ll be increasing flexibility and balancing all parts of the body through this strengthening workout. Yoga can help reduce stress levels and improve overall health.</p>
             </div>
           </div>
         </div>
@@ -135,48 +135,6 @@
   </div>
 </div>
 
-
-<div class="modal fade modalsection" id="modalJoin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content" style="background-color: #f1f1f1;">
-     <div class="modal-header">
-      <h4 class="modal-title" style="letter-spacing: 2px; font-size: 16px; text-transform:uppercase; color: black;font-weight: normal;"><span style="color: red;font-size: 20px; text-transform: capitalize;">Olympia</span> Fitness Center</h4>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <div class="container">
-        <div class="row mt-4 mb-4">
-          <div class="col-lg-6 col-md-6 col-sm-12">
-            <img src="{{asset('./img/youga2.jpg')}}" alt="" class="img-fluid">
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-12">
-            <h3>Get Thin and Win</h3>
-            <h3 style="font-size: 20px;">Appointment <span>Information</span></h3>
-            <form action="">
-              <div class="form-group">
-                <label for="appointmentname"><i class="fa fa-user" ></i></label>
-                <input type="text" placeholder="Your Name" id="appointmentname">
-              </div>
-              <div class="form-group">
-                <label for="appointmentphone"><i class="fa fa-phone" ></i></label>
-                <input type="number" placeholder="Phone No." id="appointmentphone">
-              </div>
-              <div class="form-group">
-               <label for="appointmentdatetime"><i class="fa fa-calendar"></i></label>
-               <input type="text" placeholder="Appointment Date & Time" data-field="datetime" readonly id="appointmentdatetime">
-             </div> 
-             <a href="" class="appointmentbtn">Join Now</a>
-             <div id="dtBox"></div>
-           </form>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
-</div>
-</div>
 
 <script>
  $(document).ready(function()
@@ -193,7 +151,7 @@
 
 <style>
   /*Modal Section*/
-
+  
 
   .classdetail h4{
     color:#777777;
@@ -233,7 +191,7 @@
     color:red;
   }
   .modalsection input:focus{
-    border-bottom: 1px solid black;
+    /*border-bottom: 1px solid black;*/
   }
   /*End of Modal Section*/
   .appointmentbtn{
@@ -447,6 +405,7 @@
 
   .hovereffect-grid-ul-child li:first-child{
    background-color:red;
+   border:1px solid red;
    color:#fff;
    width:60px
   }
@@ -459,5 +418,46 @@
   }
 
  </style>
+ <div class="modal fade modalsection" id="modalJoin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content" style="background-color: #f1f1f1;">
+     <div class="modal-header">
+      <h4 class="modal-title" style="letter-spacing: 2px; font-size: 16px; text-transform:uppercase; color: black;font-weight: normal;"><span style="color: red;font-size: 20px; text-transform: capitalize;">Olympia</span> Fitness Center</h4>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="container">
+        <div class="row mt-4 mb-4">
+          <div class="col-lg-6 col-md-6 col-sm-12 my-md-auto">
+            <img src="{{asset('./img/youga2.jpg')}}" alt="" class="img-fluid">
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <h3 class="mt-2">Get Thin and Win</h3>
+            <h3 style="font-size: 20px;">Appointment <span>Information</span></h3>
+            <form action="">
+              <div class="form-group">
+                <label for="appointmentname"><i class="fa fa-user"></i></label>
+                <input type="text" placeholder="Your Name" id="appointmentname">
+              </div>
+              <div class="form-group">
+                <label for="appointmentphone"><i class="fa fa-phone"></i></label>
+                <input type="number" placeholder="Phone No." id="appointmentphone">
+              </div>
+              <div class="form-group">
+               <label for="appointmentdatetime"><i class="fa fa-calendar"></i></label>
+               <input type="text" placeholder="Appointment Date & Time" data-field="datetime" readonly id="appointmentdatetime">
+             </div> 
+             <a href="" class="appointmentbtn">Join Now</a>
+             <div id="dtBox"></div>
+           </form>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+</div>
 
  @endsection

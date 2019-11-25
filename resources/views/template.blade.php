@@ -16,12 +16,15 @@
 		<!-- Site Title -->
 		<title>Fitness</title>
 
+		<link rel="icon" type="image/png" href="{{asset('./img/gymlogo.png')}}">
+
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css">
 
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		
         <meta name="csrf-token" content="{{ csrf_token() }}">
 			<!--
 			CSS

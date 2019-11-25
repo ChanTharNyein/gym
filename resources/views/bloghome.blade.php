@@ -23,7 +23,7 @@
 			    <div class="row" style="padding-top: 50px;" >
 			        <div class="col-lg-12 col-md-12 col-sm-12 text-center">
 			            <h2 style="font-family:'Poppins'; font-weight: normal;">Technical…Practical…Theoretically Interesting</h2>
-			            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis placeat dolor, dolorem tempora maiores obcaecati, reiciendis
+			            <p>A directory of wonderful things,we smash you with the information that will make your fitness journey easier. Really.
 			            </p>
 			        </div>
 			    </div>

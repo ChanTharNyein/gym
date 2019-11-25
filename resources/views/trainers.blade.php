@@ -22,8 +22,8 @@
 <div class="container-fluid sectiontwo">
 	<div class="row" style="padding-top: 50px;">
 		<div class="col-lg-12 col-md-12 col-sm-12 text-center">
-			<h2>Achieve Your Fitness Goals!</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis placeat dolor, dolorem tempora maiores obcaecati, reiciendis
+			<h2 class="mb-2">Train With Us, You’ll Thank Yourself</h2>
+			<p class="col-lg-8 offset-lg-2 ">Wherever you are on your exercise journey, a personal trainer may be just what you need to finally reach your fitness and weight loss goals.
 			</p>
 		</div>
 	</div>
@@ -31,7 +31,7 @@
 		<div class="col-lg-4 col-md-6 col-sm-12">
 			<div class="xs-team">
 				<div class="xs-team-thumb">
-					<img src="{{asset('./img/lady3.png')}}" alt="Jhon Statham">
+					<img src="{{asset('./img/aungpaing.png')}}" alt="Jhon Statham">
 					<div class="xs-team-overlay d-flex align-items-center">
 						<ul class="list-unstyled xs-team-share">
 							<li>
@@ -48,7 +48,7 @@
 				</div>
 				<div class="xs-team-content">
 					<ul>
-						<li><h3>Ilona Jeklain</h3></li>
+						<li><h3>Aung Paing</h3></li>
 						<!-- <li><h5>Gymnast</h5></li> -->
 						<li><button class="trainerinfo" data-toggle="modal" data-target="#modalQuickView">View Profile</button></li>
 					</ul>
@@ -63,9 +63,9 @@
 <!-- Section One -->
 <div class="container-fluid sectionone pt-5">
 	<div class="row text-center">
-		<div class="col-lg-8 offset-lg-2 col-md-8 offset-md-2 col-sm-12">
+		<div class="col-lg-8 offset-lg-2 col-sm-12">
 			<h2 class="mb-3">What Our Services</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed est consequatur quod at minima suscipit a provident? Doloremque cupiditate ipsa itaque nam atque, repellat nostrum iste ducimus consectetur aspernatur.</p>
+			<p>Push harder today if you want a different tomorrow. Do it because they said you couldn’t. Exercise until the body obeys. Remember,the only bad workout is no workout.</p>
 		</div>
 	</div>
 	<div class="row pt-5">
@@ -76,7 +76,7 @@
 				</div> 
 				<div class="servicetext pl-2 mb-4">
 					<h4 class="pb-2">Aerobics</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis porro quidem eum. Quibusdam architecto dolorum </p>
+					<p style="text-align: justify;">Aerobic exercise is any activity that gets your blood pumping and large muscle groups working. It’s also known as cardiovascular activity. Experts recommend getting at least 75 minutes of vigorous activity each week.</p>
 				</div>
 			</div>
 		</div>
@@ -87,7 +87,7 @@
 				</div> 
 				<div class="servicetext pl-2">
 					<h4 class="pb-2">Cardio</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis porro quidem eum. Quibusdam architecto dolorum </p>
+					<p style="text-align: justify;">Cardio Classes help to strengthen the heart and lungs. They also help in burning calories fast, reduce stress, trim off fat, lower cholesterol, lessen risks of heart diseases and improve your health. </p>
 				</div>
 			</div>
 		</div>
@@ -98,7 +98,7 @@
 				</div> 
 				<div class="servicetext pl-2">
 					<h4 class="pb-2">Demonstrating Exercises</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis porro quidem eum. Quibusdam architecto dolorum </p>
+					<p style="text-align:justify;">The actual demonstration stage teaches the client how to perform the exercise correctly and safely. Effective use of verbal and physical techniques adds clarity to the teaching.</p>
 				</div>
 			</div>
 		</div>
@@ -109,7 +109,7 @@
 				</div> 
 				<div class="servicetext pl-2">
 					<h4 class="pb-2">Correct Techniques</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis porro quidem eum. Quibusdam architecto dolorum </p>
+					<p style="text-align:justify;">Technique is the way you perform an exercise in order to target specific muscle groups. Without the proper technique, your results won’t be as good as they could be. They can help you up improve your physique.</p>
 				</div>
 			</div>
 		</div>
@@ -120,7 +120,7 @@
 				</div> 
 				<div class="servicetext pl-2">
 					<h4 class="pb-2">Emergency First Aid</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis porro quidem eum. Quibusdam architecto dolorum </p>
+					<p style="text-align:justify;">Although a first aid qualification isn’t usually a mandatory requirement, all fitness instructors have a duty of care to their clients, holding a first aid qualification shows that you’re serious about ensuring their wellbeing.</p>
 				</div>
 			</div>
 		</div>
@@ -131,7 +131,7 @@
 				</div> 
 				<div class="servicetext pl-2">
 					<h4 class="pb-2">Dance Club</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis porro quidem eum. Quibusdam architecto dolorum </p>
+					<p style="text-align: justify;">Dance Classes are a great way to keep your body in perfect tone and revive your activeness. While you’re dancing, you can burn calories, enjoy the energy themed music, and keep fit at the same time.</p>
 				</div>
 			</div>
 		</div>
@@ -150,7 +150,7 @@
 				<h3>One-on-One Consultation!</h3>
 				<p>For more information on <br> fitness programs call or text us at <br> <span style="color:red;font-size: 20px;">+959 123-456-789</span></p>
 			</div>
-		<div class="col-lg-6 col-md-6 col-sm-12 pt-md-5 pt-lg-0">
+		<div class="col-lg-6 col-md-6 col-sm-12 my-md-auto">
 			<img src="{{asset('./img/lady2.png')}}" alt="" class="img-fluid">
 		</div>
 	</div>
@@ -227,6 +227,7 @@
 
 	.xs-team:hover .xs-team-overlay {
 		right: 0;
+		background-color: #f1f1f1;
 	}
 	.xs-team-content ul h5{
 		padding-top: 5px;
@@ -252,9 +253,9 @@
 	}
 
 	.xs-team-thumb:hover img {
-		-webkit-transform: translateX(-40px) scale(1.1);
-		-ms-transform: translateX(-40px) scale(1.1);
-		transform: translateX(-40px) scale(1.1);
+		/*-webkit-transform: translateX(-40px) scale(1.1);*/
+		/*-ms-transform: translateX(-40px) scale(1.1);*/
+		/*transform: translateX(-40px) scale(1.1);*/
 	}
 
 	.xs-team-content {
@@ -353,6 +354,16 @@
 	.trainerinfoicon li a{
 		color:red;
 	}
+	.candolist,.aboutlist{
+		list-style: none;
+	}
+	.candolist li:before, .aboutlist li:before{
+		content: "\2022";
+		color: red;
+		font-weight: bold;
+		display: inline-block; 
+		width: 1em;
+	}
 	
 
 	/*End of Modal Section*/
@@ -371,18 +382,26 @@
       <div class="modal-body">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <img src="{{asset('./img/lady3.png')}}" alt="" class="img-fluid" style="height: 450px; width: auto;">
+                <div class="col-lg-6 col-md-6 col-sm-12 my-md-auto">
+                    <img src="{{asset('./img/aungpaing.png')}}" alt="" class="img-fluid" >
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12">
                 	<div class="mt-4">
 	                    <h3 class="firstinfo">Hello,</h3>
-	                    <h3 class="secondinfo">I am<span style="font-size:35px"> Ilona Jeklain</span></h3>
+	                    <h3 class="secondinfo">I am<span style="font-size:35px">&nbsp;Aung Paing</span></h3>
 	                    <h3 class="mt-4" style="font-size: 20px;">Look What I Can Do?</h3>
-	                    <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione adipisci porro dolor tenetur iure saepe </p>
+	                    <ul class="mt-2 ml-3 candolist">
+	                    	<li>Muscle gain, weight gain</li>
+	                    	<li>Cardio training</li>
+	                    	<li>Functional training</li>
+	                    </ul>
 
 	                    <h3 class="mt-4" style="font-size: 20px;">About Me?</h3>
-	                    <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione adipisci porro dolor tenetur iure saepe </p>
+	                    <ul class="mt-2 ml-3 aboutlist">
+	                    	<li>Working as a personal trainer at Olympia</li>
+	                    	<li>3years experience in fitness industry</li>
+	                    	<li>Certified Fitness Instructor at Olympia</li>
+	                    </ul>
 
 	                    <ul class="trainerinfoicon">
 	                    	<li><a href="#"><i class="fa fa-facebook fa-2x"></i></a></li>

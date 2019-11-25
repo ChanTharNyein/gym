@@ -98,6 +98,7 @@
         border: 1px solid #777777;
         border-radius: 20px;
         background-color: transparent;
+        padding-left: 10px;
     }
     .card-header{
         font-size: 18px;

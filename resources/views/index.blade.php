@@ -54,7 +54,7 @@
 <!-- Section One -->
 <div class="container-fluid sectionone">
     <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+        <div class="col-lg-6 col-md-6 col-sm-12 text-center my-md-auto">
             <img src="{{asset('./img/couple.png')}}"  class="img-fluid couple">
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 mt-5 mb-5">
@@ -65,8 +65,8 @@
                     <img src="{{asset('./img/quality.png')}}" class="servicepng">  
                 </div> 
                 <div class="servicetext">
-                    <h4>Quality Training Courses</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis porro quidem eum. Quibusdam architecto dolorum </p>
+                    <h4>Quality Training Services</h4>
+                    <p>Our Personal Trainers provide a unique Valet Fitness Experience to every client. The experience is key to motivate and unlock your transformation.</p>
                 </div>
             </div>
             <div class="services d-flex">
@@ -75,7 +75,7 @@
                 </div> 
                 <div class="servicetext">
                  <h4>Professional Trainers</h4>
-                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis porro quidem eum. Quibusdam architecto dolorum </p>
+                 <p>If you've been trying to increase your fitness activity but keep making excuses or are unsure of the best course of action, the Olympia team of certified professionals can help.</p>
              </div>
          </div>
          <div class="services d-flex">
@@ -84,7 +84,8 @@
             </div> 
             <div class="servicetext">
                 <h4>Flexible Time</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis porro quidem eum. Quibusdam architecto dolorum </p>
+                <p>Olympia fitness center provides flexible workout schedule opportunities. You will find flexibility in activities, facilities and services to provide you with the best experience.
+                </p>
             </div>
         </div>
     </div>
@@ -96,10 +97,10 @@
 
 <!-- Section Two -->
 <div class="container-fluid sectiontwo">
-    <div class="row" style="padding-top: 50px;">
+    <div class="row" style="padding-top: 20px;">
         <div class="col-lg-12 col-md-12 col-sm-12 text-center">
             <h2>Achieve Your Fitness Goals!</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis placeat dolor, dolorem tempora maiores obcaecati, reiciendis
+            <p class="col-lg-8 offset-lg-2 pb-3">Discover a fitter tomorrow. Take care of your body, it's the only place you have to live. Fitness is not about being better than else. It's about being better than you used to be.
             </p>
         </div>
     </div>
@@ -108,15 +109,35 @@
             <div class="product-card">
                 <div class="card">
                     <div class="text-center">
-                        <h3>Basic</h3>
+                        <h3>Starter</h3>
                         <hr style="width: 10%; border-bottom:2px solid red;">
                         <div class="pricecard">
-                            <h3><sup>$</sup><span class="price">39</span><span class="small">/mo</span></h3>
-                            <p>Starter</p>
+                            <h3><sup>$</sup><span class="price">29.99</span><span class="small">/mo</span></h3>
+                            <p>1 month membership</p>
+                            <p>Gym T-shirt</p>
                             <p>Get Free WiFi</p>
                             <p>3 Days a Week Program</p>
+
                         </div>
                         <a href="" class="getitnowbtn" data-toggle="modal" data-target="#modalQuickView">Get It Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-12 mb-5">
+            <div class="product-card">
+                <div class="card">
+                    <div class="text-center">
+                        <h3>Silver</h3>
+                        <hr style="width: 10%; border-bottom:2px solid red;">
+                        <div class="pricecard">
+                            <h3><sup>$</sup><span class="price">49.99</span><span class="small">/mo</span></h3>
+                            <p>3 month membership</p>
+                            <p>Gym T-shirt</p>
+                            <p>Free WiFi & Locker</p>
+                            <p>4 Days a Week Program</p>
+                        </div>
+                        <a href="" class="getitnowbtn">Get It Now</a>
                     </div>
                 </div>
             </div>
@@ -128,10 +149,11 @@
                         <h3>Gold</h3>
                         <hr style="width: 10%; border-bottom:2px solid red;">
                         <div class="pricecard">
-                            <h3><sup>$</sup><span class="price">39</span><span class="small">/mo</span></h3>
-                            <p>Women Training</p>
-                            <p>Get Free WiFi</p>
-                            <p>Fat Burn Pro</p>
+                            <h3><sup>$</sup><span class="price">79.99</span><span class="small">/mo</span></h3>
+                            <p>4 month membership</p>
+                            <p>T-shirt & WiFi & Locker</p>
+                            <p>Access to 3 Classes</p>
+                            <p>No Time Restrictions</p>
                         </div>
                         <a href="" class="getitnowbtn">Get It Now</a>
                     </div>
@@ -145,26 +167,10 @@
                         <h3>Platinum</h3>
                         <hr style="width: 10%; border-bottom:2px solid red;">
                         <div class="pricecard">
-                            <h3><sup>$</sup><span class="price">39</span><span class="small">/mo</span></h3>
-                            <p>Professional Trainers</p>
-                            <p>Month to Month</p>
-                            <p>No Time Restrictions</p>
-                        </div>
-                        <a href="" class="getitnowbtn">Get It Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-12 mb-5">
-            <div class="product-card">
-                <div class="card">
-                    <div class="text-center">
-                        <h3>Free</h3>
-                        <hr style="width: 10%; border-bottom:2px solid red;">
-                        <div class="pricecard">
-                            <h3><sup>$</sup><span class="price">39</span><span class="small">/mo</span></h3>
-                            <p>Get Free WiFi</p>
-                            <p>Month to Month</p>
+                            <h3><sup>$</sup><span class="price">99.99</span><span class="small">/mo</span></h3>
+                            <p>5 month membership</p>
+                            <p>Access to all Classes</p>
+                            <p>Swimming Pool</p>
                             <p>No Time Restrictions</p>
                         </div>
                         <a href="" class="getitnowbtn">Get It Now</a>
@@ -184,7 +190,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-8 offset-lg-2 col-md-8 offset-md-2 col-sm-12">
+        <div class="col-lg-8 offset-lg-2  col-sm-12">
             <div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
                 <!-- Carousel indicators -->
                 <ol class="carousel-indicators">
@@ -196,26 +202,26 @@
                 <div class="carousel-inner text-center">
                     <div class="carousel-item active">
                         <div class="testimontials">
-                            <img src="{{asset('./img/trainer6.jpg')}}" alt="">
+                            <img src="{{asset('./img/trainer.jpg')}}" alt="">
 
                             <h3 class="mb-4">Chan Thar Nyein</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam ut nisi recusandae. Earum sequi repudiandae suscipit doloribus, inventore dolor laboriosam quia aspernatur velit, dolorem in, ad ut nisi quo dolores!</p>
+                            <p>Well run village gyms, providing a professional and personal touch. Always manage to use the equipment I need to use even during peak times. Enjoyable classes and personal training.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="testimontials">
-                            <img src="{{asset('./img/trainer6.jpg')}}" alt="">
+                            <img src="{{asset('./img/trainer2.jpg')}}" alt="">
 
-                            <h3 class="mb-4">Chan Thar Nyein</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam ut nisi recusandae. Earum sequi repudiandae suscipit doloribus, inventore dolor laboriosam quia aspernatur velit, dolorem in, ad ut nisi quo dolores!</p>
+                            <h3 class="mb-4">Paing Hein Htet</h3>
+                            <p>Can't beat having a local gym, especially one like this. No matter what your fitness goals are, the staff are extremely knowledgable, friendly and keen to help. Great place to train and always immaculate.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="testimontials">
-                            <img src="{{asset('./img/trainer6.jpg')}}" alt="">
+                            <img src="{{asset('./img/trainer.jpg')}}" alt="">
 
-                            <h3 class="mb-4">Chan Thar Nyein</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam ut nisi recusandae. Earum sequi repudiandae suscipit doloribus, inventore dolor laboriosam quia aspernatur velit, dolorem in, ad ut nisi quo dolores!</p>
+                            <h3 class="mb-4">Thant Zin Myo</h3>
+                            <p>Family run business with good customer service. Always someone around in the gym for fitness advice. Staff are very pleasant and helpful. Membership reasonable.</p>
                         </div>
                     </div>
                 </div>
@@ -235,7 +241,7 @@
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 text-left discount">
             <h3>Fitness Classes This Summer.<br> Pay Now And Get <span style="color:red;font-size: 40px;">25%</span> Discount.</h3>
-            <p class="pt-3 text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate sed alias aspernatur itaque inventore repellendus ipsam officiis. Maxime debitis odio, quas sapiente reiciendis explicabo incidunt quidem! Laudantium impedit, molestias accusantium.</p>
+            <p class="pt-3 text-justify">Somewhere between first tries and finish lines. Pillows flight and pushing limits.That's where you find Fitness. How you spend your day determines when you reach your goals. And seeing your progress helps you see what's possible.</p>
             <button class="joinbtn mt-1">Become A Member</button>
         </div>
     </div>
@@ -246,8 +252,8 @@
 <div class="container-fluid sectionthree">
     <div class="row" style="padding-top: 50px;padding-bottom: 30px;">
         <div class="col-lg-12 text-center">
-            <h2>Get Your 3 Days <span style="color:red; font-size: 38px;">Free</span> Pass</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis placeat dolor, dolorem tempora maiores obcaecati, reiciendis
+            <h2 class="pb-2">Get Your 3 Days <span style="color:red; font-size: 38px;">Free</span> Pass</h2>
+            <p>Your time start now. Book your free 3 days trial. Put yourself to the test with our free workouts!
             </p>
         </div>
     </div>
@@ -310,7 +316,7 @@
     .carousel-caption{
         width: 500px;
         position: absolute;
-        bottom: 30%;
+        bottom: 27%;
         right: 55%;
         z-index: 20;
         color: white;
@@ -359,8 +365,8 @@
         background-color: #f1f1f1;
     }
     .couple{
-        width: auto;
-        height: 500px;
+        width: 400px;
+        height: auto;
     }
     .sectionone .row{
         padding-top: 50px;
@@ -445,7 +451,7 @@
         font-size: 30px;
     }
     .price{
-        font-size: 50px;
+        font-size: 45px;
     }
 
     .getitnowbtn,.appointmentbtn{
@@ -576,7 +582,8 @@
         color:red;
     }
     .modalsection input:focus{
-        border-bottom: 1px solid black;
+        /*border-bottom: 1px solid black;*/
+        border-width: 80%;
     }
     .trainerselect select{
         border:none;
@@ -615,11 +622,11 @@
       <div class="modal-body">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="col-lg-6 col-md-6 col-sm-12 my-md-auto">
                     <img src="{{asset('./img/lady.png')}}" alt="" class="img-fluid">
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12">
-                    <h3>Get Into Shape</h3>
+                    <h3 class="mt-2">Get Into Shape</h3>
                     <h3 style="font-size: 20px;">Appointment <span>Information</span></h3>
                     <form action="">
                         <div class="form-group">
@@ -636,7 +643,7 @@
                         </div> 
                         <div class="form-group trainerselect">                          
                             <select class="form-control" onfocus='this.size=3;' onblur='this.size=1;' onchange='this.size=1; this.blur();' style="padding:0px;">
-                                <option selected="selected">Need a Trainer?</option>
+                                <option selected="selected">Need a Trainer? (Optional)</option>
                                 <option>Hello</option>
                                 <option>Hello</option>
                                 <option>Hello</option>
@@ -647,8 +654,6 @@
                         </div>
                         <a href="" class="appointmentbtn">Get It Now</a>
                         <div id="dtBox"></div>
-
-
                     </form>
                 </div>
             </div>

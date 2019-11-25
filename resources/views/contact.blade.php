@@ -130,14 +130,14 @@
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12">
 				<div class="contact-title">
-					<h1 class="text-dark text-center my-5">Let's get together</h1>
+					<h1 class="text-dark text-center mt-5 mb-mb-0">Let's get together</h1>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-lg-5 col-md-12 col-sm-12 pt-lg-5">
 				<div class="map-area">
-				  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11413.591595150554!2d96.09956905294727!3d21.95763449988052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30cb6d8219da2b4b%3A0xb14e6f528aa5395b!2sMyanmar%20IT%20Consulting%20Mandalay%20Office%20Staff%2FHR%2FAdmin%20Training%20School!5e0!3m2!1sen!2smm!4v1574502986124!5m2!1sen!2smm" width="600" height="350" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+				  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3700.801837207067!2d96.09045301395032!3d21.942168285510785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30cb6d689c4f2a49%3A0x7dc5ef273e2c02be!2sMingalar%20Mandalay!5e0!3m2!1sen!2smm!4v1574666825796!5m2!1sen!2smm" ></iframe>
 				</div>
 			</div>
 			<div class="col-lg-7">
@@ -348,14 +348,29 @@
   }
 /*End of Section Three*/
 /*Section Four*/
-.map-area {
+/*.map-area {
   position: relative;
   z-index: 2; }
 .map-area iframe {
 width: 100%;
 height: 500px;
 border: none;
-margin-bottom: 0; }
+margin-bottom: 0; }*/
+.map-area {
+        position: relative;
+        padding-bottom: 90%;
+        padding-top: 13%;
+        /*height: 0;*/
+        overflow: hidden;   
+    }
+    .map-area iframe {
+        position: absolute;
+        top: 10;
+        /*padding-left: 5%;*/
+        width: 95% !important;
+        height: 80% !important;
+        border: 2px solid #777777;
+    }
 /*End of Section Four*/
 		</style>
 

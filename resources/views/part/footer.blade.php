@@ -3,22 +3,22 @@
     <div class="row">
       <div class="col-lg-3 col-md-6 col-sm-12 pb-3">
         <h3 class="mb-3" style="font-size: 30px;color: red;">Olympia</h3>
-        <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto animi neque at</p>
+        <p style="text-align: justify;">Olympia Gym, founded by Midnight Sun Group, is located in Mandalay, Myanmar. Achieves your fitness goals with us!</p>
         <button class="joinbtn">Get In Touch</button>
       </div>
       <div class="col-lg-3 col-md-6 col-sm-12 pb-3">
         <h4>Contact Info</h4>
-        <ul class="list">
-          <li><i class="fa fa-map-marker"></i><a href="index.html">  MIC Bootcamp, Mandalay.</a></li>
-          <li><i class="fa fa-envelope-square"></i><a href="">  example@gmail.com</a></li>
-          <li><i class="fa fa-phone"></i><a href="contant/contact.html">  +959 123 456 789</a></li>
+        <ul class="list pt-2">
+          <li><i class="fa fa-map-marker"></i><a href="index.html">&nbsp;Olympia Fitness, Mandalay.</a></li>
+          <li><i class="fa fa-envelope-square"></i><a href="">&nbsp;olympia@gmail.com</a></li>
+          <li><i class="fa fa-phone"></i><a href="contant/contact.html"> &nbsp;+959 123 456 789</a></li>
           <li>Mon - Fri : 9AM to 5PM</li>
           <li>Sat - Sun : 9AM to 2PM</li>
         </ul>
       </div>
       <div class="col-lg-3 col-md-6 col-sm-12 pb-3">
         <h4>Useful Links</h4>
-        <ul class="list">
+        <ul class="list pt-2">
           <li><a href="/">Home</a></li>
           <li><a href="/bloghome">Blog</a></li>
           <li><a href="/classes">Classes</a></li>
@@ -27,7 +27,7 @@
         </ul>
       </div>
       <div class="col-lg-3 col-md-6 col-sm-12 pb-3">
-       <h4>News Letter</h4>
+       <h4 class="mb-3">News Letter</h4>
        <p>Subscribe and get the latest news.</p>
        <div class="form-group d-flex flex-row">
          <div class="col-autos">
@@ -36,7 +36,7 @@
               <div class="input-group-text"><i class="fa fa-envelope" aria-hidden="true"></i>
               </div>
             </div>
-            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email'" >
+            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email'" style="border-top:none;">
           </div>
         </div>
         <a href="#" class="bbtns">Subcribe</a>

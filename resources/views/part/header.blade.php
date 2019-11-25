@@ -1,41 +1,6 @@
-<!--
-<header id="header">
-		<div class="header-top">
-			<div class="container">
-	  		<div class="row align-items-center justify-content-center">
-	  			<div class="col-md-4 col-4 header-top-left no-padding">
-	        		<a href="mailto:support@colorlib.com"><span class="lnr lnr-location"></span></a>
-	        		<a class="contact-texts" href="mailto:support@colorlib.com">support@colorlib.com</a>
-	  			</div>
-	  			<div class="col-md-4 col-4 header-top-bottom no-padding">
-	        		<a href="index.html"><img class="img-fluid" src="{{asset('img/logo.png')}}" alt="" title="" /></a>
-	  			</div>
-	  			<div class="col-md-4 col-4 header-top-right no-padding">
-	        		<a class="contact-texts" href="tel:+440 123 12 658 439">+440 123 12 658 439</a>
-	        		<a href="tel:+440 123 12 658 439"><span class="lnr lnr-phone-handset"></span></a>
-	  			</div>
-	  		</div>
-			</div>
-	</div>
-	<div class="container main-menu">
-		<div class="row align-items-center justify-content-center">
-			<nav id="nav-menu-container">
-				<ul class="nav-menu">
-				  <li class="menu-active"><a href="">Home</a></li>
-				  <li><a href="">Trainers</a></li>
-				  <li><a href="">Classes</a></li>
-				  <li><a href="">Blog</a></li>
-				  <li><a href="">Contact</a></li>
-				</ul>
-			</nav>
-		</div>
-	</div>
-</header> -->
-
-
 
 <div class="container-fluid">
-	<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <a class="navbar-brand d-lg-none" href="/"><img class="gymlogo" src="{{asset('./img/gymlogo.png')}}" alt=""></a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,7 +8,7 @@
     </button>
     <div class="collapse navbar-collapse justify-content-between" id="navbarToggle">
 
-      <ul class="navbar-nav"> <!-- ml-5 mr-5 -->
+      <ul class="navbar-nav ml-5 mr-5"> <!-- ml-5 mr-5 -->
         <li class="nav-item">
           <a class="nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
@@ -63,37 +28,36 @@
         <li class="nav-item">
           <a class="nav-link" href="/contact">Contact</a>
         </li>
+          @guest
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Join
           </a>
           <div class="dropdown-menu dropdown-menu-right animated" aria-labelledby="navbarDropdown">
-            <!-- <a class="dropdown-item" href="/login">Login</a>
-            <a class="dropdown-item" href="/register">Register</a> -->
-            @guest
-                  <a class=" dropdown-item" href="{{route('login')}}">Login</a>
-                  <a class=" dropdown-item" href="{{route('register')}}">Register</a>
+
+              <a class="nav-link" href="{{route('login')}}">Login</a>
+              <a class="nav-link" href="{{route('register')}}">Register</a>
+              
           </div>
         </li>
-          @else
+        @else
               <li class="dropdown nav-item">
-                  <a class=" nav-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      {{Auth::user()->name}}
+                
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{Auth::user()->name}}
                   </a>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">Profile</a>
+                      @hasrole('admin')
+                      <a class="nav-link" href="{{route('admin.index')}}">Admin Pannel</a>
+                      @endhasrole
                       <a class="dropdown-item" href="{{route('logout')}}"onclick="event.preventDefault();document.getElementById('logout-form').submit();">Log Out</a>
+
                       <form id="logout-form" action="{{route('logout')}}" method="post" style="display: none;">
                           @csrf
                       </form>
                   </div>
               </li>
           @endguest
-          @hasrole('admin')
-          <li class="nav-item">
-              <a class="nav-link" href="{{route('admin.index')}}">Admin Pannel</a>
-          </li>
-          @endhasrole
       </ul>
     </div>
   </nav>
@@ -114,7 +78,7 @@
     width:80px;
     height: 60px;
   }
-  
+
   .navbar {
     padding-top: 5px;
     padding-bottom: 5px;
@@ -141,7 +105,7 @@
   .custom-toggler.navbar-toggler {
     border-color:white;
   }
- 
+
   .dropdown-menu{
     background-color:black;
   }
