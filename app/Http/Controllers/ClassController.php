@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Resources\ClassResource as ClassResource;
 use App\Trainer;
 use App\Classes;
 
@@ -15,6 +16,9 @@ class ClassController extends Controller
      */
     public function index()
     {
+        $classes=Classes::all();
+        //dd($post);
+        return view('classes',compact('classes'));
 
     }
 
@@ -43,6 +47,8 @@ class ClassController extends Controller
             "class_name" => 'required|min:3' ,
             "class_price" =>'required'  ,
             "class_image" => 'required|mimes:jpeg,jpg,png',
+            "start_time" => 'required',
+            "end_time" => 'required',
             "class_desc" => 'required',
             "trainer_id" => 'required'
 
@@ -61,6 +67,8 @@ class ClassController extends Controller
         $class->name = request('class_name');
         $class->description = request('class_desc');
         $class->image = $photo;
+        $class->start = request('start_time');
+        $class->end = request('end_time');
         $class->price = request('class_price');
         $class->trainer_id = request('trainer_id');
         $class->save();
@@ -75,7 +83,10 @@ class ClassController extends Controller
      */
     public function show($id)
     {
-        //
+            //$class = Classes::find($id);
+            //$trainer = Trainer::find($id)
+        return new ClassResource(Classes::find($id));
+
     }
 
     /**
@@ -106,6 +117,8 @@ class ClassController extends Controller
             "class_name" => 'required|min:3' ,
             "class_price" =>'required'  ,
             "class_image" => 'sometimes|mimes:jpeg,jpg,png',
+            "start_time" => 'required',
+            "end_time" => 'required',
             "class_desc" => 'required',
             "trainer_id" => 'required'
 
@@ -124,6 +137,8 @@ class ClassController extends Controller
         $class->name = request('class_name');
         $class->description = request('class_desc');
         $class->image = $photo;
+        $class->start = request('start_time');
+        $class->end = request('end_time');
         $class->price = request('class_price');
         $class->trainer_id = request('trainer_id');
         $class->save();

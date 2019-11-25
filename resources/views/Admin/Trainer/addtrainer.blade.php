@@ -23,7 +23,7 @@
                             </span>
                         @enderror
                         <label for="trainer_desc">Description</label>
-                        <input type="text" name="trainer_desc" id="trainer_desc" class="form-control @error('trainer_desc') is-invalid @enderror">
+                        <textarea id="summernote" cols="30" rows="3"  name="trainer_desc" id="trainer_desc" class="form-control @error('trainer_desc') is-invalid @enderror"></textarea>
                         @error('trainer_desc')
                         <span class="invalid-feedback" role="alert">
                                 <strong>{{$message}}</strong>

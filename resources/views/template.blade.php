@@ -19,7 +19,8 @@
 		<link rel="icon" type="image/png" href="{{asset('./img/gymlogo.png')}}">
 
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
-		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css">
 
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -40,10 +41,10 @@
 			<link rel="stylesheet" href="{{asset('css/main.css')}}">
 
 		</head>
-		
-		<body>	
-			
-			@include('part.header')  
+
+		<body>
+
+			@include('part.header')
 
 
 			@yield('content')
@@ -65,5 +66,49 @@
 			<script src="{{asset('js/owl.carousel.min.js')}}"></script>
 			<script src="{{asset('js/mail-script.js')}}"></script>
 			<script src="{{asset('js/main.js')}}"></script>
+        <script>
+            $(document).ready(function(){
+                $('#modalQuickView').on('show.bs.modal', function (e) {
+                    var id = $(e.relatedTarget).data('id');
+                    console.log(id);
+                    $.get('/admin/trainer/' + id, function(response){
+                        //console.log(response);
+                        $('#trainer_name').html(response.name);
+                        $('#about').html(response.description);
+                        $("#cover_img").attr("src", response.image);
+                        $("#facebook").attr("href", response.facebook);
+                        $("#google").attr("href", response.google);
+                        $("#instagram").attr("href", response.instagram);
+
+                    })
+                });
+            });
+        </script>
+            <script>
+                $(document).ready(function () {
+                    $('#modalDetail').on('show.bs.modal',function (e) {
+                        var id = $(e.relatedTarget).data('id');
+                        //console.log(id);
+                        $.get('/class/' + id,function (response) {
+                            console.log(response);
+                            $('#detail_name').html(response.name);
+                            $('#detail_price').html('$'+response.price);
+                            $('#start').html(response.start);
+                            $('#end').html(response.end);
+                            $('#trainername').html(response.trainer.name);
+                            $('#desc').html(response.description);
+                        })
+                    })
+
+
+                    $('#modalJoin').on('show.bs.modal',function (e) {
+                        var id = $(e.relatedTarget).data('id');
+                        //console.log(id);
+                        $('#class_id').val(id);
+                        //
+                    })
+                })
+            </script>
+
 		</body>
 	</html>

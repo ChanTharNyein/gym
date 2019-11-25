@@ -3,16 +3,16 @@
 <!-- start banner Area -->
 
 
-<section class="banner-area relative about-banner" id="home" style="background-image: url({{asset('./img/testimontials.jpg')}});">	
+<section class="banner-area relative about-banner" id="home" style="background-image: url({{asset('./img/testimontials.jpg')}});">
 	<div class="overlay overlay-bg"></div>
-	<div class="container">				
+	<div class="container">
 		<div class="row d-flex align-items-center justify-content-center">
 			<div class="about-content col-lg-12">
 				<h1 class="text-white">
-					Trainers				
-				</h1>	
+					Trainers
+				</h1>
 				<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="trainers.html"> Trainers</a></p>
-			</div>	
+			</div>
 		</div>
 	</div>
 </section>
@@ -27,38 +27,42 @@
 			</p>
 		</div>
 	</div>
+
 	<div class="row pt-3">
+        @foreach($trainer as $trainers)
 		<div class="col-lg-4 col-md-6 col-sm-12">
 			<div class="xs-team">
 				<div class="xs-team-thumb">
-					<img src="{{asset('./img/aungpaing.png')}}" alt="Jhon Statham">
+					<img  src="{{asset($trainers->image)}}" alt="Jhon Statham">
 					<div class="xs-team-overlay d-flex align-items-center">
 						<ul class="list-unstyled xs-team-share">
 							<li>
-								<a href="#"><i class="fa fa-facebook fa-2x"></i></a>
+								<a href="{{$trainers->facebook}}"><i class="fa fa-facebook fa-2x"></i></a>
 							</li>
 							<li>
-								<a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+								<a href="{{$trainers->gmail}}"><i class="fa fa-google fa-2x"></i></a>
 							</li>
 							<li>
-								<a href="#"><i class="fa fa-instagram fa-2x"></i></i></a>  
+								<a href="{{$trainers->instagram}}"><i class="fa fa-instagram fa-2x"></i></i></a>
 							</li>
 						</ul>
 					</div>
 				</div>
 				<div class="xs-team-content">
 					<ul>
-						<li><h3>Aung Paing</h3></li>
+						<li><h3>{{$trainers->name}}</h3></li>
 						<!-- <li><h5>Gymnast</h5></li> -->
-						<li><button class="trainerinfo" data-toggle="modal" data-target="#modalQuickView">View Profile</button></li>
+						<li><button class="trainerinfo" data-toggle="modal" data-target="#modalQuickView" data-id="{{$trainers->id}}">View Profile</button></li>
 					</ul>
 				</div>
 			</div>
 		</div>
-		
+        @endforeach
+
 	</div>
 </div>
-<!-- End of Section Two -->	
+
+<!-- End of Section Two -->
 
 <!-- Section One -->
 <div class="container-fluid sectionone pt-5">
@@ -72,8 +76,8 @@
 		<div class="col-lg-4 col-md-4 col-sm-6 mb-4">
 			<div class="trainerservices d-flex">
 				<div class="icon d-flex align-content-center justify-content-center">
-					<img src="{{asset('./img/aerobics.png')}}" class="servicepng">  
-				</div> 
+					<img src="{{asset('./img/aerobics.png')}}" class="servicepng">
+				</div>
 				<div class="servicetext pl-2 mb-4">
 					<h4 class="pb-2">Aerobics</h4>
 					<p style="text-align: justify;">Aerobic exercise is any activity that gets your blood pumping and large muscle groups working. It’s also known as cardiovascular activity. Experts recommend getting at least 75 minutes of vigorous activity each week.</p>
@@ -83,8 +87,8 @@
 		<div class="col-lg-4 col-md-4 col-sm-6 mb-4">
 			<div class="trainerservices d-flex">
 				<div class="icon d-flex align-content-center justify-content-center">
-					<img src="{{asset('./img/cardio.png')}}" class="servicepng">  
-				</div> 
+					<img src="{{asset('./img/cardio.png')}}" class="servicepng">
+				</div>
 				<div class="servicetext pl-2">
 					<h4 class="pb-2">Cardio</h4>
 					<p style="text-align: justify;">Cardio Classes help to strengthen the heart and lungs. They also help in burning calories fast, reduce stress, trim off fat, lower cholesterol, lessen risks of heart diseases and improve your health. </p>
@@ -94,8 +98,8 @@
 		<div class="col-lg-4 col-md-4 col-sm-6 mb-4">
 			<div class="trainerservices d-flex">
 				<div class="icon d-flex align-content-center justify-content-center">
-					<img src="{{asset('./img/exercise.png')}}" class="servicepng">  
-				</div> 
+					<img src="{{asset('./img/exercise.png')}}" class="servicepng">
+				</div>
 				<div class="servicetext pl-2">
 					<h4 class="pb-2">Demonstrating Exercises</h4>
 					<p style="text-align:justify;">The actual demonstration stage teaches the client how to perform the exercise correctly and safely. Effective use of verbal and physical techniques adds clarity to the teaching.</p>
@@ -105,8 +109,8 @@
 		<div class="col-lg-4 col-md-4 col-sm-6 mb-4">
 			<div class="trainerservices d-flex">
 				<div class="icon d-flex align-content-center justify-content-center">
-					<img src="{{asset('./img/techniques.png')}}" class="servicepng">  
-				</div> 
+					<img src="{{asset('./img/techniques.png')}}" class="servicepng">
+				</div>
 				<div class="servicetext pl-2">
 					<h4 class="pb-2">Correct Techniques</h4>
 					<p style="text-align:justify;">Technique is the way you perform an exercise in order to target specific muscle groups. Without the proper technique, your results won’t be as good as they could be. They can help you up improve your physique.</p>
@@ -116,8 +120,8 @@
 		<div class="col-lg-4 col-md-4 col-sm-6 mb-4">
 			<div class="trainerservices d-flex">
 				<div class="icon d-flex align-content-center justify-content-center">
-					<img src="{{asset('./img/emergency.png')}}" class="servicepng">  
-				</div> 
+					<img src="{{asset('./img/emergency.png')}}" class="servicepng">
+				</div>
 				<div class="servicetext pl-2">
 					<h4 class="pb-2">Emergency First Aid</h4>
 					<p style="text-align:justify;">Although a first aid qualification isn’t usually a mandatory requirement, all fitness instructors have a duty of care to their clients, holding a first aid qualification shows that you’re serious about ensuring their wellbeing.</p>
@@ -127,8 +131,8 @@
 		<div class="col-lg-4 col-md-4 col-sm-6 mb-4">
 			<div class="trainerservices d-flex">
 				<div class="icon d-flex align-content-center justify-content-center">
-					<img src="{{asset('./img/dance.png')}}" class="servicepng">  
-				</div> 
+					<img src="{{asset('./img/dance.png')}}" class="servicepng">
+				</div>
 				<div class="servicetext pl-2">
 					<h4 class="pb-2">Dance Club</h4>
 					<p style="text-align: justify;">Dance Classes are a great way to keep your body in perfect tone and revive your activeness. While you’re dancing, you can burn calories, enjoy the energy themed music, and keep fit at the same time.</p>
@@ -142,7 +146,7 @@
 
 <!-- Section Three -->
 <div class="container-fluid traineradvertise" style="background-color: #f1f1f1;">
-	<div class="row">		
+	<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-12 pt-5 pl-5">
 				<h1 class="pb-4">Fitness <span style="color:red;">Trainer</span></h1>
 				<h3>Call now for a</h3>
@@ -180,7 +184,7 @@
 	/*End of Section One*/
 
 	/*Section Two*/
-	
+
 	.trainerinfo{
 		background-color: transparent;
 		display: inline-block;
@@ -354,6 +358,7 @@
 	.trainerinfoicon li a{
 		color:red;
 	}
+<<<<<<< HEAD
 	.candolist,.aboutlist{
 		list-style: none;
 	}
@@ -365,6 +370,9 @@
 		width: 1em;
 	}
 	
+=======
+
+>>>>>>> 1f3472eca027b520a4504d9a0448bff21be57efc
 
 	/*End of Modal Section*/
 
@@ -382,12 +390,18 @@
       <div class="modal-body">
         <div class="container">
             <div class="row">
+<<<<<<< HEAD
                 <div class="col-lg-6 col-md-6 col-sm-12 my-md-auto">
                     <img src="{{asset('./img/aungpaing.png')}}" alt="" class="img-fluid" >
+=======
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <img src="" id="cover_img" alt="" class="img-fluid" style="height: 450px; width: auto;">
+>>>>>>> 1f3472eca027b520a4504d9a0448bff21be57efc
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12">
                 	<div class="mt-4">
 	                    <h3 class="firstinfo">Hello,</h3>
+<<<<<<< HEAD
 	                    <h3 class="secondinfo">I am<span style="font-size:35px">&nbsp;Aung Paing</span></h3>
 	                    <h3 class="mt-4" style="font-size: 20px;">Look What I Can Do?</h3>
 	                    <ul class="mt-2 ml-3 candolist">
@@ -402,11 +416,19 @@
 	                    	<li>3years experience in fitness industry</li>
 	                    	<li>Certified Fitness Instructor at Olympia</li>
 	                    </ul>
+=======
+	                    <h3 class="secondinfo">I am<span style="font-size:35px" id="trainer_name"></span></h3>
+	                    {{--<h3 class="mt-4" style="font-size: 20px;">Look What I Can Do?</h3>
+	                    <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione adipisci porro dolor tenetur iure saepe </p>--}}
+
+	                    <h3 class="mt-4" style="font-size: 20px;">About Me?</h3>
+	                    <p class="mt-2" id="about"></p>
+>>>>>>> 1f3472eca027b520a4504d9a0448bff21be57efc
 
 	                    <ul class="trainerinfoicon">
-	                    	<li><a href="#"><i class="fa fa-facebook fa-2x"></i></a></li>
-	                    	<li><a href="#"><i class="fa fa-twitter fa-2x"></i></a> </li>
-	                    	<li><a href="#"><i class="fa fa-instagram fa-2x"></i></i></a></li>
+	                    	<li><a href="" id="facebook"><i class="fa fa-facebook fa-2x"></i></a></li>
+	                    	<li><a href="" id="google"><i class="fa fa-google fa-2x"></i></a> </li>
+	                    	<li><a href="" id="instagram"><i class="fa fa-instagram fa-2x"></i></i></a></li>
 	                    </ul>
                     </div>
                 </div>

@@ -3,20 +3,20 @@
 <!-- start banner Area -->
 <script src="{{asset('js/DateTimePicker.js')}}"></script>
 <link rel="stylesheet" href="{{asset('css/DateTimePicker.css')}}">
-<section class="banner-area relative about-banner" id="home" style="background-image: url({{asset('./img/home3.jpg')}});">	
+<section class="banner-area relative about-banner" id="home" style="background-image: url({{asset('./img/home3.jpg')}});">
 	<div class="overlay overlay-bg"></div>
-	<div class="container">				
+	<div class="container">
 		<div class="row d-flex align-items-center justify-content-center">
 			<div class="about-content col-lg-12">
 				<h1 class="text-white">
-					Classes		
-				</h1>	
+					Classes
+				</h1>
 				<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="services.html"> Classes</a></p>
-			</div>	
+			</div>
 		</div>
 	</div>
 </section>
-<!-- End banner Area -->	
+<!-- End banner Area -->
 
 <!-- Start offred Area -->
 <section class="offred-area section-gap">
@@ -24,42 +24,44 @@
 		<div class="row section-title mb-4">
 			<h1>If you appreciate quality, then we are for you.</h1>
 			<p class="col-lg-8 offset-lg-2">We are in extremely love with eco friendly system. Tomorrow is the first blank page of a 365 page book. Write a good one. Once you can control your mind, you can control your body</p>
-		</div>					
-		<div class="row pl-2 pr-2">	
+		</div>
+		<div class="row pl-2 pr-2">
+            @foreach($classes as $class)
       <div class="col-lg-4 col-md-6  mb-5 p-lg-4 mb-md-5">
         <div class="hovereffect">
           <div class="card">
-            <img src="{{asset('./img/youga2.jpg')}}" class="card-img-top" alt="...">
+            <img src="{{asset($class->image)}}" class="card-img-top" alt="...">
             <div class="overlay"><br>
               <ul class="hovereffect-grid-ul-child">
                 <li>Mon</li>
-                <li style="background-color: #fff;border:1px solid red">2:30am</li>
+                <li style="background-color: #fff;border:1px solid red">{{$class->start}}</li>
               </ul><br>
               <ul class="hovereffect-grid-ul-child ">
                 <li>Sun</li>
-                <li style="background-color: #fff;border:1px solid red">2:30am</li>
+                <li style="background-color: #fff;border:1px solid red">{{$class->end}}</li>
               </ul>
               
-              <a class="joinbtn pb-1" href="" data-toggle="modal" data-target="#modalDetail">Detail</a>
-              <a href="" class="joinbtn pb-1" data-toggle="modal" data-target="#modalJoin">Join Now</a>
+              <a class="joinbtn pb-1" href="" data-toggle="modal" data-target="#modalDetail" data-id="{{$class->id}}">Detail</a>
+              <a href="" class="joinbtn pb-1" data-toggle="modal" data-target="#modalJoin" data-id="{{$class->id}}">Join Now</a>
 
             </div>
           </div>
           <div class="card-body">
             <ul class="classlist">
-              <li class="pr-5 classname">Youga</li>
-              <li class="pl-5 classprice"><sup>$</sup><span>39.99</span></li>
+              <li class="pr-5 classname">{{$class->name}}</li>
+              <li class="pl-5 classprice"><sup>$</sup><span>{{$class->price}}</span></li>
             </ul>
             <div style="border-bottom: 2px solid #777777; width: 100%; padding-top: 10px;"></div>
-            <p style="padding-top: 10px; text-align: justify;">Experience mind and body connection through a series of disciplined physical postures, breathing exercises and relaxation.</p>
+            <p style="padding-top: 10px; text-align: justify;">{{substr($class->description, 0, 70)}}</p><p class="d-inline">......</p>
             <ul class="classlist">
              <!--  <li><i class="fa fa-user fa-2x pr-4" style="color:red;"></i></li> -->
              <li><img src="{{asset('./img/trainericon.png')}}" width="40" height="40"></li>
-             <li><h3 class="pl-4">Lucy</h3></li>
+             <li><h3 class="pl-4">{{$class->trainer->name}}</h3></li>
            </ul>
          </div>
        </div>
      </div>
+      @endforeach
    </div>
  </div>
 </section>
@@ -67,7 +69,7 @@
 
 <!-- Start top-course Area -->
 
-<!-- End top-course Area -->		
+<!-- End top-course Area -->
 
 <!-- Start callto Area -->
 <section class="callto-area section-gap relative" style="background-image: url('{{asset('./img/background.jpg')}}')">
@@ -103,12 +105,12 @@
               <div class="row">
                 <div class="col-lg-6 col-md-6">
                   <ul>
-                    <li><h4>Youga</h4></li>
+                    <li style="float: left;"><h4 id="detail_name"></h4></li>
                   </ul>
                 </div>
                 <div class="col-lg-6 col-md-6">
                   <ul>
-                    <li><h4><sup>$</sup>39.99</h4></li>
+                    <li style="float: right;"><h4 id="detail_price"></h4></li>
                   </ul>
                 </div>
               </div>
@@ -116,17 +118,18 @@
                 <div class="col-lg-6" style="padding-bottom: 5px;">
                   <ul class="hovereffect-grid-ul-child">
                     <li>Mon</li>
-                    <li style="background-color: transparent; border:1px solid red">2:30am</li>
+                    <li style="background-color: transparent; border:1px solid red" id="start"></li>
                   </ul>
                 </div>
                 <div class="col-lg-6" style="padding-bottom: 5px;">
                   <ul class="hovereffect-grid-ul-child">
                     <li>Fri</li>
-                    <li style="background-color: transparent;border:1px solid red;">2:30am</li>
+                    <li style="background-color: transparent;border:1px solid red;" id="end"></li>
                   </ul>
                 </div>
               </div>
-              <p><span style="font-size: 18px; color:red; font-weight:bold;">Lucy</span>&nbsp;Experience mind and body connection through a series of disciplined physical postures, breathing exercises and relaxation. You’ll be increasing flexibility and balancing all parts of the body through this strengthening workout. Yoga can help reduce stress levels and improve overall health.</p>
+              <p id="desc"></p>
+              <span style="font-size: 18px; color:red; font-weight:bold;" id="trainername"></span>
             </div>
           </div>
         </div>
@@ -136,12 +139,59 @@
 </div>
 
 
+<div class="modal fade modalsection" id="modalJoin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content" style="background-color: #f1f1f1;">
+     <div class="modal-header">
+      <h4 class="modal-title" style="letter-spacing: 2px; font-size: 16px; text-transform:uppercase; color: black;font-weight: normal;"><span style="color: red;font-size: 20px; text-transform: capitalize;">Olympia</span> Fitness Center</h4>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="container">
+        <div class="row mt-4 mb-4">
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <img src="{{asset('./img/youga2.jpg')}}" alt="" class="img-fluid">
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <h3>Get Thin and Win</h3>
+            <h3 style="font-size: 20px;">Appointment <span>Information</span></h3>
+
+            <form action="{{route('orderclass.store')}}" method="post">
+                @csrf
+              <div class="form-group">
+                <label for="appointmentname"><i class="fa fa-user" ></i></label>
+                  <input type="text" name="class_id" id="class_id">
+                <input class="" type="text" placeholder="Your Name" id="appointmentname">
+              </div>
+              <div class="form-group">
+                <label for="appointmentphone"><i class="fa fa-phone" ></i></label>
+                <input type="number" placeholder="Phone No." id="appointmentphone" name="phone">
+              </div>
+              <div class="form-group">
+               <label for="appointmentdatetime"><i class="fa fa-calendar"></i></label>
+               <input name="appointment_date" type="text" placeholder="Appointment Date & Time" data-field="datetime" readonly id="appointmentdatetime">
+             </div>
+                <input type="submit" class="appointmentbtn" name="submit" value="Join Now">
+             {{--< href="" class="appointmentbtn">Join Now</>--}}
+             <div id="dtBox"></div>
+           </form>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+</div>
+
+
 <script>
  $(document).ready(function()
  {
 
    $("#dtBox").DateTimePicker();
-   
+
  });
 </script>
 
@@ -157,7 +207,7 @@
     color:#777777;
     font-size: 25px;
   }
-    
+
   .classdetail p{
     color:#777777;
     text-align: justify;
@@ -371,7 +421,7 @@
    opacity:0
   }
 
-  .hovereffect-item:hover 
+  .hovereffect-item:hover
   .hovereffect-overly ul{
   opacity:1;
   transition:all .5s

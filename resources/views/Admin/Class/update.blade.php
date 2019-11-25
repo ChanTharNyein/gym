@@ -18,6 +18,10 @@
                         <input type="hidden" value="{{$class->image}}" name="oldimg" >
                     </div>
                     <div class="form-group">
+                        <label for="start_time" >Start Time</label>
+                        <input type="text" value="{{$class->start}}" class="form-control" name="start_time" id="start_time">
+                        <label for="end_time" >End Time</label>
+                        <input type="text" value="{{$class->end}}" class="form-control" name="end_time" id="end_time">
                         <label for="class_desc">Class Description</label>
                         <textarea  name="class_desc" id="class_desc" class="form-control">{{$class->description}}</textarea>
                         <label for="trainer_id">Trainer ID</label>

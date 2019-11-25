@@ -24,10 +24,7 @@ class BlogpostController extends Controller
     public function index()
     {
         $post=Post::all();
-        /*$post=Post::all('created_at')
-            ->latest()
-            ->first();*/
-        //dd($post);
+        //dd($posts);
         $category=Category::all();
         return view('bloghome',compact('post','category'));
     }
@@ -180,4 +177,12 @@ class BlogpostController extends Controller
         //dd($post);
         return view('bloghome',compact('post','category'));
     }
+    /*public function trainerid($id)
+    {
+        //dd($id);
+        $post=Post::where('trainer_id',$id)->get();
+        $trainer=Trainer::all();
+        //dd($post);
+        return view('bloghome',compact('post','trainer'));
+    }*/
 }

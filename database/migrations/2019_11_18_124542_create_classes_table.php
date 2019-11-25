@@ -17,6 +17,8 @@ class CreateClassesTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('image');
+            $table->string('start');
+            $table->string('end');
             $table->text('description');
             $table->double('price');
             $table->unsignedBigInteger('trainer_id');

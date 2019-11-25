@@ -16,14 +16,14 @@
           <a class="nav-link" href="/bloghome">Blog</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/trainers">Trainers</a>
+          <a class="nav-link" href="{{route('ourtrainer')}}">Trainers</a>
         </li>
       </ul>
 
       <a class="navbar-brand d-none d-lg-block" href="#"><img class="gymlogo" src="{{asset('./img/gymlogo.png')}}" alt=""></a>
       <ul class="navbar-nav ml-5 mr-5">
         <li class="nav-item">
-          <a class="nav-link" href="/classes">Classes</a>
+          <a class="nav-link" href="/class">Classes</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/contact">Contact</a>
@@ -37,10 +37,9 @@
 
               <a class="nav-link" href="{{route('login')}}">Login</a>
               <a class="nav-link" href="{{route('register')}}">Register</a>
-              
           </div>
         </li>
-        @else
+          @else
               <li class="dropdown nav-item">
                 
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

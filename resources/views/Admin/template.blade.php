@@ -10,6 +10,7 @@
     <meta name="author" content="">
 
     <title>@yield('title')</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- Custom fonts for this template-->
     <link href="{{asset('Admin tools/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -95,6 +96,14 @@
 <!-- Page level custom scripts -->
 <script src="{{asset('Admin tools/js/demo/chart-area-demo.js')}}"></script>
 <script src="{{asset('Admin tools/js/demo/chart-pie-demo.js')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.js"></script>
+<script>
+    $('#summernote').summernote({
+        placeholder: 'Hello bootstrap 4',
+        tabsize: 2,
+        height: 100
+    });
+</script>
 
 </body>
 </html>

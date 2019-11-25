@@ -1,7 +1,7 @@
 <?php
 
 namespace App;
-
+use App\Classes;
 use Illuminate\Database\Eloquent\Model;
 
 class Trainer extends Model
@@ -15,5 +15,8 @@ class Trainer extends Model
     }
     public function orderpackage($value=''){
         return $this->belongsToMany('App\OrderPackage');
+    }
+    public function classes($value=''){
+        return $this->hasMany('App\Classes');
     }
 }
