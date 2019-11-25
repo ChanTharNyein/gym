@@ -16,9 +16,8 @@ class CreateOrderClassesTable extends Migration
         Schema::create('order_classes', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('trainer_id');
             $table->string('phone');
-            $table->unsignedBigInteger('package_id');
+            $table->unsignedBigInteger('class_id');
             $table->timestamp('appointment_date');
             $table->timestamp('start_date')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('end_date')->default(DB::raw('CURRENT_TIMESTAMP'));

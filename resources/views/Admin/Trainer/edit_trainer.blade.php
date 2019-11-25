@@ -25,7 +25,7 @@
                         @enderror
                         <input type="hidden" value="{{$trainer->image}}" name="old_img">
                         <label for="trainer_desc">Description</label>
-                        <input type="text" value="{{$trainer->description}}" name="trainer_desc" id="trainer_desc" class="form-control @error('trainer_desc') is-invalid @enderror">
+                        <textarea id="summernote" cols="30" rows="3"   name="trainer_desc" id="trainer_desc" class="form-control @error('trainer_desc') is-invalid @enderror">{{$trainer->description}}</textarea>
                         @error('trainer_desc')
                         <span class="invalid-feedback" role="alert">
                                 <strong>{{$message}}</strong>

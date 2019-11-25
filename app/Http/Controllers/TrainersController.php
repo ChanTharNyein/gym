@@ -13,6 +13,7 @@ class TrainersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         $trainer = Trainer::all();
@@ -49,7 +50,7 @@ class TrainersController extends Controller
         if($request->hasFile('trainer_image')){
             $tphoto = $request->file('trainer_image');
             $tname = time(). '.' .$tphoto->getClientOriginalExtension();
-            $tphoto -> move(public_path().'/storage/post_img',$tname);
+            $tphoto -> move(public_path().'/storage/post_img/',$tname);
             $tphoto = '/storage/post_img'.$tname;
         }
         else{
@@ -74,7 +75,9 @@ class TrainersController extends Controller
      */
     public function show($id)
     {
-        //
+        $trainer = Trainer::find($id);
+        return $trainer;
+
     }
 
     /**
@@ -143,5 +146,10 @@ class TrainersController extends Controller
         $trainer->posts()->delete();
         $trainer->delete();
         return redirect()->route('trainer.index');
+    }
+    public function ourtrainer()
+    {
+        $trainer = Trainer::all();
+        return view('trainers',compact('trainer'));
     }
 }

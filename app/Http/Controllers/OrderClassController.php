@@ -1,11 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Comment;
+
+use App\Classes;
+use Carbon\Carbon;
+use App\OrderClass;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Resources\CommentResource as CommentResource;
-class CommentController extends Controller
+
+class OrderClassController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,13 +17,7 @@ class CommentController extends Controller
      */
     public function index()
     {
-        /*$classes = [
-            'name' => 'My Class',
-            'price' => 100000,
-            'desc' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, tempora?',
-            'trainer' => 'Mr. Trainer'
-        ];*/
-        return view('classes', compact('classes'));
+        //
     }
 
     /**
@@ -30,7 +27,7 @@ class CommentController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -41,12 +38,17 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
-        $comment = new Comment();
-        $comment->description = request('description');
-        $comment->post_id = request('pid');
-        $comment->user_id = Auth::id();
-        $comment->save();
-        return 'Successfully Inserted';
+
+        //$datetime=request('appointment_date');
+        //$datetime
+        //dd($datetime);
+        $order=new OrderClass;
+        $order->user_id = Auth::id();
+        $order->phone=request('phone');
+        $order->class_id=request('class_id');
+        $order->appointment_date=Carbon::parse(request('appointment_date'));
+        $order->save();
+        return redirect()->route('class.index');
     }
 
     /**
@@ -92,10 +94,5 @@ class CommentController extends Controller
     public function destroy($id)
     {
         //
-    }
-    public function getcomments(Request $request){
-        $pid = request('pid');
-        $comments = Comment::where('post_id',$pid)->get();
-        return CommentResource::collection($comments);
     }
 }

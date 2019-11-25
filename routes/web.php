@@ -24,14 +24,9 @@ Route::get('/contact', 'ContactController@index');
 
 
 Route::resource('/comment','CommentController');
+Route::resource('/orderclass','OrderClassController');
 Route::post('/getcomments','CommentController@getcomments')->name('getcomments');
 
-Route::get('/admin/class', function () {
-    return view('Admin.class');
-});
-Route::get('/admin/createclass', function () {
-    return view('Admin.createclass');
-});
 Auth::routes();
 
 Route::get('/index', 'HomeController@index');
@@ -39,12 +34,10 @@ Route::resource('/admin/package','PackageController');
 Route::resource('/admin/category','CategoryController');
 Route::resource('/admin/trainer','TrainersController');
 Route::resource('/admin/orderpackage','OrderPackageController');
-Route::get('/trainers',function (){
-   return view('trainers');
-});
-Route::get('/bloghome',function (){
+Route::get('/ourtrainer','TrainersController@ourtrainer')->name('ourtrainer');
+/*Route::get('/bloghome',function (){
     return view('bloghome');
-});
+});*/
 Route::group(['middleware'=>['role:admin']],function (){
     Route::resource('/admin','AdminController');
 });
