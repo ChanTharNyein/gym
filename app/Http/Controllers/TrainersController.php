@@ -51,7 +51,7 @@ class TrainersController extends Controller
             $tphoto = $request->file('trainer_image');
             $tname = time(). '.' .$tphoto->getClientOriginalExtension();
             $tphoto -> move(public_path().'/storage/post_img/',$tname);
-            $tphoto = '/storage/post_img'.$tname;
+            $tphoto = '/storage/post_img/'.$tname;
         }
         else{
         $tphoto = '';

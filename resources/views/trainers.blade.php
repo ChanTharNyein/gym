@@ -390,41 +390,18 @@
       <div class="modal-body">
         <div class="container">
             <div class="row">
-<<<<<<< HEAD
-                <div class="col-lg-6 col-md-6 col-sm-12 my-md-auto">
-                    <img src="{{asset('./img/aungpaing.png')}}" alt="" class="img-fluid" >
-=======
+
                 <div class="col-lg-6 col-md-6 col-sm-12">
-                    <img src="" id="cover_img" alt="" class="img-fluid" style="height: 450px; width: auto;">
->>>>>>> 1f3472eca027b520a4504d9a0448bff21be57efc
+                    <img src="" id="cover_img" alt="" class="img-fluid">
+
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12">
                 	<div class="mt-4">
 	                    <h3 class="firstinfo">Hello,</h3>
-<<<<<<< HEAD
-	                    <h3 class="secondinfo">I am<span style="font-size:35px">&nbsp;Aung Paing</span></h3>
+
+	                    <h3 class="secondinfo">I am <span style="font-size:35px" id="trainer_name"></span></h3>
 	                    <h3 class="mt-4" style="font-size: 20px;">Look What I Can Do?</h3>
-	                    <ul class="mt-2 ml-3 candolist">
-	                    	<li>Muscle gain, weight gain</li>
-	                    	<li>Cardio training</li>
-	                    	<li>Functional training</li>
-	                    </ul>
-
-	                    <h3 class="mt-4" style="font-size: 20px;">About Me?</h3>
-	                    <ul class="mt-2 ml-3 aboutlist">
-	                    	<li>Working as a personal trainer at Olympia</li>
-	                    	<li>3years experience in fitness industry</li>
-	                    	<li>Certified Fitness Instructor at Olympia</li>
-	                    </ul>
-=======
-	                    <h3 class="secondinfo">I am<span style="font-size:35px" id="trainer_name"></span></h3>
-	                    {{--<h3 class="mt-4" style="font-size: 20px;">Look What I Can Do?</h3>
-	                    <p class="mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione adipisci porro dolor tenetur iure saepe </p>--}}
-
-	                    <h3 class="mt-4" style="font-size: 20px;">About Me?</h3>
 	                    <p class="mt-2" id="about"></p>
->>>>>>> 1f3472eca027b520a4504d9a0448bff21be57efc
-
 	                    <ul class="trainerinfoicon">
 	                    	<li><a href="" id="facebook"><i class="fa fa-facebook fa-2x"></i></a></li>
 	                    	<li><a href="" id="google"><i class="fa fa-google fa-2x"></i></a> </li>

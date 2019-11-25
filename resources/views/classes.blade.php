@@ -34,11 +34,11 @@
             <div class="overlay"><br>
               <ul class="hovereffect-grid-ul-child">
                 <li>Mon</li>
-                <li style="background-color: #fff;border:1px solid red">{{$class->start}}</li>
+                <li style="background-color: #fff;border:1px solid #fff">{{$class->start}}</li>
               </ul><br>
               <ul class="hovereffect-grid-ul-child ">
                 <li>Sun</li>
-                <li style="background-color: #fff;border:1px solid red">{{$class->end}}</li>
+                <li style="background-color: #fff;border:1px solid #fff">{{$class->end}}</li>
               </ul>
               
               <a class="joinbtn pb-1" href="" data-toggle="modal" data-target="#modalDetail" data-id="{{$class->id}}">Detail</a>
@@ -52,7 +52,7 @@
               <li class="pl-5 classprice"><sup>$</sup><span>{{$class->price}}</span></li>
             </ul>
             <div style="border-bottom: 2px solid #777777; width: 100%; padding-top: 10px;"></div>
-            <p style="padding-top: 10px; text-align: justify;">{{substr($class->description, 0, 70)}}</p><p class="d-inline">......</p>
+            <p style="padding-top: 10px; text-align: justify;">{{substr($class->description, 0, 70)}}<!-- <p class="d-inline">......</p> --></p>
             <ul class="classlist">
              <!--  <li><i class="fa fa-user fa-2x pr-4" style="color:red;"></i></li> -->
              <li><img src="{{asset('./img/trainericon.png')}}" width="40" height="40"></li>
@@ -105,12 +105,12 @@
               <div class="row">
                 <div class="col-lg-6 col-md-6">
                   <ul>
-                    <li style="float: left;"><h4 id="detail_name"></h4></li>
+                    <li><h4 id="detail_name"></h4></li>
                   </ul>
                 </div>
                 <div class="col-lg-6 col-md-6">
                   <ul>
-                    <li style="float: right;"><h4 id="detail_price"></h4></li>
+                    <li><h4 id="detail_price"></h4></li>
                   </ul>
                 </div>
               </div>
@@ -138,52 +138,6 @@
   </div>
 </div>
 
-
-<div class="modal fade modalsection" id="modalJoin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content" style="background-color: #f1f1f1;">
-     <div class="modal-header">
-      <h4 class="modal-title" style="letter-spacing: 2px; font-size: 16px; text-transform:uppercase; color: black;font-weight: normal;"><span style="color: red;font-size: 20px; text-transform: capitalize;">Olympia</span> Fitness Center</h4>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <div class="container">
-        <div class="row mt-4 mb-4">
-          <div class="col-lg-6 col-md-6 col-sm-12">
-            <img src="{{asset('./img/youga2.jpg')}}" alt="" class="img-fluid">
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-12">
-            <h3>Get Thin and Win</h3>
-            <h3 style="font-size: 20px;">Appointment <span>Information</span></h3>
-
-            <form action="{{route('orderclass.store')}}" method="post">
-                @csrf
-              <div class="form-group">
-                <label for="appointmentname"><i class="fa fa-user" ></i></label>
-                  <input type="text" name="class_id" id="class_id">
-                <input class="" type="text" placeholder="Your Name" id="appointmentname">
-              </div>
-              <div class="form-group">
-                <label for="appointmentphone"><i class="fa fa-phone" ></i></label>
-                <input type="number" placeholder="Phone No." id="appointmentphone" name="phone">
-              </div>
-              <div class="form-group">
-               <label for="appointmentdatetime"><i class="fa fa-calendar"></i></label>
-               <input name="appointment_date" type="text" placeholder="Appointment Date & Time" data-field="datetime" readonly id="appointmentdatetime">
-             </div>
-                <input type="submit" class="appointmentbtn" name="submit" value="Join Now">
-             {{--< href="" class="appointmentbtn">Join Now</>--}}
-             <div id="dtBox"></div>
-           </form>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
-</div>
-</div>
 
 
 <script>
@@ -480,26 +434,30 @@
     <div class="modal-body">
       <div class="container">
         <div class="row mt-4 mb-4">
-          <div class="col-lg-6 col-md-6 col-sm-12 my-md-auto">
+          <div class="col-lg-6 col-md-6 col-sm-12">
             <img src="{{asset('./img/youga2.jpg')}}" alt="" class="img-fluid">
           </div>
           <div class="col-lg-6 col-md-6 col-sm-12">
-            <h3 class="mt-2">Get Thin and Win</h3>
+            <h3>Get Thin and Win</h3>
             <h3 style="font-size: 20px;">Appointment <span>Information</span></h3>
-            <form action="">
+
+            <form action="{{route('orderclass.store')}}" method="post">
+                @csrf
               <div class="form-group">
-                <label for="appointmentname"><i class="fa fa-user"></i></label>
-                <input type="text" placeholder="Your Name" id="appointmentname">
+                <label for="appointmentname"><i class="fa fa-user" ></i></label>
+                  <input type="text" name="class_id" id="class_id">
+                <input class="" type="text" placeholder="Your Name" id="appointmentname">
               </div>
               <div class="form-group">
-                <label for="appointmentphone"><i class="fa fa-phone"></i></label>
-                <input type="number" placeholder="Phone No." id="appointmentphone">
+                <label for="appointmentphone"><i class="fa fa-phone" ></i></label>
+                <input type="number" placeholder="Phone No." id="appointmentphone" name="phone">
               </div>
               <div class="form-group">
                <label for="appointmentdatetime"><i class="fa fa-calendar"></i></label>
-               <input type="text" placeholder="Appointment Date & Time" data-field="datetime" readonly id="appointmentdatetime">
-             </div> 
-             <a href="" class="appointmentbtn">Join Now</a>
+               <input name="appointment_date" type="text" placeholder="Appointment Date & Time" data-field="datetime" readonly id="appointmentdatetime">
+             </div>
+                <input type="submit" class="appointmentbtn" name="submit" value="Join Now">
+             
              <div id="dtBox"></div>
            </form>
          </div>
