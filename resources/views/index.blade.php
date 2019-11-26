@@ -183,7 +183,7 @@
 <!-- End of Section Two -->
 
 <!-- Section Four -->
-<div class="container-fluid sectionfour" style="background-image: url({{asset('./img/testimontials.jpg')}});">
+<div class="container-fluid sectionfour" style="background-image: url({{asset('./img/testimontials.jpg')}}); background-size: cover; background-position: center center;">
     <div class="row" style="padding-top: 50px;padding-bottom: 50px;">
         <div class="col-lg-12 col-md-12 col-sm-12 text-center">
             <h2>What Our Clients Say!</h2>
@@ -236,7 +236,7 @@
 <!-- Section Five -->
 <div class="container-fluid sectionfive">
     <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+        <div class="col-lg-6 col-md-6 col-sm-12 text-center my-md-auto">
             <img src="{{asset('./img/man.png')}}"  class="img-fluid">
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 text-left discount">
@@ -441,6 +441,9 @@
     .pricecard p{
         color:#fff;
     }
+    .pricecard sup{
+        color:red;
+    }
     .pricecard p span{
         font-size: 30px;
     }
@@ -474,7 +477,6 @@
         border-radius: 5px;
         transition-duration: 0.2s;
         background-color: red;
-        color:#fff;
         transition:0.3s;
     }
 

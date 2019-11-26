@@ -1,7 +1,7 @@
 @extends('template')
 @section('content')
 <!-- start banner Area -->
-<section class="banner-area relative about-banner" id="home" style="background-image: url('{{asset('./img/home3.jpg')}}');">	
+<section class="banner-area relative about-banner" id="home" style="background-image: url('{{asset('./img/home3.jpg')}}');background-size: cover;background-position: center center;">	
 	<div class="overlay overlay-bg"></div>
 	<div class="container">				
 		<div class="row d-flex align-items-center justify-content-center">

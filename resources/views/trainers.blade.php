@@ -3,7 +3,7 @@
 <!-- start banner Area -->
 
 
-<section class="banner-area relative about-banner" id="home" style="background-image: url({{asset('./img/testimontials.jpg')}});">
+<section class="banner-area relative about-banner" id="home" style="background-image: url({{asset('./img/testimontials.jpg')}});background-size: cover;background-position: center center;">
 	<div class="overlay overlay-bg"></div>
 	<div class="container">
 		<div class="row d-flex align-items-center justify-content-center">
@@ -358,7 +358,8 @@
 	.trainerinfoicon li a{
 		color:red;
 	}
-<<<<<<< HEAD
+
+
 	.candolist,.aboutlist{
 		list-style: none;
 	}
@@ -370,9 +371,8 @@
 		width: 1em;
 	}
 	
-=======
 
->>>>>>> 1f3472eca027b520a4504d9a0448bff21be57efc
+
 
 	/*End of Modal Section*/
 
@@ -391,7 +391,7 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="col-lg-6 col-md-6 col-sm-12 my-md-auto">
                     <img src="" id="cover_img" alt="" class="img-fluid">
 
                 </div>

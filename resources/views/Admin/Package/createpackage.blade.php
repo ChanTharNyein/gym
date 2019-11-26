@@ -24,7 +24,7 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="serviceid1">Service ID One</label>
+                        <label for="serviceid1">Service One</label>
                         <input type="text" name="serviceid1" id="serviceid1" class="form-control @error('serviceid1') is-invalid @enderror">
                         @error('serviceid1')
                             <span class="invalid-feedback" role="alert">

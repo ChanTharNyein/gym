@@ -22,7 +22,7 @@
                         <input type="text" class="form-control" name="end_time" id="end_time">
                         <label for="class_desc">Class Description</label>
                         <textarea  name="class_desc" id="class_desc" class="form-control"></textarea>
-                        <label for="trainer_id">Trainer ID</label>
+                        <label for="trainer_id">Trainer Name</label>
                         <select name="trainer_id" id="trainer_id" class="custom-select">
                             @foreach($trainer as $trainers)
                                 <option value="{{$trainers->id}}">{{$trainers->name}}</option>

@@ -21,8 +21,8 @@
         <ul class="list pt-2">
           <li><a href="/">Home</a></li>
           <li><a href="/bloghome">Blog</a></li>
-          <li><a href="/classes">Classes</a></li>
-          <li><a href="/trainers">Trainers</a></li>
+          <li><a href="/class">Classes</a></li>
+          <li><a href="{{route('ourtrainer')}}">Trainers</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
