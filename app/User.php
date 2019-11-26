@@ -7,7 +7,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
 use App\OrderPackage;
-
+use App\OrderClass;
 class User extends Authenticatable
 {
     use Notifiable,HasRoles;
@@ -40,5 +40,8 @@ class User extends Authenticatable
     ];
     public function orderpackage(){
         return $this->belongsToMany('App\OrderPackage');
+    }
+    public function orderclass(){
+        return $this->belongsToMany('App\OrderClass');
     }
 }

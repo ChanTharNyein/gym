@@ -22,6 +22,7 @@ class PackageController extends Controller
         return view('Admin.Package.package',compact('package'));
     }
 
+
     /**
      * Show the form for creating a new resource.
      *

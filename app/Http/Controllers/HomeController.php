@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Package;
+use App\Trainer;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +25,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $trainer = Trainer::all();
+        $packages = Package::all();
+        return view('index',compact('packages','trainer'));
     }
 }

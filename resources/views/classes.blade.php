@@ -40,7 +40,7 @@
                 <li>Sun</li>
                 <li style="background-color: #fff;border:1px solid #fff">{{$class->end}}</li>
               </ul>
-              
+
               <a class="joinbtn pb-1" href="" data-toggle="modal" data-target="#modalDetail" data-id="{{$class->id}}">Detail</a>
               @guest
               <a href="{{route('login')}}" class="joinbtn pb-1">Join Now</a>
@@ -159,6 +159,7 @@
 
 <style>
   /*Modal Section*/
+
   #detail_price::before{
     content:"$";
     font-size: 25px;
@@ -435,6 +436,37 @@
   }
 
  </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#formsub2").validate({
+            // Specify validation rules
+            rules: {
+                name: "required",
+                lastname: "required",
+                phone: {
+                    required: true,
+                    digits: true,
+                    minlength: 10,
+                    maxlength: 10,
+                },
+
+            },
+            messages: {
+                name: {
+                    required: "Please enter first name",
+                },
+                phone: {
+                    required: "Please enter phone number",
+                    digits: "Please enter valid phone number",
+                    minlength: "Phone number field accept only 10 digits",
+                    maxlength: "Phone number field accept only 10 digits",
+                },
+            },
+
+        });
+    });
+</script>
  <div class="modal fade modalsection" id="modalJoin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content" style="background-color: #f1f1f1;">
@@ -454,25 +486,27 @@
             <h3>Get Thin and Win</h3>
             <h3 style="font-size: 20px;">Appointment <span>Information</span></h3>
 
-            <form action="{{route('orderclass.store')}}" method="post">
+            <form action="{{route('orderclass.store')}}" method="post" id="formsub2">
                 @csrf
               <div class="form-group">
                 <label for="appointmentname"><i class="fa fa-user" ></i></label>
+
                   <input type="hidden" name="class_id" id="class_id">
-                <input class="" type="text" placeholder="Your Name" id="appointmentname">
+
+                  <input class="form-control" name="name" type="text" placeholder="Your Name" id="appointmentname">
               </div>
               <div class="form-group">
                 <label for="appointmentphone"><i class="fa fa-phone" ></i></label>
-                <input type="number" placeholder="Phone No." id="appointmentphone" name="phone">
+                <input type="number" name="phone" placeholder="Phone No." id="appointmentphone" name="phone">
               </div>
               <div class="form-group">
                <label for="appointmentdatetime"><i class="fa fa-calendar"></i></label>
                <input name="appointment_date" type="text" placeholder="Appointment Date & Time" data-field="datetime" readonly id="appointmentdatetime">
              </div>
-                <input type="submit" class="appointmentbtn" name="submit" value="Join Now" style="border:1px solid red;">
-             
+                <input type="submit" id="paing" class="appointmentbtn" name="submit" value="Join Now" style="border:1px solid red;">
              <div id="dtBox"></div>
            </form>
+
          </div>
        </div>
      </div>
@@ -480,5 +514,4 @@
  </div>
 </div>
 </div>
-
  @endsection

@@ -2,7 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Classes;
+use App\Package;
+use App\Trainer;
+use App\User;
+//use http\Client\Curl\User;
 use Illuminate\Http\Request;
+use function PHPUnit\Framework\StaticAnalysis\HappyPath\AssertIsArray\consume;
 
 class ContactController extends Controller
 {
@@ -13,7 +19,11 @@ class ContactController extends Controller
      */
     public function index()
     {
-        return view('contact');
+        $trainers = Trainer::all();
+        $users = User::all();
+        $packages = Package::all();
+        $classes = Classes::all();
+        return view('contact',compact('trainers','users','packages','classes'));
     }
 
     /**

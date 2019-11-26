@@ -1,10 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Package;
+use App\Trainer;
 use App\Http\Resources\OrderPackageResource as OrderPackageResource;
 use App\OrderPackage;
+use Carbon\Carbon;
 use http\Client\Curl\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class OrderPackageController extends Controller
 {
@@ -15,19 +19,6 @@ class OrderPackageController extends Controller
      */
     public function index()
     {
-//        $packages = OrderPackage::all();
-//        //dd($orderpackage);
-//        $name=[];
-//        foreach ($packages->user as $username){
-//            $namepush=$username->name;
-//            array_push($name,$namepush);
-//
-//        }
-//        dd($name);
-//
-//        $orderpackage= OrderPackageResource::collection(OrderPackage::all());
-//        //dd($orderpackage);
-//        return view('Admin.OrderPackage.orderpackage',compact('orderpackage'));
         $orderpackages = OrderPackage::all();
         return view('Admin.OrderPackage.orderpackage', compact('orderpackages'));
     }
@@ -50,7 +41,21 @@ class OrderPackageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $request->validate([
+            'name' => 'required|min:2',
+            'phone' => 'required'
+        ]);
+        $order=new OrderPackage;
+        $order->user_id = Auth::id();
+        $order->phone=request('phone');
+        $order->package_id=request('package_id');
+        $order->trainer_id=request('trainer_id');
+        $order->appointment_date=Carbon::parse(request('appointdate'));
+        $order->save();
+        $packages = Package::all();
+        $trainer = Trainer::all();
+        return view('index',compact('trainer','packages'));
     }
 
     /**
@@ -72,7 +77,10 @@ class OrderPackageController extends Controller
      */
     public function edit($id)
     {
-        //
+        $orderpackage = OrderPackage::find($id);
+        $trainers = Trainer::all();
+        $packages = Package::all();
+        return view('Admin.OrderPackage.update',compact('trainers','packages','orderpackage'));
     }
 
     /**
@@ -95,6 +103,8 @@ class OrderPackageController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $orderpackage = OrderPackage::find($id);
+        $orderpackage->delete();
+        return redirect()->route('orderpackage.index');
     }
 }
