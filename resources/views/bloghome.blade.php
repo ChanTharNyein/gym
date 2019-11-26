@@ -87,7 +87,7 @@
 
 						<div class="col-lg-4 sidebar-widgets">
 							<div class="widget-wrap"  style="background-color: #f1f1f1;">
-								<div class="single-sidebar-widget popular-post-widget">
+								<!-- <div class="single-sidebar-widget popular-post-widget">
 									<h4 class="popular-title">Popular Posts</h4>
 									<div class="popular-post-list">
 										<div class="single-post-list d-flex flex-row align-items-center">
@@ -100,7 +100,7 @@
 											</div>
 										</div>
 									</div>
-								</div>
+								</div> -->
 
 								<div class="single-sidebar-widget post-category-widget">
 									<h4 class="category-title">Post Catgories</h4>
@@ -114,7 +114,7 @@
                                         @endforeach
 									</ul>
 								</div>
-								<div class="single-sidebar-widget newsletter-widget">
+								<!-- <div class="single-sidebar-widget newsletter-widget">
 									<h4 class="newsletter-title">Newsletter</h4>
 									<p>
 										Here, I focus on a range of items and features that we use in life without
@@ -135,7 +135,7 @@
 									<p class="text-bottom">
 										You can unsubscribe at any time
 									</p>
-								</div>
+								</div> -->
 							</div>
 						</div>
 					</div>

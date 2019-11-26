@@ -634,7 +634,7 @@
                         <div class="form-group trainerselect">
                             <select  class="form-control" onfocus='this.size=3;' onblur='this.size=1;' onchange='this.size=1; this.blur();' style="padding:0px;" name="trainer_id" >
 
-                                <option selected="selected">Need a Trainer? (Optional)</option>
+                                <option selected="selected">Need a Trainer?</option>
                                 @foreach($trainer as $trainer)
                                     <option value="{{$trainer->id}}">{{$trainer->name}}</option>
                                 @endforeach

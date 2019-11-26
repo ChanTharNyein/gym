@@ -83,20 +83,22 @@
     </div>
   </div>
 </div>
-<div class="card my-4 commentsection offset-lg-2 col-lg-8">
-  <h5 class="card-header commentheader">Leave a Comment</h5>
-  <div class="card-body">
 
-    <form name="frm" id="frm">
-      <div class="form-group">
-        <textarea class="form-control"  name="body" rows="3" id="body"></textarea>
-        <input type="hidden" id="pid" name="pid" value="{{$post->id}}">
-      </div>
-      <!-- <button class="click" type="submit" name="submit">Submit</button> -->
-      <div class="col-lg-2 offset-lg-5">
+
         @guest
-        <a href="{{route('login')}}"name="pid" class="click">LogIn</a>
+        
         @else
+        <div class="card my-4 commentsection offset-lg-2 col-lg-8">
+      <h5 class="card-header commentheader">Leave a Comment</h5>
+      <div class="card-body">
+
+        <form name="frm" id="frm">
+          <div class="form-group">
+            <textarea class="form-control"  name="body" rows="3" id="body"></textarea>
+            <input type="hidden" id="pid" name="pid" value="{{$post->id}}">
+          </div>
+          <!-- <button class="click" type="submit" name="submit">Submit</button> -->
+          <div class="col-lg-2 offset-lg-5">
         <a href="" class="click" type="submit" id="pid" name="pid" value="{{$post->id}}">Send</a>
         @endguest
       </div>

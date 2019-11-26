@@ -160,11 +160,11 @@
 <style>
   /*Modal Section*/
 
-  #detail_price::before{
+  /*#detail_price::before{
     content:"$";
     font-size: 25px;
     color:red;
-  }
+  }*/
   #trainername::before{
     content:"Trainer - ";
     color: #777777;
@@ -489,11 +489,9 @@
             <form action="{{route('orderclass.store')}}" method="post" id="formsub2">
                 @csrf
               <div class="form-group">
-                <label for="appointmentname"><i class="fa fa-user" ></i></label>
-
+                <label for="appointmentname"><i class="fa fa-user"></i></label>
                   <input type="hidden" name="class_id" id="class_id">
-
-                  <input class="form-control" name="name" type="text" placeholder="Your Name" id="appointmentname">
+                  <input  name="name" type="text" placeholder="Your Name" id="appointmentname">
               </div>
               <div class="form-group">
                 <label for="appointmentphone"><i class="fa fa-phone" ></i></label>
