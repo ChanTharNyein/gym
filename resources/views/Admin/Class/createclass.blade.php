@@ -16,7 +16,7 @@
                         </span>
                         @enderror
                         <label for="class_price">Class Price</label>
-                        <input type="number" name="class_price" id="class_price" class="form-control @error('class_price') is-invalid @enderror">
+                        <input type="number" step="0.01" name="class_price" id="class_price" class="form-control @error('class_price') is-invalid @enderror">
                         @error('class_price')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{$message}}</strong>

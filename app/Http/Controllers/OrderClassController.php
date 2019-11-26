@@ -10,6 +10,10 @@ use Illuminate\Support\Facades\Auth;
 
 class OrderClassController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware ('role:admin',['except'=>['store']]);
+    }
     /**
      * Display a listing of the resource.
      *
