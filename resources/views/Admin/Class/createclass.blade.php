@@ -46,6 +46,7 @@
                         </span>
                         @enderror
                         <label for="class_desc">Class Description</label>
+
                         <textarea  name="class_desc" id="class_desc" class="form-control @error('class_desc') is-invalid @enderror"></textarea>
                         @error('class_desc')
                         <span class="invalid-feedback" role="alert">
@@ -53,6 +54,7 @@
                         </span>
                         @enderror
                         <label for="trainer_id">Trainer ID</label>
+
                         <select name="trainer_id" id="trainer_id" class="custom-select">
                             @foreach($trainer as $trainers)
                                 <option value="{{$trainers->id}}">{{$trainers->name}}</option>

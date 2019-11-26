@@ -16,7 +16,7 @@
                             </span>
                         @enderror
                         <label for="price">Package Price</label>
-                        <input type="number" name="price" id="price" class="form-control @error('price') is-invalid @enderror">
+                        <input type="number" step="0.01" name="price" id="price" class="form-control @error('price') is-invalid @enderror">
                         @error('price')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{$message}}</strong>
@@ -24,7 +24,7 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="serviceid1">Service ID One</label>
+                        <label for="serviceid1">Service One</label>
                         <input type="text" name="serviceid1" id="serviceid1" class="form-control @error('serviceid1') is-invalid @enderror">
                         @error('serviceid1')
                             <span class="invalid-feedback" role="alert">

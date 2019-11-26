@@ -31,7 +31,7 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="trainer_id">Trainer ID</label>
+                        <label for="trainer_id">Trainer Name</label>
                         <select name="trainer_id" id="trainer_id" class="custom-select">
                             @foreach($trainer as $trainers)
                                 <option value="{{$trainers->id}}">{{$trainers->name}}</option>
@@ -39,7 +39,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="category_id">Category ID</label>
+                        <label for="category_id">Category</label>
                         <select name="category_id" id="category_id" class="custom-select">
                             @foreach($category as $cates)
                                 <option value="{{$cates->id}}">{{$cates->name}}</option>

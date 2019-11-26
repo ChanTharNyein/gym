@@ -23,7 +23,9 @@
                 <h4 class="headertext1 pl-2 animated fadeInLeft">Looking For</h4>
                 <h1 class="animated fadeInRight">Personal <span style="color: red">Trainer?</span></h1>
                 <p class="animated fadeInLeft">Don't Stop When You're Tired. Stop When You're Done.</p>
-                <button class="joinbtn animated fadeInRight">Become A Member</button>
+                @guest
+                <a href="{{route('login')}}" class="joinbtn animated fadeInRight">Become A Member</a>
+                @endguest
             </div>
         </div>
         <div class="carousel-item">
@@ -36,7 +38,9 @@
             <h4 class="headertext1 pl-2 animated fadeInDown">Are You Ready To</h4>
             <h1 class="animated slideInLeft"><span style="color:red;">Get Fit</span>, Strong!</h1>
             <p class="animated slideInRight">Get In Shape & Be Healthy. No Pain, No Gain.</p>
-            <button class="joinbtn animated fadeInUp">Become A Member</button>
+            @guest
+            <a href="{{route('login')}}" class="joinbtn animated fadeInUp">Become A Member</a>
+            @endguest
         </div>
     </div>
 </div>
@@ -132,7 +136,7 @@
 <!-- End of Section Two -->
 
 <!-- Section Four -->
-<div class="container-fluid sectionfour" style="background-image: url({{asset('./img/testimontials.jpg')}});">
+<div class="container-fluid sectionfour" style="background-image: url({{asset('./img/testimontials.jpg')}}); background-size: cover; background-position: center center;">
     <div class="row" style="padding-top: 50px;padding-bottom: 50px;">
         <div class="col-lg-12 col-md-12 col-sm-12 text-center">
             <h2>What Our Clients Say!</h2>
@@ -185,13 +189,15 @@
 <!-- Section Five -->
 <div class="container-fluid sectionfive">
     <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12 text-center">
+        <div class="col-lg-6 col-md-6 col-sm-12 text-center my-md-auto">
             <img src="{{asset('./img/man.png')}}"  class="img-fluid">
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 text-left discount">
             <h3>Fitness Classes This Summer.<br> Pay Now And Get <span style="color:red;font-size: 40px;">25%</span> Discount.</h3>
             <p class="pt-3 text-justify">Somewhere between first tries and finish lines. Pillows flight and pushing limits.That's where you find Fitness. How you spend your day determines when you reach your goals. And seeing your progress helps you see what's possible.</p>
-            <button class="joinbtn mt-1">Become A Member</button>
+            @guest
+            <a href="{{route('login')}}" class="joinbtn mt-1">Become A Member</a>
+            @endguest
         </div>
     </div>
 </div>
@@ -390,6 +396,9 @@
     .pricecard p{
         color:#fff;
     }
+    .pricecard sup{
+        color:red;
+    }
     .pricecard p span{
         font-size: 30px;
     }
@@ -423,7 +432,6 @@
         border-radius: 5px;
         transition-duration: 0.2s;
         background-color: red;
-        color:#fff;
         transition:0.3s;
     }
 
@@ -626,7 +634,7 @@
                         <div class="form-group trainerselect">
                             <select  class="form-control" onfocus='this.size=3;' onblur='this.size=1;' onchange='this.size=1; this.blur();' style="padding:0px;" name="trainer_id" >
 
-                                <option selected="selected">Need a Trainer? (Optional)</option>
+                                <option selected="selected">Need a Trainer?</option>
                                 @foreach($trainer as $trainer)
                                     <option value="{{$trainer->id}}">{{$trainer->name}}</option>
                                 @endforeach

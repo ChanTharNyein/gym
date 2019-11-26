@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 offset-0">
-                <table class="table">
+                <table class="table" style="width: 100%;">
                     <h3 class="text-capitalize">Trainers Table</h3>
                     <thead class="text-dark">
                     <tr>
@@ -16,7 +16,7 @@
                         <th>Facebook</th>
                         <th>Gmail</th>
                         <th>Instagram</th>
-                        <th>action</th>
+                        <th>Action</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -30,12 +30,16 @@
                         <td>{{$train->gmail}}</td>
                         <td>{{$train->instagram}}</td>
                         <td>
-                            <a href="{{route('trainer.edit',$train->id)}}" class="btn btn-info">Update</a>
+                            
+                              <a href="{{route('trainer.edit',$train->id)}}" class="btn btn-info mb-2">Update</a>
+                                                    
                             <form action="{{route('trainer.destroy',$train->id)}}" class="d-inline-block" method="post" onsubmit="return dele(event)">
                                 @csrf
                                 @method('DELETE')
                                 <input type="submit" name="delete" class="btn btn-danger" value="Delete">
-                            </form>
+                            </form>  
+                           
+                            
                         </td>
                     </tr>
                     @endforeach
@@ -52,5 +56,8 @@
         </div>
     </div>
 @endsection
+
+
+
 
 

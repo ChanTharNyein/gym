@@ -1,7 +1,10 @@
 @extends('template')
 @section('content')
 <!-- start banner Area -->
-<section class="banner-area relative about-banner" id="home" style="background-image: url('{{asset('./img/home3.jpg')}}');">
+
+<section class="banner-area relative about-banner" id="home" style="background-image: url('{{asset('./img/home3.jpg')}}');background-size: cover;background-position: center center;">	
+
+
 	<div class="overlay overlay-bg"></div>
 	<div class="container">
 		<div class="row d-flex align-items-center justify-content-center">
@@ -77,7 +80,7 @@
 <!-- End of Section One -->
 
 <!-- Section Tow -->
-<div class="cool-facts-area section-padding-100-0 bg-img bg-overlay" style="background-image: url({{asset('./img/contactbg.jpg')}});">
+<div class="cool-facts-area section-padding-100-0 bg-img bg-overlay" style="background-image: url({{asset('./img/contactbg.jpg')}});background-size: cover; background-attachment: fixed;">
 	<div class="container">
 		<div class="row" style="padding-top: 70px;padding-bottom: 70px;">
 
@@ -385,7 +388,8 @@ margin-bottom: 0; }*/
         /*padding-left: 5%;*/
         width: 95% !important;
         height: 80% !important;
-        border: 2px solid #777777;
+        /*border: 2px solid #777777;*/
+        box-shadow: 0 3px 3px rgba(0,0,0,0.5);
     }
 /*End of Section Four*/
 		</style>

@@ -3,7 +3,7 @@
 <!-- start banner Area -->
 <script src="{{asset('js/DateTimePicker.js')}}"></script>
 <link rel="stylesheet" href="{{asset('css/DateTimePicker.css')}}">
-<section class="banner-area relative about-banner" id="home" style="background-image: url({{asset('./img/home3.jpg')}});">
+<section class="banner-area relative about-banner" id="home" style="background-image: url({{asset('./img/home3.jpg')}});background-size: cover;background-position: center center;">
 	<div class="overlay overlay-bg"></div>
 	<div class="container">
 		<div class="row d-flex align-items-center justify-content-center">
@@ -42,7 +42,11 @@
               </ul>
 
               <a class="joinbtn pb-1" href="" data-toggle="modal" data-target="#modalDetail" data-id="{{$class->id}}">Detail</a>
+              @guest
+              <a href="{{route('login')}}" class="joinbtn pb-1">Join Now</a>
+              @else
               <a href="" class="joinbtn pb-1" data-toggle="modal" data-target="#modalJoin" data-id="{{$class->id}}">Join Now</a>
+              @endguest
 
             </div>
           </div>
@@ -55,7 +59,7 @@
             <p style="padding-top: 10px; text-align: justify;">{{substr($class->description, 0, 70)}}<!-- <p class="d-inline">......</p> --></p>
             <ul class="classlist">
              <!--  <li><i class="fa fa-user fa-2x pr-4" style="color:red;"></i></li> -->
-             <li><img src="{{asset('./img/trainericon.png')}}" width="40" height="40"></li>
+             <li><img src="{{asset('./img/trainericon.png')}}" width="40" height="40" style="margin-bottom: -10px;"></li>
              <li><h3 class="pl-4">{{$class->trainer->name}}</h3></li>
            </ul>
          </div>
@@ -72,7 +76,7 @@
 <!-- End top-course Area -->
 
 <!-- Start callto Area -->
-<section class="callto-area section-gap relative" style="background-image: url('{{asset('./img/background.jpg')}}')">
+<section class="callto-area section-gap relative" style="background-image: url('{{asset('./img/background.jpg')}}');background-size: cover;background-position: center center;">
 	<div class="overlay overlay-bg"></div>
 	<div class="container">
 		<div class="row pt-5">
@@ -129,7 +133,7 @@
                 </div>
               </div>
               <p id="desc"></p>
-              <span style="font-size: 18px; color:red; font-weight:bold;" id="trainername"></span>
+              <span style="font-size: 18px; color:red; font-weight:bold; float: left;" id="trainername"></span>
             </div>
           </div>
         </div>
@@ -156,6 +160,15 @@
 <style>
   /*Modal Section*/
 
+  /*#detail_price::before{
+    content:"$";
+    font-size: 25px;
+    color:red;
+  }*/
+  #trainername::before{
+    content:"Trainer - ";
+    color: #777777;
+  }
 
   .classdetail h4{
     color:#777777;
@@ -216,7 +229,7 @@
   .classlist h3{
     font-family: 'Poppins';
     font-weight: normal;
-    font-size: 30px;
+    font-size: 25px;
     color:#777777;
   }
   .section-title h1{
@@ -269,6 +282,7 @@
   }
   .classprice sup{
     font-size: 18px;
+    color:red;
   }
   .classprice span{
     font-size: 30px;
@@ -475,12 +489,9 @@
             <form action="{{route('orderclass.store')}}" method="post" id="formsub2">
                 @csrf
               <div class="form-group">
-                <label for="appointmentname"><i class="fa fa-user" ></i></label>
-
+                <label for="appointmentname"><i class="fa fa-user"></i></label>
                   <input type="hidden" name="class_id" id="class_id">
-
-                  <input class="form-control" name="name" type="text" placeholder="Your Name" id="appointmentname">
-
+                  <input  name="name" type="text" placeholder="Your Name" id="appointmentname">
               </div>
               <div class="form-group">
                 <label for="appointmentphone"><i class="fa fa-phone" ></i></label>
@@ -490,8 +501,7 @@
                <label for="appointmentdatetime"><i class="fa fa-calendar"></i></label>
                <input name="appointment_date" type="text" placeholder="Appointment Date & Time" data-field="datetime" readonly id="appointmentdatetime">
              </div>
-                <input type="submit" id="paing" class="appointmentbtn" name="submit" value="Join Now">
-
+                <input type="submit" id="paing" class="appointmentbtn" name="submit" value="Join Now" style="border:1px solid red;">
              <div id="dtBox"></div>
            </form>
 

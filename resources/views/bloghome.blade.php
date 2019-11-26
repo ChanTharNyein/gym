@@ -2,7 +2,7 @@
 @section('content')
 
 <!-- start banner Area -->
-			<section class="banner-area relative" id="home" style="background-image: url({{asset('./img/home3.jpg')}});">
+			<section class="banner-area relative" id="home" style="background-image: url({{asset('./img/home3.jpg')}});background-size: cover;background-position: center center;">
 
 				<div class="overlay overlay-bg"></div>
 				<div class="container">
@@ -41,13 +41,13 @@
 								<div class="col-lg-3  col-md-3 meta-details">
 
 									<div class="user-details row">
-										<p class="user-name col-lg-12 col-md-12 col-6"><a href="#">{{$post->trainer->name}}</a> <span class="lnr lnr-user" style="color:red;"></span></p>
-										<p class="date col-lg-12 col-md-12 col-6"><a href="#">{{$post->created_at}}</a> <span class="lnr lnr-calendar-full" style="color:red;"></span></p>
+										<p class="user-name col-lg-12 col-md-12">{{$post->trainer->name}}<span class="lnr lnr-user pl-1" style="color:red;"></span></p>
+										<p class="date col-lg-12 col-md-12">{{$post->created_at->format('d/m/Y')}}<span class="lnr lnr-calendar-full pl-1" style="color:red;"></span></p>
 
-										<p class="comments col-lg-12 col-md-12 col-6"><a href="#">06 Comments</a> <span class="lnr lnr-bubble" style="color:red;"></span></p>
+										<p class="comments col-lg-12 col-md-12">06 Comments<span class="lnr lnr-bubble pl-1" style="color:red;"></span></p>
 									</div>
 								</div>
-								<div class="col-lg-9 col-md-9 ">
+								<div class="col-lg-9 col-md-9 mb-3">
 									<div class="feature-img">
 										<img class="img-fluid" src="{{asset($post->image)}}" alt="">
 									</div>
@@ -57,6 +57,7 @@
 									</p>
 									<a href="{{route('postid',$post->id)}}" class="primary-btn">View More</a>
 								</div>
+								<hr style="color:#777777;width:100%;">
                                 @endforeach
 							</div>
 		                    <!-- <nav class="blog-pagination justify-content-center d-flex">
@@ -86,7 +87,7 @@
 
 						<div class="col-lg-4 sidebar-widgets">
 							<div class="widget-wrap"  style="background-color: #f1f1f1;">
-								<div class="single-sidebar-widget popular-post-widget">
+								<!-- <div class="single-sidebar-widget popular-post-widget">
 									<h4 class="popular-title">Popular Posts</h4>
 									<div class="popular-post-list">
 										<div class="single-post-list d-flex flex-row align-items-center">
@@ -99,7 +100,7 @@
 											</div>
 										</div>
 									</div>
-								</div>
+								</div> -->
 
 								<div class="single-sidebar-widget post-category-widget">
 									<h4 class="category-title">Post Catgories</h4>
@@ -113,7 +114,7 @@
                                         @endforeach
 									</ul>
 								</div>
-								<div class="single-sidebar-widget newsletter-widget">
+								<!-- <div class="single-sidebar-widget newsletter-widget">
 									<h4 class="newsletter-title">Newsletter</h4>
 									<p>
 										Here, I focus on a range of items and features that we use in life without
@@ -134,7 +135,7 @@
 									<p class="text-bottom">
 										You can unsubscribe at any time
 									</p>
-								</div>
+								</div> -->
 							</div>
 						</div>
 					</div>
@@ -143,3 +144,4 @@
 			<!-- End post-content Area -->
 
 @endsection
+

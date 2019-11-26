@@ -97,7 +97,7 @@
 <!-- Style -->
 <style>
     .card{
-        background-color: #121212;
+        background-color: #454141;
         border-radius: 10px;
     }
     .card input{
@@ -105,6 +105,9 @@
         border-radius: 20px;
         background-color: transparent;
         padding-left: 10px;
+    }
+    .card input:focus{
+        color:#fff;
     }
     .card-header{
         font-size: 18px;

@@ -11,16 +11,8 @@
 |
 */
 
+Route::get('/', 'HomeController@index');
 
-Route::get('/trainers',function (){
-   return view('trainers');
-});
-Route::get('/bloghome',function (){
-    return view('bloghome');
-});
-Route::get('/classes',function (){
-    return view('classes');
-});
 
 Route::resource('/class','ClassController');
 Route::get('/showclass','ClassController@showclass')->name('tableclass');
@@ -39,7 +31,8 @@ Route::post('/sendemail/send', 'SendEmailController@send')->name('sentmail');
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index');
+// Route::get('/', 'HomeController@index');
+
 Route::resource('/admin/package','PackageController');
 Route::resource('/admin/category','CategoryController');
 Route::resource('/admin/trainer','TrainersController');
