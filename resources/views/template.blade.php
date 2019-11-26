@@ -25,7 +25,7 @@
 
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		
+
         <meta name="csrf-token" content="{{ csrf_token() }}">
 			<!--
 			CSS
@@ -70,7 +70,7 @@
             $(document).ready(function(){
                 $('#modalQuickView').on('show.bs.modal', function (e) {
                     var id = $(e.relatedTarget).data('id');
-                    console.log(id);
+                    //console.log(id);
                     $.get('/admin/trainer/' + id, function(response){
                         //console.log(response);
                         $('#trainer_name').html(response.name);
@@ -90,7 +90,7 @@
                         var id = $(e.relatedTarget).data('id');
                         //console.log(id);
                         $.get('/class/' + id,function (response) {
-                            console.log(response);
+                            //console.log(response);
                             $('#detail_name').html(response.name);
                             $('#detail_price').html('$'+response.price);
                             $('#start').html(response.start);
@@ -107,6 +107,12 @@
                         $('#class_id').val(id);
                         //
                     })
+                    $('#packageModal').on('show.bs.modal',function (e) {
+                        var id = $(e.relatedTarget).data('id');
+                        //console.log(id);
+                        $('#package_id').val(id);
+                    })
+
                 })
             </script>
 

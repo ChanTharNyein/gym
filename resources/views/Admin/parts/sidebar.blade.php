@@ -30,12 +30,16 @@
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
             <i class="fas fa-fw fa-cog"></i>
-            <span>Categories</span>
+            <span>Categories And Orders</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="{{route('category.index')}}">Categories Table</a>
                 <a class="collapse-item" href="{{route('category.create')}}">Create Category</a>
+                <div class="collapse-divider"></div>
+                <h2 class="collapse-header">Orders</h2>
+                <a class="collapse-item" href="{{route('orderclass.index')}}">Order Classes</a>
+                <a class="collapse-item" href="{{route('orderpackage.index')}}">Order Packages</a>
             </div>
         </div>
     </li>

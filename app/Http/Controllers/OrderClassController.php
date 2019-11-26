@@ -17,7 +17,8 @@ class OrderClassController extends Controller
      */
     public function index()
     {
-        //
+        $orderclasses = OrderClass::all();
+        return view('Admin.OrderClass.orderclass',compact('orderclasses'));
     }
 
     /**
@@ -42,6 +43,10 @@ class OrderClassController extends Controller
         //$datetime=request('appointment_date');
         //$datetime
         //dd($datetime);
+        $request->validate([
+            'name' => 'required|min:2',
+            'phone' => 'required'
+        ]);
         $order=new OrderClass;
         $order->user_id = Auth::id();
         $order->phone=request('phone');
@@ -70,7 +75,9 @@ class OrderClassController extends Controller
      */
     public function edit($id)
     {
-        //
+        $orderclass = OrderClass::find($id);
+        $class = Classes::all();
+        return view('Admin.OrderClass.edit_orderclass',compact('orderclass','class'));
     }
 
     /**
@@ -82,7 +89,17 @@ class OrderClassController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'start' => 'required|min:2',
+            'end' => 'required'
+        ]);
+        $order= OrderClass::find($id);
+        $order->class_id = request('class_name');
+        $order->start_date = request('start') ;
+        $order->end_date = request('end') ;
+        $order->status=request('status');
+        $order->save();
+        return redirect()->route('orderclass.index');
     }
 
     /**
@@ -93,6 +110,8 @@ class OrderClassController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $orderclass = OrderClass::find($id);
+        $orderclass->delete();
+        return redirect()->route('orderclass.index');
     }
 }

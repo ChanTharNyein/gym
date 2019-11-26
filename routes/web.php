@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+
 Route::get('/trainers',function (){
    return view('trainers');
 });
@@ -22,9 +20,6 @@ Route::get('/bloghome',function (){
 });
 Route::get('/classes',function (){
     return view('classes');
-});
-Route::get('/contact',function (){
-    return view('contact');
 });
 
 Route::resource('/class','ClassController');
@@ -35,14 +30,16 @@ Route::get('/blogpost/{id}', 'BlogpostController@postid')->name('postid');
 Route::get('/category/{id}', 'BlogpostController@categoryid')->name('categoryid');
 
 
-
+Route::resource('/contact','ContactController');
 Route::resource('/comment','CommentController');
 Route::resource('/orderclass','OrderClassController');
 Route::post('/getcomments','CommentController@getcomments')->name('getcomments');
+Route::get('/sendemail', 'SendEmailController@index');
+Route::post('/sendemail/send', 'SendEmailController@send')->name('sentmail');
 
 Auth::routes();
 
-Route::get('/index', 'HomeController@index');
+Route::get('/', 'HomeController@index');
 Route::resource('/admin/package','PackageController');
 Route::resource('/admin/category','CategoryController');
 Route::resource('/admin/trainer','TrainersController');

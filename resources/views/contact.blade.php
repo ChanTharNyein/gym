@@ -1,16 +1,16 @@
 @extends('template')
 @section('content')
 <!-- start banner Area -->
-<section class="banner-area relative about-banner" id="home" style="background-image: url('{{asset('./img/home3.jpg')}}');">	
+<section class="banner-area relative about-banner" id="home" style="background-image: url('{{asset('./img/home3.jpg')}}');">
 	<div class="overlay overlay-bg"></div>
-	<div class="container">				
+	<div class="container">
 		<div class="row d-flex align-items-center justify-content-center">
 			<div class="about-content col-lg-12">
 				<h1 class="text-white">
-					Contact Us				
-				</h1>	
+					Contact Us
+				</h1>
 				<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="contact.html"> Contact Us</a></p>
-			</div>	
+			</div>
 		</div>
 	</div>
 </section>
@@ -32,7 +32,7 @@
 						<div class="col-lg-1">
 							<span class="lnr lnr-pointer-right"></span>
 						</div>
-						<div class="col-lg-11">     
+						<div class="col-lg-11">
 							<h5 class="about-title">Analyze Your Goal</h5>
 							<p class="mt-2">At first, you should know what you want.In fitness, there are no short cuts. It involves immense discipline and hard work.</p>
 						</div>
@@ -41,7 +41,7 @@
 						<div class="col-lg-1">
 							<span class="lnr lnr-pointer-right"></span>
 						</div>
-						<div class="col-lg-11">     
+						<div class="col-lg-11">
 							<h5 class="about-title">Work Hard On It</h5>
 							<p class="mt-2">Next,you must keep that goal for trying yourselves.That's one thing you learn in sports. You don't give up; you fight to the finish.</p>
 						</div>
@@ -50,7 +50,7 @@
 						<div class="col-lg-1">
 							<span class="lnr lnr-pointer-right"></span>
 						</div>
-						<div class="col-lg-11">     
+						<div class="col-lg-11">
 							<h5 class="about-title">Improve Your Performance</h5>
 							<p class="mt-2">It keeps you on your toes. You’re ready to turn your walks into jogs, lift heavier weights, or swim faster than you might have thought you ever would.</p>
 						</div>
@@ -59,7 +59,7 @@
 						<div class="col-lg-1">
 							<span class="lnr lnr-pointer-right"></span>
 						</div>
-						<div class="col-lg-11">     
+						<div class="col-lg-11">
 							<h5 class="about-title">Achieve Your Perfect Body</h5>
 							<p class="mt-2">To try a perfect body , you will need to do : Build Muscle,Loss Fat,Get In Shape, and Improve Health etc.</p>
 						</div>
@@ -83,39 +83,54 @@
 
 			<!-- Single Cool Facts -->
 			<div class="col-12 col-sm-6 col-lg-3">
+                <?php $no=1; ?>
 				<div class="single-cool-fact text-center">
 					<img src="{{asset('./img/exercise.png')}}">
-					<h2 class="mt-4"><span class="counter" data-count="254">0</span></h2>
+                    @foreach($users as $user)
+                        <h5 style="display:none;">{{$no++}}</h5>
+                    @endforeach
+					<h2 class="mt-4"><span class="counter" data-count="{{$no}}">0</span></h2>
 					<p>Happy Clients</p>
 				</div>
 			</div>
-
 			<!-- Single Cool Facts -->
 			<div class="col-12 col-sm-6 col-lg-3">
+                <?php $nu=1; ?>
 				<div class="single-cool-fact text-center">
 					<img src="{{asset('./img/aerobics.png')}}">
 					<!-- <span class="lnr lnr-bicycle" style="font-size: 80px; color: red;"></span> -->
-					<h2 class="mt-4"><span class="counter" data-count="26">0</span></h2>
+                    @foreach($trainers as $trainer)
+                        <h5 style="display:none;">{{$nu++}}</h5>
+                    @endforeach
+					<h2 class="mt-4"><span class="counter" data-count="{{$nu}}">0</span></h2>
 					<p>Trainers</p>
 				</div>
 			</div>
 
 			<!-- Single Cool Facts -->
 			<div class="col-12 col-sm-6 col-lg-3">
+                <?php $num=1; ?>
 				<div class="single-cool-fact text-center">
 					<img src="{{asset('./img/techniques.png')}}">
 					<!-- <span class="lnr lnr-clock" style="font-size: 80px; color: red;"></span> -->
-					<h2 class="mt-4"><span class="counter" data-count="10">0</span></h2>
+                    @foreach($packages as $package)
+                        <h5 style="display:none;">{{$num++}}</h5>
+                    @endforeach
+					<h2 class="mt-4"><span class="counter" data-count="{{$num}}">0</span></h2>
 					<p>Packages</p>
 				</div>
 			</div>
 
 			<!-- Single Cool Facts -->
 			<div class="col-12 col-sm-6 col-lg-3">
+                <?php $nun=1; ?>
 				<div class="single-cool-fact text-center">
 					<img src="{{asset('./img/dance.png')}}">
 					<!-- <span class="lnr lnr-dinner" style="font-size: 80px; color: red;"></span> -->
-					<h2 class="mt-4"><span class="counter" data-count="15">0</span></h2>
+                    @foreach($classes as $class)
+                        <h5 style="display:none; ">{{$nun++}}</h5>
+                    @endforeach
+					<h2 class="mt-4"><span class="counter" data-count="{{$nun}}">0</span></h2>
 					<p>Classes</p>
 				</div>
 			</div>
@@ -151,7 +166,7 @@
 						<div class="services d-flex mb-2">
 			                <div class="icon d-flex align-content-center justify-content-center">
 			                    <i class="fa fa-map-marker" style="color:red;font-size: 30px;"></i>
-			                </div> 
+			                </div>
 			                <div class="servicetext pl-3">
 			                    <h4>Where We Are?</h4>
 			                    <p>Lorem ipsum dolor sit amet,</p>
@@ -160,7 +175,7 @@
 			            <div class="services d-flex mb-2">
 			                <div class="icon d-flex align-content-center justify-content-center">
 			                    <i class="fa fa-envelope" style="color:red;font-size: 20px;"></i>
-			                </div> 
+			                </div>
 			                <div class="servicetext pl-3">
 			                    <h4>Need Help?</h4>
 			                    <p>olympiafitnesscenter@gmail.com</p>
@@ -169,7 +184,7 @@
 			            <div class="services d-flex mb-2">
 			                <div class="icon d-flex align-content-center justify-content-center">
 			                    <i class="fa fa-phone" style="color:red;font-size: 25px;"></i>
-			                </div> 
+			                </div>
 			                <div class="servicetext pl-3">
 			                    <h4>Feel Like Talking?</h4>
 			                    <p>olympiafitnesscenter@gmail.com</p>
@@ -186,23 +201,24 @@
 					<div class="col-lg-6 col-md-6" style="background-color:rgba(0,0,0,0.1);margin-bottom: 15px;">
 						<div class="contact-content" >
 							<!-- Contact Form Area -->
-							<div class="contact-form-area my-4">
-								<form action="/contact" method="">
-									<div class="form-group">
-										<input type="text" class="form-control" id="name" placeholder="Your Name"  required="required">
-									</div>
-									<div class="form-group">
-										<input type="email" class="form-control" id="email" placeholder="Your E-mail" required="required">
-									</div>
-									<div class="form-group">
-										<input type="text" class="form-control" id="title" placeholder="Subject" required="required">
-									</div>
-									<div class="form-group">
-										<textarea name="description" class="form-control" id="message"  placeholder="Message" required="required"></textarea>
-									</div>
-									<button class="btn fitness-btn btn-2 btn-danger" type="submit">Send Message</button>
-								</form>
-							</div>
+                            <div class="contact-form-area my-4">
+                                <form action="{{url('sendemail/send')}}" method="post" >
+                                    @csrf
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="Your Name"  required="required" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="Your E-mail" required="required" value="" >
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="title" id="title" placeholder="Title" required="required" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea class="form-control" name="message" id="message"  placeholder="Message" required="required"></textarea>
+                                    </div>
+                                    <button class="btn fitness-btn btn-2 btn-danger" name="send" type="submit">Send Message</button>
+                                </form>
+                            </div>
 						</div>
 					</div>
 				</div>
@@ -302,7 +318,7 @@
 	.contact-area h3{
 		font-family: 'Poppins';
 	}
-	
+
 	.contact-content .contact-form-area .form-group {
     position: relative;
     z-index: 9; }
@@ -361,7 +377,7 @@ margin-bottom: 0; }*/
         padding-bottom: 90%;
         padding-top: 13%;
         /*height: 0;*/
-        overflow: hidden;   
+        overflow: hidden;
     }
     .map-area iframe {
         position: absolute;

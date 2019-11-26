@@ -108,7 +108,6 @@
 										<li>
 											<a href="{{route('categoryid',$category->id)}}" class="d-flex justify-content-between">
 												<p>{{$category->name}}</p>
-												<p>37</p>
 											</a>
 										</li>
                                         @endforeach

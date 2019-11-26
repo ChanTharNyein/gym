@@ -62,8 +62,8 @@
             <h3>Exercise Regularly <span style="color:red;font-weight: bold;">Stay Healthy</span>.</h3>
             <div class="services d-flex">
                 <div class="icon d-flex align-content-center justify-content-center">
-                    <img src="{{asset('./img/quality.png')}}" class="servicepng">  
-                </div> 
+                    <img src="{{asset('./img/quality.png')}}" class="servicepng">
+                </div>
                 <div class="servicetext">
                     <h4>Quality Training Services</h4>
                     <p>Our Personal Trainers provide a unique Valet Fitness Experience to every client. The experience is key to motivate and unlock your transformation.</p>
@@ -71,8 +71,8 @@
             </div>
             <div class="services d-flex">
                 <div class="icon d-flex align-content-center justify-content-center">
-                    <img src="{{asset('./img/trainerlogo.png')}}" class="servicepng">  
-                </div> 
+                    <img src="{{asset('./img/trainerlogo.png')}}" class="servicepng">
+                </div>
                 <div class="servicetext">
                  <h4>Professional Trainers</h4>
                  <p>If you've been trying to increase your fitness activity but keep making excuses or are unsure of the best course of action, the Olympia team of certified professionals can help.</p>
@@ -80,8 +80,8 @@
          </div>
          <div class="services d-flex">
             <div class="icon d-flex align-content-center justify-content-center">
-                <img src="{{asset('./img/clock.png')}}" class="servicepng">  
-            </div> 
+                <img src="{{asset('./img/clock.png')}}" class="servicepng">
+            </div>
             <div class="servicetext">
                 <h4>Flexible Time</h4>
                 <p>Olympia fitness center provides flexible workout schedule opportunities. You will find flexibility in activities, facilities and services to provide you with the best experience.
@@ -105,79 +105,28 @@
         </div>
     </div>
     <div class="row">
+        @foreach($packages as $package)
         <div class="col-lg-3 col-md-4 col-sm-12 mb-5">
             <div class="product-card">
                 <div class="card">
                     <div class="text-center">
-                        <h3>Starter</h3>
+                        <h3>{{$package->title}}</h3>
                         <hr style="width: 10%; border-bottom:2px solid red;">
                         <div class="pricecard">
-                            <h3><sup>$</sup><span class="price">29.99</span><span class="small">/mo</span></h3>
-                            <p>1 month membership</p>
-                            <p>Gym T-shirt</p>
-                            <p>Get Free WiFi</p>
-                            <p>3 Days a Week Program</p>
+                            <h3><sup>$</sup><span class="price">{{$package->price}}</span><span class="small">/mo</span></h3>
+                            <p>{{$package->service1}}</p>
+                            <p>{{$package->service2}}</p>
+                            <p>{{$package->service3}}</p>
+                            <p>{{$package->service4}}</p>
 
                         </div>
-                        <a href="" class="getitnowbtn" data-toggle="modal" data-target="#modalQuickView">Get It Now</a>
+                        <a href="" class="getitnowbtn" data-toggle="modal"  data-id="{{$package->id}}" data-target="#packageModal">Get It Now</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-md-4 col-sm-12 mb-5">
-            <div class="product-card">
-                <div class="card">
-                    <div class="text-center">
-                        <h3>Silver</h3>
-                        <hr style="width: 10%; border-bottom:2px solid red;">
-                        <div class="pricecard">
-                            <h3><sup>$</sup><span class="price">49.99</span><span class="small">/mo</span></h3>
-                            <p>3 month membership</p>
-                            <p>Gym T-shirt</p>
-                            <p>Free WiFi & Locker</p>
-                            <p>4 Days a Week Program</p>
-                        </div>
-                        <a href="" class="getitnowbtn">Get It Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-12 mb-5">
-            <div class="product-card">
-                <div class="card">
-                    <div class="text-center">
-                        <h3>Gold</h3>
-                        <hr style="width: 10%; border-bottom:2px solid red;">
-                        <div class="pricecard">
-                            <h3><sup>$</sup><span class="price">79.99</span><span class="small">/mo</span></h3>
-                            <p>4 month membership</p>
-                            <p>T-shirt & WiFi & Locker</p>
-                            <p>Access to 3 Classes</p>
-                            <p>No Time Restrictions</p>
-                        </div>
-                        <a href="" class="getitnowbtn">Get It Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-12 mb-5">
-            <div class="product-card">
-                <div class="card">
-                    <div class="text-center">
-                        <h3>Platinum</h3>
-                        <hr style="width: 10%; border-bottom:2px solid red;">
-                        <div class="pricecard">
-                            <h3><sup>$</sup><span class="price">99.99</span><span class="small">/mo</span></h3>
-                            <p>5 month membership</p>
-                            <p>Access to all Classes</p>
-                            <p>Swimming Pool</p>
-                            <p>No Time Restrictions</p>
-                        </div>
-                        <a href="" class="getitnowbtn">Get It Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @endforeach
+
     </div>
 </div>
 <!-- End of Section Two -->
@@ -263,9 +212,9 @@
                 <div class="d-flex">
                     <div class=" d-flex align-content-center justify-content-center">
                          <i class="fa fa-user mt-2 mr-2" style="color:red;"></i>
-                    </div> 
+                    </div>
                     <div class="">
-                        <input class="form-control"  placeholder="Enter Your Name"> 
+                        <input class="form-control"  placeholder="Enter Your Name">
                     </div>
                 </div>
             </div>
@@ -273,9 +222,9 @@
                 <div class="d-flex">
                     <div class=" d-flex align-content-center justify-content-center">
                          <i class="fa fa-envelope mt-2 mr-2" style="color:red;"></i>
-                    </div> 
+                    </div>
                     <div class="">
-                        <input class="form-control"  placeholder="Enter Your Email" > 
+                        <input class="form-control"  placeholder="Enter Your Email" >
                     </div>
                 </div>
             </div>
@@ -283,9 +232,9 @@
                 <div class="d-flex">
                     <div class=" d-flex align-content-center justify-content-center">
                          <i class="fa fa-phone mt-2 mr-2" style="color:red;"></i>
-                    </div> 
+                    </div>
                     <div class="">
-                        <input class="form-control"  placeholder="Enter Your Name" > 
+                        <input class="form-control"  placeholder="Enter Your Name" >
                     </div>
                 </div>
             </div>
@@ -293,14 +242,14 @@
                 <div class="d-flex">
                     <div class=" d-flex align-content-center justify-content-center">
                          <a href="" class="freebtn">Get My Free Pass</a>
-                    </div> 
+                    </div>
                 </div>
             </div>
 
-            
-            
-            <!-- <input class="form-control"  placeholder="Enter Your Name" > 
-            <input  class="form-control"  placeholder="Enter Your Email" > 
+
+
+            <!-- <input class="form-control"  placeholder="Enter Your Name" >
+            <input  class="form-control"  placeholder="Enter Your Email" >
             <input  class="form-control"  placeholder="Enter Your Phone No"> -->
             <!-- <a href="" class="btn">Get My Free Pass</a> -->
           </form>
@@ -482,7 +431,7 @@
 
     /*Section Three*/
     .sectionthree{
-        background-color: #f1f1f1; 
+        background-color: #f1f1f1;
     }
     .sectionthree h2{
         /*text-transform: uppercase;*/
@@ -498,9 +447,9 @@
         border-bottom: 1px solid black;
         background-color: transparent;
     }
-    
 
-    
+
+
     /*Section Three*/
 
     /*Section Four*/
@@ -593,7 +542,7 @@
         background-color:#f1f1f1;
     }
     /*End of Modal Section*/
-    
+
 
 </style>
 
@@ -603,14 +552,45 @@
 
 <script>
      $(document).ready(function(){
-   
+
      $("#dtBox").DateTimePicker();
 
 
-   
+
  });
 </script>
-<div class="modal fade modalsection" id="modalQuickView" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#formsub").validate({
+            // Specify validation rules
+            rules: {
+                name: "required",
+                lastname: "required",
+                phone: {
+                    required: true,
+                    digits: true,
+                    minlength: 10,
+                    maxlength: 10,
+                },
+
+            },
+            messages: {
+                name: {
+                    required: "Please enter first name",
+                },
+                phone: {
+                    required: "Please enter phone number",
+                    digits: "Please enter valid phone number",
+                    minlength: "Phone number field accept only 10 digits",
+                    maxlength: "Phone number field accept only 10 digits",
+                },
+            },
+
+        });
+    });
+</script>
+<div class="modal fade modalsection"  id="packageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content" style="background-color: #f1f1f1;">
         <div class="modal-header">
@@ -628,31 +608,31 @@
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <h3 class="mt-2">Get Into Shape</h3>
                     <h3 style="font-size: 20px;">Appointment <span>Information</span></h3>
-                    <form action="">
+                    <form action="{{route('orderpackage.store')}}" method="post" id="formsub">
+                        @csrf
                         <div class="form-group">
                             <label for="appointmentname"><i class="fa fa-user" ></i></label>
-                            <input type="text" placeholder="Your Name" id="appointmentname">
+                            <input type="text" name="name" placeholder="Your Name" id="appointmentname">
                         </div>
                         <div class="form-group">
                             <label for="appointmentphone"><i class="fa fa-phone" ></i></label>
-                            <input type="number" placeholder="Phone No." id="appointmentphone">
+                            <input type="number" name="phone" placeholder="Phone No." id="appointmentphone">
                         </div>
                         <div class="form-group">
                            <label for="appointmentdatetime"><i class="fa fa-calendar"></i></label>
-                           <input type="text" placeholder="Appointment Date & Time" data-field="datetime" readonly id="appointmentdatetime">
-                        </div> 
-                        <div class="form-group trainerselect">                          
-                            <select class="form-control" onfocus='this.size=3;' onblur='this.size=1;' onchange='this.size=1; this.blur();' style="padding:0px;">
+                           <input type="text" name="appointdate" placeholder="Appointment Date & Time" data-field="datetime" readonly id="appointmentdatetime">
+                            <input type="hidden" name="package_id" id="package_id" value="">
+                        </div>
+                        <div class="form-group trainerselect">
+                            <select  class="form-control" onfocus='this.size=3;' onblur='this.size=1;' onchange='this.size=1; this.blur();' style="padding:0px;" name="trainer_id" >
+
                                 <option selected="selected">Need a Trainer? (Optional)</option>
-                                <option>Hello</option>
-                                <option>Hello</option>
-                                <option>Hello</option>
-                                <option>Hello</option>
-                                <option>Hello</option>
-                                <option>Hello</option>
+                                @foreach($trainer as $trainer)
+                                    <option value="{{$trainer->id}}">{{$trainer->name}}</option>
+                                @endforeach
                             </select>
                         </div>
-                        <a href="" class="appointmentbtn">Get It Now</a>
+                        <input type="submit" value="Get It Now" name="submit" href="" class="appointmentbtn">
                         <div id="dtBox"></div>
                     </form>
                 </div>
