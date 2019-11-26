@@ -1,16 +1,16 @@
 @extends('template')
 
 @section('content')
-<section class="banner-area relative" id="home" style="background-image: url({{asset('./img/home3.jpg')}});">   
+<section class="banner-area relative" id="home" style="background-image: url({{asset('./img/home3.jpg')}});">
     <div class="overlay overlay-bg"></div>
-    <div class="container">             
+    <div class="container">
         <div class="row d-flex align-items-center justify-content-center">
             <div class="about-content col-lg-12">
                 <h1 class="text-white">
-                    Register Page               
-                </h1>   
+                    Register Page
+                </h1>
                 <p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span><a href="blog-home.html">Register </a></p>
-            </div>  
+            </div>
         </div>
     </div>
 </section>
@@ -48,6 +48,12 @@
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
+                                @enderror
+                                <input type="file" class="form-control-file @error('user_image') is-invalid @enderror" name="user_image" accept="image/*">
+                                @error('user_image')
+                                <span class="invalid-feedback" role="alert">
+                            <strong>{{$message}}</strong>
+                        </span>
                                 @enderror
                             </div>
                         </div>
@@ -94,7 +100,7 @@
         background-color: #454141;
         border-radius: 10px;
     }
-    .card input{       
+    .card input{
         border: 1px solid #777777;
         border-radius: 20px;
         background-color: transparent;
