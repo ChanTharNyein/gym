@@ -146,6 +146,3 @@
 
 @endsection
 
-<style>
-
-</style>

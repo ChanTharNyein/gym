@@ -4,7 +4,7 @@
       <div class="col-lg-3 col-md-6 col-sm-12 pb-3">
         <h3 class="mb-3" style="font-size: 30px;color: red;">Olympia</h3>
         <p style="text-align: justify;">Olympia Gym, founded by Midnight Sun Group, is located in Mandalay, Myanmar. Achieves your fitness goals with us!</p>
-        <button class="joinbtn">Get In Touch</button>
+        <a href="{{ URL::to('/contact')}}" class="joinbtn">Get In Touch</a>
       </div>
       <div class="col-lg-3 col-md-6 col-sm-12 pb-3">
         <h4>Contact Info</h4>
@@ -36,7 +36,7 @@
               <div class="input-group-text"><i class="fa fa-envelope" aria-hidden="true"></i>
               </div>
             </div>
-            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email'" style="border-top:none;">
+            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email'" style="border-top:none;border-bottom: none;">
           </div>
         </div>
         <a href="#" class="bbtns">Subcribe</a>

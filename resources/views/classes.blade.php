@@ -42,7 +42,11 @@
               </ul>
               
               <a class="joinbtn pb-1" href="" data-toggle="modal" data-target="#modalDetail" data-id="{{$class->id}}">Detail</a>
+              @guest
+              <a href="{{route('login')}}" class="joinbtn pb-1">Join Now</a>
+              @else
               <a href="" class="joinbtn pb-1" data-toggle="modal" data-target="#modalJoin" data-id="{{$class->id}}">Join Now</a>
+              @endguest
 
             </div>
           </div>
@@ -454,7 +458,7 @@
                 @csrf
               <div class="form-group">
                 <label for="appointmentname"><i class="fa fa-user" ></i></label>
-                  <input type="text" name="class_id" id="class_id">
+                  <input type="hidden" name="class_id" id="class_id">
                 <input class="" type="text" placeholder="Your Name" id="appointmentname">
               </div>
               <div class="form-group">
@@ -465,7 +469,7 @@
                <label for="appointmentdatetime"><i class="fa fa-calendar"></i></label>
                <input name="appointment_date" type="text" placeholder="Appointment Date & Time" data-field="datetime" readonly id="appointmentdatetime">
              </div>
-                <input type="submit" class="appointmentbtn" name="submit" value="Join Now">
+                <input type="submit" class="appointmentbtn" name="submit" value="Join Now" style="border:1px solid red;">
              
              <div id="dtBox"></div>
            </form>

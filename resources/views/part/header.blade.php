@@ -20,7 +20,7 @@
         </li>
       </ul>
 
-      <a class="navbar-brand d-none d-lg-block" href="#"><img class="gymlogo" src="{{asset('./img/gymlogo.png')}}" alt=""></a>
+      <a class="navbar-brand d-none d-lg-block" href="/"><img class="gymlogo" src="{{asset('./img/gymlogo.png')}}" alt=""></a>
       <ul class="navbar-nav ml-5 mr-5">
         <li class="nav-item">
           <a class="nav-link" href="/class">Classes</a>

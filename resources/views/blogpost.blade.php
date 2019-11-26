@@ -72,11 +72,11 @@
         </div>
 
         <div class="desc">
-          <h5><a href="#">Emilly Blunt</a></h5>
+          <!-- <h5><a href="#">Emilly Blunt</a></h5>
           <p class="date">December 4, 2017 at 3:12 pm </p>
           <p class="comment">
             Never say goodbye till the end comes!
-          </p>
+          </p> -->
           <div id="showcomments"></div>
         </div>
       </div>
@@ -94,7 +94,11 @@
       </div>
       <!-- <button class="click" type="submit" name="submit">Submit</button> -->
       <div class="col-lg-2 offset-lg-5">
+        @guest
+        <a href="{{route('login')}}"name="pid" class="click">LogIn</a>
+        @else
         <a href="" class="click" type="submit" id="pid" name="pid" value="{{$post->id}}">Send</a>
+        @endguest
       </div>
     </form>
 
