@@ -39,7 +39,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="email" class="col-lg-4 text-left emaillabel">{{ __('E-Mail :') }}</label>
+                            <label for="email" class="col-lg-4 text-left emaillabel">{{ __('Email :') }}</label>
 
                             <div class="col-lg-8">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
