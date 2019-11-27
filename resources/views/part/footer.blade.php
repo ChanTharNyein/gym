@@ -29,7 +29,7 @@
       <div class="col-lg-3 col-md-6 col-sm-12 pb-3">
        <h4 class="mb-3">News Letter</h4>
        <p>Subscribe and get the latest news.</p>
-          <form id="hein">
+         <form>
        <div class="form-group d-flex flex-row">
          <div class="col-autos">
           <div class="input-group">
@@ -37,10 +37,10 @@
               <div class="input-group-text"><i class="fa fa-envelope" aria-hidden="true"></i>
               </div>
             </div>
-                  <input type="email" class="form-control paing" id="inlineFormInputGroup" placeholder="Enter email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email'" style="border-top:none;border-bottom: none;">
+                  <input type="email" name="paing"  class="form-control paing" id="inlineFormInputGroup" placeholder="Enter email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email'" style="border-top:none;border-bottom: none;">
           </div>
         </div>
-        <a data-type="submit" name="submit" id="submit" class="bbtns btn-sm">Subcribe</a>
+        <a href="" class="bbtns btn-sm subclick">Subcribe</a>
       </div>
           </form>
       <p class="text-bottom" >
@@ -143,11 +143,44 @@
 
 </style>
 <script>
-    $(document).ready(function () {
-        $( "#hein" ).submit(function( event ) {
-            alert( "Handler for  called." );
-            event.preventDefault();
+        $(document).ready(function () {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            //var pid = $('.email').val();
+            $('.subclick').click(function () {
+                var body = $('.paing').val();
+                if(body==''){
+                    alert("Text Body is Empty Please Enter One Word");
+                }
+                console.log(body);
+                $.post("{{route('subscribe.store')}}",{body:body},function(response) {
+                    console.log(response);
+                    $('.paing').val('');
+                });
+                //getComments(pid);
+            });
+           /* getComments(pid);
+            function getComments(pid) {
+                $.post("{{route('getcomments')}}",{pid:pid},function (response) {
+                    //console.log(response);
+                    var html='';
+                    $.each(response,function (i,v) {
+                        html+=`<div class="media mb-4">
+                      <div>
+                      <h5 class="mt-0 text-black mr-5">${v.user_id.name}</h5></div>
+                      <div class="media-body ml-5 d-block">
+                      ${v.body}
+                      </div>
+                      </div>`;
+                    });
+                    $('#showcomments').html(html);
+                });
+            }*/
+
         });
-    })
+
 </script>
 

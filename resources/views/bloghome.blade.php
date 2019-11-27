@@ -37,7 +37,7 @@
 
 						<div class="col-lg-8 posts-list">
 							<div class="single-post row">
-                                @foreach($post as $post)
+                                @foreach($posts as $post)
 								<div class="col-lg-3  col-md-3 meta-details">
 
 									<div class="user-details row">
@@ -105,12 +105,18 @@
 								<div class="single-sidebar-widget post-category-widget">
 									<h4 class="category-title">Post Catgories</h4>
 									<ul class="cat-list">
-                                        @foreach($category as $category)
+                                        @foreach($categories as $category)
 										<li>
+                                            @foreach($posts as $post)
+                                            @if($post->category_id == $category->id)
 											<a href="{{route('categoryid',$category->id)}}" class="d-flex justify-content-between">
 												<p>{{$category->name}}</p>
 											</a>
-										</li>
+                                        </li>
+                                                @break
+                                                @endif
+                                                @endforeach
+
                                         @endforeach
 									</ul>
 								</div>

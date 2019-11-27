@@ -57,7 +57,7 @@ class OrderClassController extends Controller
         $order->class_id=request('class_id');
         $order->appointment_date=Carbon::parse(request('appointment_date'));
         $order->save();
-        return redirect()->route('class.index');
+        return redirect()->action('ClassController@index')->with('alert','Your Order is success.We Will Contact You in Shortly');
     }
 
     /**

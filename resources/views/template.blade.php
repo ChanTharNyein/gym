@@ -82,6 +82,20 @@
 
                     })
                 });
+                $('#modalQuickViewpaing').on('show.bs.modal', function (e) {
+                    var id = $(e.relatedTarget).data('id');
+                    //console.log(id);
+                    $.get('/admin/trainer/' + id, function(response){
+                        //console.log(response);
+                        $('#trainer_name').html(response.name);
+                        $('#about').html(response.description);
+                        $("#cover_img").attr("src", response.image);
+                        $("#facebook").attr("href", response.facebook);
+                        $("#google").attr("href", response.google);
+                        $("#instagram").attr("href", response.instagram);
+
+                    })
+                });
             });
         </script>
             <script>

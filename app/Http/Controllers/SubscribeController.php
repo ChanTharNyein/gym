@@ -1,13 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Post;
-use App\Category;
+
+use App\Subscribe;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class BlogController extends Controller
+class SubscribeController extends Controller
 {
-
     /**
      * Display a listing of the resource.
      *
@@ -15,9 +15,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
-        $categories = Category::all();
-        return view('bloghome',compact('categories','posts'));
+        //
     }
 
     /**
@@ -38,7 +36,14 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request);
+        /*$request->validate([
+           'email' => 'required|email',
+        ]);*/
+        $subscribe = new Subscribe();
+        $subscribe->email = request('body');
+        $subscribe->save();
+        return 'Successfully Inserted';
     }
 
     /**
