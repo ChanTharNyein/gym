@@ -397,10 +397,10 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12">
                 	<div class="mt-4">
-	                    <h3 class="firstinfo">Hello,</h3>
+	                    <h3 class="firstinfo">Hello, I am</h3>
 
-	                    <h3 class="secondinfo">I am <span style="font-size:35px" id="trainer_name"></span></h3>
-	                    <h3 class="mt-4" style="font-size: 20px;">Look What I Can Do?</h3>
+	                    <h3 class="secondinfo"><span style="font-size:35px" id="trainer_name"></span></h3>
+	                    <h3 class="mt-3" style="font-size: 20px;">Look What I Can Do?</h3>
 	                    <p class="mt-2" id="about" style="text-align:justify;"></p>
 	                    <ul class="trainerinfoicon">
 	                    	<li><a href="" id="facebook"><i class="fa fa-facebook fa-2x"></i></a></li>

@@ -3751,7 +3751,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .widget-wrap .post-category-widget .cat-list li {
   padding-top: 15px;
   padding-bottom: 8px;
-  border-bottom: 2px dotted #eee;
+  /*border-bottom: 2px dotted #eee;*/
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -3773,11 +3773,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .widget-wrap .post-category-widget .cat-list li:hover {
-  border-color: #f6214b;
+  border-color: red;
 }
 
 .widget-wrap .post-category-widget .cat-list li:hover p {
-  color: #f6214b;
+  color: red;
 }
 
 .widget-wrap .newsletter-widget .newsletter-title {

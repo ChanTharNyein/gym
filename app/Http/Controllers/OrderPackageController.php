@@ -59,7 +59,7 @@ class OrderPackageController extends Controller
         $order->save();
         $packages = Package::all();
         $trainer = Trainer::all();
-        return redirect()->action('HomeController@index')->with('alert','Your Order is success.We Will Contact You in Shortly');
+        return redirect()->action('HomeController@index')->with('alert','Your Order is success. We Will Contact You in Shortly.');
     }
 
     /**

@@ -116,7 +116,6 @@
                                                 @break
                                                 @endif
                                                 @endforeach
-
                                         @endforeach
 									</ul>
 								</div>
@@ -148,6 +147,7 @@
 				</div>
 			</section>
 			<!-- End post-content Area -->
+
 
 @endsection
 
