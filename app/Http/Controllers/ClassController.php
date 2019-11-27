@@ -11,7 +11,7 @@ class ClassController extends Controller
 {
     public function __construct()
     {
-        $this->middleware ('role:admin',['except'=>['index']]);
+        $this->middleware ('role:admin',['except'=>['index','show']]);
     }
     /**
      * Display a listing of the resource.

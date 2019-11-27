@@ -463,6 +463,9 @@
     /*Section Two*/
 
     /*Section Three*/
+    .sectionthree input.freebtn{
+        border:1px solid red;
+    }
     .sectionthree{
         background-color: #f1f1f1;
     }

@@ -3,21 +3,21 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 offset-2 my-5">
+            <div class="col-lg-8 offset-2 my-5">
                 <form action="{{route('bydate')}}" method="post">
                     @csrf
                     @method('POST')
                     <h3 class="text-info">Must Choose Date</h3>
                     <div class="form-group">
-                        <label for="" class="mr-3">Start Date:</label>
+                        <label for="" class="mr-2">Start Date:</label>
                         <input type="date"  name="start">
-                        <label for="" class="ml-3">End Date:</label>
+                        <label for="" class="ml-2">End Date:</label>
                         <input type="date" class="ml-3" name="end">
                         <input type="hidden" name="name" value="{{$table}}">
                         <input type="hidden" name="class" value="{{$checkclass}}">
                         <input type="hidden" name="package" value="{{$checkpackage}}">
                     </div>
-                    <h3 class="text-info mt-3">Need To Select</h3>
+                    <h3 class="text-info mt-3">Choose One You Want To Check</h3>
                    <div class="row my-1">
                        <div class="col-lg-6">
                            <div class="form-group">
