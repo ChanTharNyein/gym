@@ -182,7 +182,7 @@
                     @foreach($review as $key=>$review)
                     <div class="carousel-item {{$key == 0 ? 'active' : '' }}">
                         <div class="testimontials">
-                            <img src="{{asset('./img/trainer.jpg')}}" alt="">
+                            <img src="{{$review->user->image}}" alt="">
                             <h3 class="mb-4">{{$review->user->name}}</h3>
                             <p>{{$review->description}}</p>
                         </div>
