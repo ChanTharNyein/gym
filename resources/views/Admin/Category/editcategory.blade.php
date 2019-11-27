@@ -1,5 +1,5 @@
 @extends('Admin.template')
-@section('title','Create Category')
+@section('title','Update Category')
 @section('content')
     <div class="container">
         <div class="row">

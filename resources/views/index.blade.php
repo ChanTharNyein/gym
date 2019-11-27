@@ -136,15 +136,21 @@
 <!-- End of Section Two -->
 
 <!-- Section Four -->
+
 <div class="container-fluid sectionfour" style="background-image: url({{asset('./img/testimontials.jpg')}}); background-size: cover; background-position: center center;">
     <div class="row" style="padding-top: 50px;padding-bottom: 50px;">
+
         <div class="col-lg-12 col-md-12 col-sm-12 text-center">
             <h2>What Our Clients Say!</h2>
         </div>
     </div>
+
     <div class="row">
+
         <div class="col-lg-8 offset-lg-2  col-sm-12">
+
             <div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
+            @foreach($review as $review)
                 <!-- Carousel indicators -->
                 <ol class="carousel-indicators">
                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -152,36 +158,26 @@
                     <li data-target="#myCarousel" data-slide-to="2"></li>
                 </ol>
                 <!-- Wrapper for carousel items -->
+
                 <div class="carousel-inner text-center">
                     <div class="carousel-item active">
                         <div class="testimontials">
                             <img src="{{asset('./img/trainer.jpg')}}" alt="">
-
-                            <h3 class="mb-4">Chan Thar Nyein</h3>
-                            <p>Well run village gyms, providing a professional and personal touch. Always manage to use the equipment I need to use even during peak times. Enjoyable classes and personal training.</p>
+                            <h3 class="mb-4">{{$review->user->name}}</h3>
+                            <p>{{$review->description}}</p>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="testimontials">
-                            <img src="{{asset('./img/trainer2.jpg')}}" alt="">
 
-                            <h3 class="mb-4">Paing Hein Htet</h3>
-                            <p>Can't beat having a local gym, especially one like this. No matter what your fitness goals are, the staff are extremely knowledgable, friendly and keen to help. Great place to train and always immaculate.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="testimontials">
-                            <img src="{{asset('./img/trainer.jpg')}}" alt="">
-
-                            <h3 class="mb-4">Thant Zin Myo</h3>
-                            <p>Family run business with good customer service. Always someone around in the gym for fitness advice. Staff are very pleasant and helpful. Membership reasonable.</p>
-                        </div>
-                    </div>
                 </div>
+                @endforeach
             </div>
+
         </div>
+
     </div>
+
 </div>
+
 <!-- End of Section Four -->
 
 
@@ -213,14 +209,15 @@
         </div>
     </div>
     <div class="row pb-5 justify-content-center offset-lg-0 offset-md-4">
-        <form class="form-inline" action="" >
+        <form class="form-inline" action="{{route('freeform')}}" >
+            @csrf
             <div class="col-lg-3 col-md-12 pb-3">
                 <div class="d-flex">
                     <div class=" d-flex align-content-center justify-content-center">
                          <i class="fa fa-user mt-2 mr-2" style="color:red;"></i>
                     </div>
                     <div class="">
-                        <input class="form-control"  placeholder="Enter Your Name">
+                        <input class="form-control ml-3" name="name" placeholder="Enter Your Name">
                     </div>
                 </div>
             </div>
@@ -230,7 +227,7 @@
                          <i class="fa fa-envelope mt-2 mr-2" style="color:red;"></i>
                     </div>
                     <div class="">
-                        <input class="form-control"  placeholder="Enter Your Email" >
+                        <input class="form-control" name="email"  placeholder="Enter Your Email" >
                     </div>
                 </div>
             </div>
@@ -240,14 +237,14 @@
                          <i class="fa fa-phone mt-2 mr-2" style="color:red;"></i>
                     </div>
                     <div class="">
-                        <input class="form-control"  placeholder="Enter Your Name" >
+                        <input class="form-control" type="number" name="phone"  placeholder="Enter Your Phone" >
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-12 pb-3">
                 <div class="d-flex">
                     <div class=" d-flex align-content-center justify-content-center">
-                         <a href="" class="freebtn">Get My Free Pass</a>
+                         <input type="submit" name="submit" value="Get My Free Pass" class="freebtn">
                     </div>
                 </div>
             </div>

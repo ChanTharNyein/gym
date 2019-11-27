@@ -1,5 +1,5 @@
 @extends('Admin.template')
-@section('title','Create Class')
+@section('title','Edit Package')
 @section('content')
     <div class="container">
         <div class="row">

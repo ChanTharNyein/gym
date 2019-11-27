@@ -14,6 +14,7 @@
 Route::get('/', 'HomeController@index');
 
 
+Route::get('/home','HomeController@home')->name('home');
 Route::resource('/class','ClassController');
 Route::get('/showclass','ClassController@showclass')->name('tableclass');
 Route::resource('/bloghome', 'BlogpostController');
@@ -28,10 +29,9 @@ Route::resource('/orderclass','OrderClassController');
 Route::post('/getcomments','CommentController@getcomments')->name('getcomments');
 Route::get('/sendemail', 'SendEmailController@index');
 Route::post('/sendemail/send', 'SendEmailController@send')->name('sentmail');
-
+Route::resource('/review','ReviewController');
 Auth::routes();
-
-// Route::get('/', 'HomeController@index');
+Route::get('/freeform','HomeController@freeform')->name('freeform');
 
 Route::resource('/admin/package','PackageController');
 Route::resource('/admin/category','CategoryController');
