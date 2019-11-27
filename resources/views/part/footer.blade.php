@@ -39,7 +39,7 @@
   <hr style="width: 100%; border:1px solid white;">
   <div class="row">
     <div class="col-lg-12 col-md-12 col-sm-12 text-center">
-      <p class="mb-3">Copyright @ 2019. Designed By Midnight Sun </p>
+      <p class="mb-3">Copyright @ 2019. Designed By Midnight Sun Group.</p>
     </div>
   </div>
 </div>
