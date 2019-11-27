@@ -488,7 +488,7 @@
                     required: true,
                     digits: true,
                     minlength: 10,
-                    maxlength: 10,
+                    maxlength: 15,
                 },
 
             },

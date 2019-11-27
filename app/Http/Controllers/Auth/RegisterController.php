@@ -66,8 +66,6 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-
-
         $request = app('request');
         $photo='';
         if($request->hasfile('image')){

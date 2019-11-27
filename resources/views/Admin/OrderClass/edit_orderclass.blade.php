@@ -38,12 +38,10 @@
                             </span>
                         @enderror
                         <label for="status">Status</label>
-                        <input type="text" value="{{$orderclass->status}}" name="status" id="status" class="form-control @error('status') is-invalid @enderror">
-                        @error('status')
-                        <span class="invalid-feedback" role="alert">
-                                <strong>{{$message}}</strong>
-                            </span>
-                        @enderror
+                        <select name="status" id="status" class="custom-select">
+                            <option value="0">False</option>
+                            <option value="1">True</option>
+                        </select>
                     </div>
                     <div class="form-group " >
                         <input type="submit" name="update_orderclass" value="Update" class="btn btn-info w-25" >

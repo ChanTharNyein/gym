@@ -600,7 +600,7 @@
                     required: true,
                     digits: true,
                     minlength: 10,
-                    maxlength: 10,
+                    maxlength: 15,
                 },
 
             },
@@ -653,10 +653,16 @@
                             <input type="hidden" name="package_id" id="package_id" value="">
                         </div>
                         <div class="form-group trainerselect">
+<<<<<<< HEAD
                             <label for="appointmenttrainer">Choose a Trainer</label>
                             <select  class="form-control" onfocus='this.size=3;' onblur='this.size=1;' onchange='this.size=1; this.blur();' style="padding:0px;" name="trainer_id" >
 
                                 <option selected="selected">Trainer List</option>
+=======
+                            <label for="status">Need a Trainer?</label>
+                            <select  class="form-control" onfocus='this.size=3;' onblur='this.size=1;' onchange='this.size=1; this.blur();' style="padding:0px;" name="trainer_id" >
+
+>>>>>>> 9c44976c7ca7058c6aaadf2f2062bd0b38a9aa91
                                 @foreach($trainer as $trainer)
                                     <option value="{{$trainer->id}}">{{$trainer->name}}</option>
                                 @endforeach

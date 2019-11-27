@@ -37,6 +37,10 @@ Route::resource('/admin/package','PackageController');
 Route::resource('/admin/category','CategoryController');
 Route::resource('/admin/trainer','TrainersController');
 Route::resource('/admin/orderpackage','OrderPackageController');
+Route::resource('/record','RecordController');
+Route::get('/orclass','RecordController@orclass')->name('onlyclass');
+Route::get('/orpackage','RecordController@orpackage')->name('onlypackage' );
+Route::post('/bydate','RecordController@bydate')->name('bydate');
 
 Route::get('/ourtrainer','TrainersController@ourtrainer')->name('ourtrainer');
 
