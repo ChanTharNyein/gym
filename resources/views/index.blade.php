@@ -258,7 +258,7 @@
             <div class="col-lg-3 col-md-12 pb-3">
                 <div class="d-flex">
                     <div class=" d-flex align-content-center justify-content-center">
-                         <a href="" class="freebtn">Get My Free Pass</a>
+                         <input type="submit" href="" class="freebtn" name="submit" value="Get My Free Pass">
                     </div>
                 </div>
             </div>
