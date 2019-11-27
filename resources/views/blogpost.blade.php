@@ -48,7 +48,7 @@
      <div class="user-details row">
       <p class="user-name col-lg-12 col-md-12">{{$post->trainer->name}}<span class="lnr lnr-user pl-1"></span></p>
       <p class="date col-lg-12 col-md-12">{{$post->created_at->format('d/m/Y')}}<span class="lnr lnr-calendar-full pl-1"></span></p>
-      <p class="comments col-lg-12 col-md-12">06 Comments<span class="lnr lnr-bubble pl-1"></span></p>																			
+      <!-- <p class="comments col-lg-12 col-md-12">06 Comments<span class="lnr lnr-bubble pl-1"></span></p>																			 -->
     </div>
   </div>
   <div class="col-lg-8 col-md-9">
@@ -62,7 +62,7 @@
 </div>
 
 <div class="comments-area offset-lg-2 col-lg-8">
-  <h4 class="text-dark">05 Comments</h4>
+  <h4 class="text-dark">Comments</h4>
   <div class="comment-list">
     <div class="single-comment justify-content-between d-flex">
       <div class="user justify-content-between d-flex">

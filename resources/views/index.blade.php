@@ -244,11 +244,10 @@
             <div class="col-lg-3 col-md-12 pb-3">
                 <div class="d-flex">
                     <div class=" d-flex align-content-center justify-content-center">
-                         <input type="submit" name="submit" value="Get My Free Pass" class="freebtn">
-                    </div>
+                         <a href="" class="freebtn">Get My Free Pass</a>
+                    </div> 
                 </div>
             </div>
-
 
 
             <!-- <input class="form-control"  placeholder="Enter Your Name" >
@@ -297,11 +296,10 @@
     }
     .freebtn{
         border:1px solid red;
-        background-color: transparent;
-        color: red;
+        background-color: transparent;;
+        color:red;
         font-size: 16px;
-        padding: 5px 20px;
-        border-radius: 0;
+        padding:5px 20px;
     }
     .joinbtn:hover,.freebtn:hover{
         border-radius: 5px;

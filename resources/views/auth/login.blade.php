@@ -15,9 +15,9 @@
     </div>
 </section>
 
-<div class="container-fluid" style="background-color: #e8e6eb;">
+<div class="container-fluid loginsection">
     <div class="row justify-content-center pt-5 pb-5">
-        <div class="col-lg-4 col-md-5 col-sm-12 pt-5 pb-2">
+        <div class="col-lg-4 col-md-5 col-sm-12 pt-5 pb-5">
             <div class="card">
                 <div class="card-header text-center mt-1">{{ __('Login') }}</div>
 
@@ -91,9 +91,15 @@
 
 <!-- Style -->
 <style>
+    .loginsection{
+        background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('./img/gym.jpg');
+        background-size: cover;
+        background-position: center center;
+    }
     .card{
-        background-color: #454141;
+        background-color: #121212;
         border-radius: 10px;
+        border-color:#fff;
     }
     .card input{       
         border: 1px solid #777777;
