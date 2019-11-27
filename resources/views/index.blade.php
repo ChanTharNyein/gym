@@ -161,7 +161,7 @@
         <div class="col-lg-8 offset-lg-2  col-sm-12">
 
             <div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
-            
+
                 <!-- Carousel indicators -->
                 <ol class="carousel-indicators">
                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -183,7 +183,7 @@
                     @endforeach
 
                 </div>
-                
+
             </div>
 
         </div>
@@ -259,7 +259,7 @@
                 <div class="d-flex">
                     <div class=" d-flex align-content-center justify-content-center">
                          <a href="" class="freebtn">Get My Free Pass</a>
-                    </div> 
+                    </div>
                 </div>
             </div>
 
@@ -653,16 +653,13 @@
                             <input type="hidden" name="package_id" id="package_id" value="">
                         </div>
                         <div class="form-group trainerselect">
-<<<<<<< HEAD
                             <label for="appointmenttrainer">Choose a Trainer</label>
                             <select  class="form-control" onfocus='this.size=3;' onblur='this.size=1;' onchange='this.size=1; this.blur();' style="padding:0px;" name="trainer_id" >
 
                                 <option selected="selected">Trainer List</option>
-=======
                             <label for="status">Need a Trainer?</label>
                             <select  class="form-control" onfocus='this.size=3;' onblur='this.size=1;' onchange='this.size=1; this.blur();' style="padding:0px;" name="trainer_id" >
 
->>>>>>> 9c44976c7ca7058c6aaadf2f2062bd0b38a9aa91
                                 @foreach($trainer as $trainer)
                                     <option value="{{$trainer->id}}">{{$trainer->name}}</option>
                                 @endforeach
