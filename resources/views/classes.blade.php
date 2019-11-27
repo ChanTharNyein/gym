@@ -11,7 +11,7 @@
 				<h1 class="text-white">
 					Classes
 				</h1>
-				<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="services.html"> Classes</a></p>
+				<p class="text-white link-nav">Home<span class="lnr lnr-arrow-right"></span>Classes</p>
 			</div>
 		</div>
 	</div>
@@ -443,6 +443,38 @@
    width:76px
   }
 
+  .classtrainer h3{
+    color: black;
+    font-family:'Poppins';
+    font-weight: normal;
+
+  }
+  .intro{
+    padding-bottom:15px;
+  }
+  .classtrainer h3 span{
+    color: red;
+  }
+  .firstinfo {
+    font-family: 'Poppins';
+  }
+  .secondinfo{
+    padding-top: 10px;
+  }
+  .trainerinfoicon{
+    margin-top: 30px;
+  }
+  .classtrainer i{
+    font-size: 2em;
+  }
+  .trainerinfoicon li {
+    display: inline-block;
+    padding: 0 20px;
+  }
+  .trainerinfoicon li a{
+    color:red;
+  }
+
  </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
 <script>
@@ -520,7 +552,8 @@
  </div>
 </div>
 </div>
-<div class="modal fade modalsection" id="modalQuickViewpaing" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+<div class="modal fade modalsection classtrainer" id="modalQuickViewpaing" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content" style="background-color: #f1f1f1;">
             <div class="modal-header">
@@ -539,15 +572,15 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="mt-4">
-                                <h3 class="firstinfo">Hello,</h3>
+                                <h3 class="firstinfo text-left">Hello, I am</h3>
 
-                                <h3 class="secondinfo">I am <span style="font-size:35px" id="trainer_name"></span></h3>
-                                <h3 class="mt-4" style="font-size: 20px;">Look What I Can Do?</h3>
+                                <h3 class="secondinfo text-left"><span style="font-size:30px" id="trainer_name"></span></h3>
+                                <h3 class="mt-3 text-left" style="font-size: 20px;">Look What I Can Do?</h3>
                                 <p class="mt-2" id="about" style="text-align:justify;"></p>
                                 <ul class="trainerinfoicon">
-                                    <li><a href="" id="facebook"><i class="fa fa-facebook fa-2x"></i></a></li>
-                                    <li><a href="" id="google"><i class="fa fa-google fa-2x"></i></a> </li>
-                                    <li><a href="" id="instagram"><i class="fa fa-instagram fa-2x"></i></i></a></li>
+                                    <li><a href="" id="facebook"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="" id="google"><i class="fa fa-google"></i></a> </li>
+                                    <li><a href="" id="instagram"><i class="fa fa-instagram"></i></i></a></li>
                                 </ul>
                             </div>
                         </div>

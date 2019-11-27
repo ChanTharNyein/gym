@@ -32,7 +32,7 @@
                         <td>{{$pack->service4}}</td>
                         <td>{{$pack->service5}}</td>
                         <td>
-                            <a href="{{route('package.edit',$pack->id)}}" class="btn btn-info">Update</a>
+                            <a href="{{route('package.edit',$pack->id)}}" class="btn btn-info mb-2">Update</a>
                             <form action="{{route('package.destroy',$pack->id)}}" method="post" class="d-inline-block" onsubmit="return fu(event)">
                                 @csrf
                                 @method('DELETE')

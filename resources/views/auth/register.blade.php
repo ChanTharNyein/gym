@@ -9,12 +9,12 @@
                 <h1 class="text-white">
                     Register Page
                 </h1>
-                <p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span><a href="blog-home.html">Register </a></p>
+                <p class="text-white link-nav">Home<span class="lnr lnr-arrow-right"></span>Register</p>
             </div>
         </div>
     </div>
 </section>
-<div class="container-fluid" style="background-color: #e8e6eb;">
+<div class="container-fluid registersection">
     <div class="row justify-content-center pt-5 pb-5">
         <div class="col-lg-6 col-md-7 col-sm-12 pt-5 pb-2">
             <div class="card">
@@ -49,12 +49,6 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                                <input type="file" class="form-control-file @error('image') is-invalid @enderror" name="image" accept="image/*">
-                                @error('image')
-                                <span class="invalid-feedback" role="alert">
-                            <strong>{{$message}}</strong>
-                        </span>
-                                @enderror
                             </div>
                         </div>
 
@@ -80,6 +74,14 @@
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label for="fileupload" class="col-lg-4 text-left">{{__('Image :')}}</label>
+                            <div class="col-lg-5">
+                                <input type="file" id="fileupload" class="form-control-file" name="image" accept="image/*" style="border:none;">
+                                
+                            </div>
+                        </div>
+
                         <div class="row justify-content-center">
                             <div class="">
                                 <button type="submit" class="registerbtn">
@@ -96,9 +98,15 @@
 
 <!-- Style -->
 <style>
+    .registersection{
+        background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('./img/gym.jpg');
+        background-size: cover;
+        background-position: center center;
+    }
     .card{
-        background-color: #454141;
+        background-color: #121212;
         border-radius: 10px;
+        border-color: #fff;
     }
     .card input{
         border: 1px solid #777777;

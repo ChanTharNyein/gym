@@ -12,7 +12,7 @@
 				<h1 class="text-white">
 					Contact Us
 				</h1>
-				<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="contact.html"> Contact Us</a></p>
+				<p class="text-white link-nav">Home<span class="lnr lnr-arrow-right"></span>Contact Us</p>
 			</div>
 		</div>
 	</div>
@@ -219,7 +219,7 @@
                                     <div class="form-group">
                                         <textarea class="form-control" name="message" id="message"  placeholder="Message" required="required"></textarea>
                                     </div>
-                                    <button class="btn fitness-btn btn-2 btn-danger" name="send" type="submit">Send Message</button>
+                                    <button class=" fitness-btn" name="send" type="submit">Send Message</button>
                                 </form>
                             </div>
 						</div>
@@ -299,6 +299,21 @@
 	/*End of Section Two*/
 
 	/*Section Three*/
+    .fitness-btn{
+        border-color: red;
+        background-color: transparent;
+        color: red;
+        font-size: 16px;
+        padding: 5px 20px;
+        border-radius: 0;
+    }
+    .fitness-btn:hover{
+        border-radius: 5px;
+        transition-duration: 0.2s;
+        background-color: red;
+        color:#fff;
+        transition:0.3s;
+    }
 	.contacticon li {
 		display: inline-block;
 	}
@@ -352,11 +367,15 @@
     margin-bottom: 15px;
     border: none;
     border-radius: 0;
-    padding: 15px 25px; }
+    padding: 15px 25px;
+    color:black;
+     }
     .contact-content .contact-form-area .form-control:focus {
       box-shadow: none; }
   .contact-content .contact-form-area textarea.form-control {
-    height: 180px; }
+    height: 180px;
+    color: black; 
+     }
 	/*Section Three*/
 	.icon .lnr {
     font-size: 30px;
