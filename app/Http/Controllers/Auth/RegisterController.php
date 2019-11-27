@@ -52,6 +52,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'user_image' => ['required'],
         ]);
     }
 
@@ -63,10 +64,31 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        /*if($request->hasFile('class_image')){
+            $photo = $request->file('class_image');
+            $name = time() . '.'.$photo->getClientOriginalExtension();
+            $photo->move(public_path().'/storage/class_img/',$name);
+            $photo = '/storage/class_img/'.$name;
+        }*/
+        /*if(User::hasfile($data['user_image'])){
+            $image = User::file($data['user_image']);
+            $upload = time() . '.'.$image->getClientOriginalExtension();
+            $filename = $data['user_image'].'.jpg';
+            $image->move($upload, $filename);
+            $path = $upload.$filename;
+        }*/
+        if($data->hasFile('user_image'))
+        {
+            $destinationPath = 'path/to/upload/the/file';
+            $imgName = 'yourimagename.jpg';
+            $data->avatar->move($destinationPath, $imgName);
+            $path = $destinationPath . '/' . $imgName;
+            }
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'user_image' => $path,
         ]);
         $user->assignRole('user');
         return $user;

@@ -29,6 +29,7 @@
       <div class="col-lg-3 col-md-6 col-sm-12 pb-3">
        <h4 class="mb-3">News Letter</h4>
        <p>Subscribe and get the latest news.</p>
+          <form id="hein">
        <div class="form-group d-flex flex-row">
          <div class="col-autos">
           <div class="input-group">
@@ -36,14 +37,15 @@
               <div class="input-group-text"><i class="fa fa-envelope" aria-hidden="true"></i>
               </div>
             </div>
-            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email'" style="border-top:none;border-bottom: none;">
+                  <input type="email" class="form-control paing" id="inlineFormInputGroup" placeholder="Enter email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email'" style="border-top:none;border-bottom: none;">
           </div>
         </div>
-        <a href="#" class="bbtns">Subcribe</a>
-      </div>  
-      <p class="text-bottom">
+        <a data-type="submit" name="submit" id="submit" class="bbtns btn-sm">Subcribe</a>
+      </div>
+          </form>
+      <p class="text-bottom" >
         You can unsubscribe at any time
-      </p>  
+      </p>
     </div>
   </div>
   <hr style="width: 100%; border:1px solid white;">
@@ -57,7 +59,7 @@
         <li><i class="fa fa-instagram"></i></li>
         <li><i class="fa fa-twitter"></i></li>
       </ul>
-    </div>     
+    </div>
   </div>
 </div>
 </div>
@@ -140,4 +142,12 @@
   }
 
 </style>
+<script>
+    $(document).ready(function () {
+        $( "#hein" ).submit(function( event ) {
+            alert( "Handler for  called." );
+            event.preventDefault();
+        });
+    })
+</script>
 
