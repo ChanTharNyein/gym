@@ -4,6 +4,13 @@
 <!-- DateTimePicker Link -->
 
 <script src="{{asset('js/DateTimePicker.js')}}"></script>
+<script>
+    var msg = '{{Session::get('alert')}}';
+    var exit = '{{Session::has('alert')}}';
+    if(exit){
+        alert(msg);
+    }
+</script>
 <link rel="stylesheet" href="{{asset('css/DateTimePicker.css')}}">
 <link href="https://fonts.googleapis.com/css?family=Poppins|Raleway&display=swap" rel="stylesheet">
 <!-- Carousel Section -->

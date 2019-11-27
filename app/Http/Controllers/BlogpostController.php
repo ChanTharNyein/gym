@@ -23,10 +23,10 @@ class BlogpostController extends Controller
      */
     public function index()
     {
-        $post=Post::all();
+        $posts=Post::all();
         //dd($posts);
-        $category=Category::all();
-        return view('bloghome',compact('post','category'));
+        $categories=Category::all();
+        return view('bloghome',compact('posts','categories'));
     }
 
     /**
@@ -172,10 +172,10 @@ class BlogpostController extends Controller
     public function categoryid($id)
     {
         //dd($id);
-        $post=Post::where('category_id',$id)->get();
-        $category=Category::all();
+        $posts=Post::where('category_id',$id)->get();
+        $categories=Category::all();
         //dd($post);
-        return view('bloghome',compact('post','category'));
+        return view('bloghome',compact('posts','categories'));
     }
     /*public function trainerid($id)
     {

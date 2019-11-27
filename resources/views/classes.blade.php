@@ -60,7 +60,7 @@
             <ul class="classlist">
              <!--  <li><i class="fa fa-user fa-2x pr-4" style="color:red;"></i></li> -->
              <li><img src="{{asset('./img/trainericon.png')}}" width="40" height="40" style="margin-bottom: -10px;"></li>
-             <li><h3 class="pl-4">{{$class->trainer->name}}</h3></li>
+             <li><a href="#" data-toggle="modal" data-target="#modalQuickViewpaing" data-id="{{$class->trainer->id}}"><h3 class="pl-4">{{$class->trainer->name}}</h3></a></li>
            </ul>
          </div>
        </div>
@@ -85,7 +85,9 @@
 				<p>
 					Everything you want is outside of your comfort zone. Push harder than yesterday if you want a different tomorrow. We provide solutions for moving better and feeling healthier.
 				</p>
-				<a href="#" class="joinbtn">Become a Member</a>
+                @guest
+				<a href="{{route('register')}}" class="joinbtn">Become a Member</a>
+                    @endguest
      </div>
    </div>
  </div>
@@ -143,7 +145,13 @@
 </div>
 
 
-
+    <script>
+        var msg = '{{Session::get('alert')}}';
+        var exit = '{{Session::has('alert')}}';
+        if(exit){
+            alert(msg);
+        }
+    </script>
 <script>
  $(document).ready(function()
  {
@@ -511,5 +519,42 @@
    </div>
  </div>
 </div>
+</div>
+<div class="modal fade modalsection" id="modalQuickViewpaing" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" style="background-color: #f1f1f1;">
+            <div class="modal-header">
+                <h4 class="modal-title" style="letter-spacing: 2px; font-size: 16px; text-transform:uppercase; color: black;font-weight: normal;"><span style="color: red;font-size: 20px; text-transform: capitalize;">Olympia</span> Fitness Center</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-md-6 col-sm-12 my-md-auto">
+                            <img src="" id="cover_img" alt="" class="img-fluid">
+
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="mt-4">
+                                <h3 class="firstinfo">Hello,</h3>
+
+                                <h3 class="secondinfo">I am <span style="font-size:35px" id="trainer_name"></span></h3>
+                                <h3 class="mt-4" style="font-size: 20px;">Look What I Can Do?</h3>
+                                <p class="mt-2" id="about" style="text-align:justify;"></p>
+                                <ul class="trainerinfoicon">
+                                    <li><a href="" id="facebook"><i class="fa fa-facebook fa-2x"></i></a></li>
+                                    <li><a href="" id="google"><i class="fa fa-google fa-2x"></i></a> </li>
+                                    <li><a href="" id="instagram"><i class="fa fa-instagram fa-2x"></i></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
  @endsection
