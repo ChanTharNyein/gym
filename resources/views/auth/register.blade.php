@@ -49,12 +49,6 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                                <input type="file" class="form-control-file @error('user_image') is-invalid @enderror" name="user_image" accept="image/*">
-                                @error('user_image')
-                                <span class="invalid-feedback" role="alert">
-                            <strong>{{$message}}</strong>
-                        </span>
-                                @enderror
                             </div>
                         </div>
 
@@ -77,6 +71,18 @@
 
                             <div class="col-lg-8">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="fileupload" class="col-lg-4 text-left">{{__('Image :')}}</label>
+                            <div class="col-lg-5">
+                                <input type="file" id="fileupload" class="form-control-file @error('user_image') is-invalid @enderror" name="user_image" accept="image/*" style="border:none;">
+                                @error('user_image')
+                                <span class="invalid-feedback" role="alert">
+                                <strong>{{$message}}</strong>
+                                </span>
+                                @enderror
                             </div>
                         </div>
 
