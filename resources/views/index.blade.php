@@ -653,10 +653,7 @@
                             <input type="hidden" name="package_id" id="package_id" value="">
                         </div>
                         <div class="form-group trainerselect">
-                            <label for="appointmenttrainer">Choose a Trainer</label>
-                            <select  class="form-control" onfocus='this.size=3;' onblur='this.size=1;' onchange='this.size=1; this.blur();' style="padding:0px;" name="trainer_id" >
-
-                                <option selected="selected">Trainer List</option>
+                            
                             <label for="status">Need a Trainer?</label>
                             <select  class="form-control" onfocus='this.size=3;' onblur='this.size=1;' onchange='this.size=1; this.blur();' style="padding:0px;" name="trainer_id" >
 
