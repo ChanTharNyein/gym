@@ -17,6 +17,7 @@
                         <th>Appointment Date</th>
                         <th>Start Date</th>
                         <th>End Date</th>
+                        <th>Month</th>
                         <th>Status</th>
                         <th>action</th>
                     </tr>
@@ -35,6 +36,7 @@
                             <td>{{$pack->appointment_date}}</td>
                             <td>{{$pack->start_date}}</td>
                             <td>{{$pack->end_date}}</td>
+                            <td>{{$pack->month}}</td>
                             <td>{{$pack->status}}</td>
                             <td>
                                 <a href="{{route('orderpackage.edit',$pack->id)}}" class="btn btn-info">Update</a>

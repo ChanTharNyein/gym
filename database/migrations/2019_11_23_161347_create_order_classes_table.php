@@ -21,6 +21,7 @@ class CreateOrderClassesTable extends Migration
             $table->timestamp('appointment_date');
             $table->timestamp('start_date')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('end_date')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->unsignedBigInteger('month')->default(0);
             $table->boolean('status')->default(false);
             $table->timestamps();
         });

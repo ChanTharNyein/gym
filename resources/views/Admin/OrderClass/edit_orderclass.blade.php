@@ -17,15 +17,22 @@
                             @endforeach
                         </select>
                         <label for="start">Start Date</label>
-                        <input type="text" value="{{$orderclass->start_date}}" name="start" id="start" class="form-control @error('start') is-invalid @enderror">
+                        <input type="date" value="{{$orderclass->start_date}}" name="start" id="start" class="form-control @error('start') is-invalid @enderror">
                         @error('start')
                         <span class="invalid-feedback" role="alert">
                                 <strong>{{$message}}</strong>
                             </span>
                         @enderror
                         <label for="end">End Date</label>
-                        <input type="text" value="{{$orderclass->end_date}}" name="end" id="end" class="form-control @error('end') is-invalid @enderror">
+                        <input type="date" value="{{$orderclass->end_date}}" name="end" id="end" class="form-control @error('end') is-invalid @enderror">
                         @error('end')
+                        <span class="invalid-feedback" role="alert">
+                                <strong>{{$message}}</strong>
+                            </span>
+                        @enderror
+                        <label for="month">Month</label>
+                        <input type="number" value="{{$orderclass->end_date}}" name="month" id="month" class="form-control @error('month') is-invalid @enderror">
+                        @error('month')
                         <span class="invalid-feedback" role="alert">
                                 <strong>{{$message}}</strong>
                             </span>

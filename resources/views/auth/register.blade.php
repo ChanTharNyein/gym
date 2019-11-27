@@ -49,8 +49,8 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                                <input type="file" class="form-control-file @error('user_image') is-invalid @enderror" name="user_image" accept="image/*">
-                                @error('user_image')
+                                <input type="file" class="form-control-file @error('image') is-invalid @enderror" name="image" accept="image/*">
+                                @error('image')
                                 <span class="invalid-feedback" role="alert">
                             <strong>{{$message}}</strong>
                         </span>

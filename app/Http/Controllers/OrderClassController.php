@@ -95,12 +95,14 @@ class OrderClassController extends Controller
     {
         $request->validate([
             'start' => 'required|min:2',
-            'end' => 'required'
+            'end' => 'required',
+            'month' => 'required'
         ]);
         $order= OrderClass::find($id);
         $order->class_id = request('class_name');
-        $order->start_date = request('start') ;
-        $order->end_date = request('end') ;
+        $order->start_date = Carbon::parse(request('start')) ;
+        $order->end_date = Carbon::parse(request('end')) ;
+        $order->month = request('month');
         $order->status=request('status');
         $order->save();
         return redirect()->route('orderclass.index');

@@ -16,6 +16,7 @@
                         <th>Appointment Date</th>
                         <th>Start Date</th>
                         <th>End Date</th>
+                        <th>Month</th>
                         <th>Status</th>
                         <th>action</th>
                     </tr>
@@ -33,6 +34,7 @@
                             <td>{{$orderclass->appointment_date}}</td>
                             <td>{{$orderclass->start_date}}</td>
                             <td>{{$orderclass->end_date}}</td>
+                            <td>{{$orderclass->month}}</td>
                             <td>{{$orderclass->status}}</td>
                             <td>
                                 <a href="{{route('orderclass.edit',$orderclass->id)}}" class="btn btn-info">Update</a>
