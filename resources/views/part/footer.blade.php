@@ -123,45 +123,5 @@
   }
 
 </style>
-<script>
-        $(document).ready(function () {
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
-            //var pid = $('.email').val();
-            $('.subclick').click(function () {
-                var body = $('.paing').val();
-                if(body==''){
-                    alert("Text Body is Empty Please Enter One Word");
-                }
-                console.log(body);
-                $.post("{{route('subscribe.store')}}",{body:body},function(response) {
-                    console.log(response);
-                    $('.paing').val('');
-                });
-                //getComments(pid);
-            });
-           /* getComments(pid);
-            function getComments(pid) {
-                $.post("{{route('getcomments')}}",{pid:pid},function (response) {
-                    //console.log(response);
-                    var html='';
-                    $.each(response,function (i,v) {
-                        html+=`<div class="media mb-4">
-                      <div>
-                      <h5 class="mt-0 text-black mr-5">${v.user_id.name}</h5></div>
-                      <div class="media-body ml-5 d-block">
-                      ${v.body}
-                      </div>
-                      </div>`;
-                    });
-                    $('#showcomments').html(html);
-                });
-            }*/
 
-        });
-
-</script>
 

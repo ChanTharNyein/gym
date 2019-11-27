@@ -22,7 +22,6 @@ Route::get('/blogposttable', 'BlogpostController@showtable')->name('table');
 Route::get('/blogpost/{id}', 'BlogpostController@postid')->name('postid');
 Route::get('/category/{id}', 'BlogpostController@categoryid')->name('categoryid');
 
-Route::resource('/subscribe','SubscribeController');
 Route::resource('/contact','ContactController');
 Route::resource('/comment','CommentController');
 Route::resource('/orderclass','OrderClassController');

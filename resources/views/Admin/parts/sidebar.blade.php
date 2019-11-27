@@ -86,6 +86,9 @@
                 <a class="collapse-item" href="{{route('bloghome.create')}}">Create Post</a>
                 <a class="collapse-item" href="{{route('table')}}">Posts Table</a>
 {{--                <a class="collapse-item" href="blank.html">Blank Page</a>--}}
+                <div class="collapse-divider"></div>
+                <h2 class="collapse-header">Review</h2>
+                <a class="collapse-item" href="{{route('review.index')}}">Make Review</a>
             </div>
         </div>
     </li>
