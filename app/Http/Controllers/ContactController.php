@@ -24,6 +24,7 @@ class ContactController extends Controller
         $packages = Package::all();
         $classes = Classes::all();
         return view('contact',compact('trainers','users','packages','classes'));
+
     }
 
     /**

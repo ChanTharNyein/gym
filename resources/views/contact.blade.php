@@ -2,7 +2,7 @@
 @section('content')
 <!-- start banner Area -->
 
-<section class="banner-area relative about-banner" id="home" style="background-image: url('{{asset('./img/home3.jpg')}}');background-size: cover;background-position: center center;">	
+<section class="banner-area relative about-banner" id="home" style="background-image: url('{{asset('./img/home3.jpg')}}');background-size: cover;background-position: center center;">
 
 
 	<div class="overlay overlay-bg"></div>
@@ -374,7 +374,7 @@
       box-shadow: none; }
   .contact-content .contact-form-area textarea.form-control {
     height: 180px;
-    color: black; 
+    color: black;
      }
 	/*Section Three*/
 	.icon .lnr {
@@ -443,6 +443,12 @@ margin-bottom: 0; }*/
 });
 			});
 		</script>
-
+<script>
+    var msg = '{{Session::get('success')}}';
+    var exit = '{{Session::has('success')}}';
+    if(exit){
+        alert(msg);
+    }
+</script>
 
 		@endsection

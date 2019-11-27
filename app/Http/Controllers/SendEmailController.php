@@ -40,5 +40,7 @@ class SendEmailController extends Controller
         Mail::to('senglikareng@gmail.com')->send(new SendMail($data));
         return back()->with('success', 'Thanks for contacting us!');
 
+
+
     }
 }

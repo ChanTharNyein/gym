@@ -41,13 +41,13 @@
         </li>
           @else
               <li class="dropdown nav-item">
-                
+
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     {{Auth::user()->name}}
                   </a>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                       @hasrole('admin')
-                      <a class="nav-link" href="{{route('admin.index')}}">Admin Pannel</a>
+                      <a class="nav-link" href="{{route('record.index')}}">Admin Pannel</a>
                       @endhasrole
                       <a class="dropdown-item" href="{{route('logout')}}"onclick="event.preventDefault();document.getElementById('logout-form').submit();">Log Out</a>
 
