@@ -9,7 +9,7 @@
                 <h1 class="text-white">
                     Login Page               
                 </h1>   
-                <p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span><a href="blog-home.html">Login </a></p>
+                <p class="text-white link-nav">Home<span class="lnr lnr-arrow-right"></span>Login</p>
             </div>  
         </div>
     </div>

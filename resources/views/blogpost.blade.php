@@ -10,7 +10,7 @@
      <h1 class="text-white">
       Blog Details Page
     </h1>
-    <p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span><a href="blog-home.html">Blog </a> <span class="lnr lnr-arrow-right"></span> <a href="blog-single.html"> Blog Details Page</a></p>
+    <p class="text-white link-nav">Home<span class="lnr lnr-arrow-right"></span>Blog<span class="lnr lnr-arrow-right"></span>Blog Details Page</p>
   </div>
 </div>
 </div>
@@ -61,7 +61,13 @@
 </div>
 </div>
 
-<div class="comments-area offset-lg-2 col-lg-8">
+
+
+
+        @guest
+        
+        @else
+        <div class="comments-area offset-lg-2 col-lg-8">
   <h4 class="text-dark">Comments</h4>
   <div class="comment-list">
     <div class="single-comment justify-content-between d-flex">
@@ -83,11 +89,6 @@
     </div>
   </div>
 </div>
-
-
-        @guest
-        
-        @else
         <div class="card my-4 commentsection offset-lg-2 col-lg-8">
       <h5 class="card-header commentheader">Leave a Comment</h5>
       <div class="card-body">

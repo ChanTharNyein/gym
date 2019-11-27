@@ -131,7 +131,11 @@
                             <p>{{$package->service4}}</p>
 
                         </div>
+                        @guest
+                        <a class="getitnowbtn" href="{{route('login')}}">Get It Now</a>
+                        @else
                         <a href="" class="getitnowbtn" data-toggle="modal"  data-id="{{$package->id}}" data-target="#packageModal">Get It Now</a>
+                        @endguest
                     </div>
                 </div>
             </div>
@@ -157,7 +161,7 @@
         <div class="col-lg-8 offset-lg-2  col-sm-12">
 
             <div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
-            @foreach($review as $review)
+            
                 <!-- Carousel indicators -->
                 <ol class="carousel-indicators">
                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -166,17 +170,20 @@
                 </ol>
                 <!-- Wrapper for carousel items -->
 
+
                 <div class="carousel-inner text-center">
-                    <div class="carousel-item active">
+                    @foreach($review as $key=>$review)
+                    <div class="carousel-item {{$key == 0 ? 'active' : '' }}">
                         <div class="testimontials">
                             <img src="{{asset('./img/trainer.jpg')}}" alt="">
                             <h3 class="mb-4">{{$review->user->name}}</h3>
                             <p>{{$review->description}}</p>
                         </div>
                     </div>
+                    @endforeach
 
                 </div>
-                @endforeach
+                
             </div>
 
         </div>
@@ -427,6 +434,15 @@
         margin-bottom: 30px;
     }
     .appointmentbtn{
+        display: inline-block;
+        border:1px solid red;
+        padding:5px 10px;
+        text-decoration: none;
+        font-size: 16px;
+        padding: 5px 20px;
+        border-radius: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
         color:red;
     }
     .getitnowbtn:hover,.appointmentbtn:hover{
@@ -551,6 +567,9 @@
     .trainerselect select option{
         background-color:#f1f1f1;
     }
+    .trainerselect select option:hover{
+        color:red;
+    }
     /*End of Modal Section*/
 
 
@@ -634,15 +653,16 @@
                             <input type="hidden" name="package_id" id="package_id" value="">
                         </div>
                         <div class="form-group trainerselect">
+                            <label for="appointmenttrainer">Choose a Trainer</label>
                             <select  class="form-control" onfocus='this.size=3;' onblur='this.size=1;' onchange='this.size=1; this.blur();' style="padding:0px;" name="trainer_id" >
 
-                                <option selected="selected">Need a Trainer?</option>
+                                <option selected="selected">Trainer List</option>
                                 @foreach($trainer as $trainer)
                                     <option value="{{$trainer->id}}">{{$trainer->name}}</option>
                                 @endforeach
                             </select>
                         </div>
-                        <input type="submit" value="Get It Now" name="submit" href="" class="appointmentbtn">
+                        <input type="submit" value="Get It Now" name="submit" href="" class="appointmentbtn" style="border:1px solid red;">
                         <div id="dtBox"></div>
                     </form>
                 </div>

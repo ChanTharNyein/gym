@@ -11,7 +11,7 @@
 				<h1 class="text-white">
 					Trainers
 				</h1>
-				<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="trainers.html"> Trainers</a></p>
+				<p class="text-white link-nav">Home<span class="lnr lnr-arrow-right"></span>Trainers</p>
 			</div>
 		</div>
 	</div>

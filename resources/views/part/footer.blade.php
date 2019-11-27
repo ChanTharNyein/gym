@@ -4,7 +4,7 @@
       <div class="col-lg-3 col-md-6 col-sm-12 pb-3">
         <h3 class="mb-3" style="font-size: 30px;color: red;">Olympia</h3>
         <p style="text-align: justify;">Olympia Gym, founded by Midnight Sun Group, is located in Mandalay, Myanmar. Achieves your fitness goals with us!</p>
-        <a href="{{ URL::to('/contact')}}" class="joinbtn">Get In Touch</a>
+        <a href="{{ URL::to('/contact')}}" class="joinbtn mt-0">Get In Touch</a>
       </div>
       <div class="col-lg-3 col-md-6 col-sm-12 pb-3">
         <h4>Contact Info</h4>
@@ -27,38 +27,19 @@
         </ul>
       </div>
       <div class="col-lg-3 col-md-6 col-sm-12 pb-3">
-       <h4 class="mb-3">News Letter</h4>
-       <p>Subscribe and get the latest news.</p>
-         <form>
-       <div class="form-group d-flex flex-row">
-         <div class="col-autos">
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <div class="input-group-text"><i class="fa fa-envelope" aria-hidden="true"></i>
-              </div>
-            </div>
-                  <input type="email" name="paing"  class="form-control paing" id="inlineFormInputGroup" placeholder="Enter email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email'" style="border-top:none;border-bottom: none;">
-          </div>
-        </div>
-        <a href="" class="bbtns btn-sm subclick">Subcribe</a>
-      </div>
-          </form>
-      <p class="text-bottom" >
-        You can unsubscribe at any time
-      </p>
+       <h4 class="mb-3">Keep In Touch</h4>
+       <p style="text-align: justify;">Follow us on social media channels so you can connect with <span style="color:red;font-size: 18px;">Olympia</span> wherever you go! Stay with us for more upcoming information.</p>
+       <ul style="list-style: none;" class="list list2">
+         <li><a href="https://www.facebook.com/pg/Olympia-Fitness-Center-111915103616134/about/?ref=page_internal" target="_blank"><i class="fa fa-facebook fa-lg"></i></a></li>
+         <li><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Finstagram.com%2Fol.ympia666%3Ffbclid%3DIwAR04mNq3bK6HfXyyqFOh36CLlN-XgQcIbLXLXi5WpyZQUFS-v8ZTElGE5Ow&h=AT3-Ujhe2L-CH5ICmDkKqoEJOArWpjTqeUMJoqr8TXModEpRpPg2xmjzO8DDGeHH-D15S6Qv5jDqQxfy1M96WKRNvLlWrGE1NdR-7i60kNEsrtoU-tKW_sAHtTLssQ" target="_blank"><i class="fa fa-instagram fa-lg"></i></a></li>
+         <li><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Ftwitter.com%2FOlympia39851779%3Ffbclid%3DIwAR0ykZ89RpaeszVoW1GbZmIprArc5_0VEvPTMoRE9SxBxVfOacAPfHZOU9E&h=AT3-Ujhe2L-CH5ICmDkKqoEJOArWpjTqeUMJoqr8TXModEpRpPg2xmjzO8DDGeHH-D15S6Qv5jDqQxfy1M96WKRNvLlWrGE1NdR-7i60kNEsrtoU-tKW_sAHtTLssQ" target="_blank"><i class="fa fa-twitter fa-lg"></i></a></li>
+       </ul>
     </div>
   </div>
   <hr style="width: 100%; border:1px solid white;">
   <div class="row">
-    <div class="col-lg-8 col-md-8 col-sm-12 text-center">
+    <div class="col-lg-12 col-md-12 col-sm-12 text-center">
       <p class="mb-3">Copyright @ 2019. Designed By Midnight Sun </p>
-    </div>
-    <div class="col-lg-4 col-md-4 col-sm-12 text-center">
-      <ul style="list-style: none;" class="list list2">
-        <li><i class="fa fa-facebook"></i></li>
-        <li><i class="fa fa-instagram"></i></li>
-        <li><i class="fa fa-twitter"></i></li>
-      </ul>
     </div>
   </div>
 </div>

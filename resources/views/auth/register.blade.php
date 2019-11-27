@@ -9,7 +9,7 @@
                 <h1 class="text-white">
                     Register Page
                 </h1>
-                <p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span><a href="blog-home.html">Register </a></p>
+                <p class="text-white link-nav">Home<span class="lnr lnr-arrow-right"></span>Register</p>
             </div>
         </div>
     </div>
@@ -21,7 +21,7 @@
                 <div class="card-header text-center mt-1">{{ __('Register') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                         @csrf
 
                         <div class="form-group row">
@@ -77,12 +77,8 @@
                         <div class="form-group row">
                             <label for="fileupload" class="col-lg-4 text-left">{{__('Image :')}}</label>
                             <div class="col-lg-5">
-                                <input type="file" id="fileupload" class="form-control-file @error('user_image') is-invalid @enderror" name="user_image" accept="image/*" style="border:none;">
-                                @error('user_image')
-                                <span class="invalid-feedback" role="alert">
-                                <strong>{{$message}}</strong>
-                                </span>
-                                @enderror
+                                <input type="file" id="fileupload" class="form-control-file" name="image" accept="image/*" style="border:none;">
+                                
                             </div>
                         </div>
 

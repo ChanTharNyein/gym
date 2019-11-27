@@ -29,7 +29,7 @@
                         <td>{{$post->trainer_id}}</td>
                         <td>{{$post->category_id}}</td>
                         <td>
-                            <a href="{{route('bloghome.edit',$post->id)}}" class="btn btn-info">Update</a>
+                            <a href="{{route('bloghome.edit',$post->id)}}" class="btn btn-info mb-2">Update</a>
                             <form action="{{route('bloghome.destroy',$post->id)}}" method="post" onsubmit="return fu(event)" class="d-inline-block">
                                 @csrf
                                 @method("DELETE")

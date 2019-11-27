@@ -32,7 +32,7 @@
                             <td>{{$class->price}}</td>
                             <td>{{$class->trainer_id}}</td>
                             <td>
-                                <a href="{{route('class.edit',$class->id)}}" class="btn btn-info">Update</a>
+                                <a href="{{route('class.edit',$class->id)}}" class="btn btn-info mb-2">Update</a>
                                 <form action="{{route('class.destroy',$class->id)}}" method="post" onsubmit="return fu(event)" class="d-inline-block">
                                     @csrf
                                     @method("DELETE")

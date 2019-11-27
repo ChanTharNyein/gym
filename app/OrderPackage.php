@@ -9,7 +9,7 @@ use App\Trainer;
 class OrderPackage extends Model
 {
      protected $fillable = [
-        'user_id', 'trainer_id', 'phone','package_id','start_date','end_date','appointment_date','status'
+        'user_id', 'trainer_id', 'phone','package_id','start_date','end_date','month','appointment_date','status'
     ];
 /*    public function user($value=''){
         return $this->hasMany('App\User');
