@@ -5,8 +5,15 @@
 
 <script src="{{asset('js/DateTimePicker.js')}}"></script>
 <script>
-    var msg = '{{Session::get('alert')}}';
-    var exit = '{{Session::has('alert')}}';
+    var msgs = '{{Session::get('alert')}}';
+    var exits = '{{Session::has('alert')}}';
+    if(exits){
+        alert(msgs);
+    }
+</script>
+<script>
+    var msg = '{{Session::get('success')}}';
+    var exit = '{{Session::has('success')}}';
     if(exit){
         alert(msg);
     }
@@ -258,7 +265,7 @@
             <div class="col-lg-3 col-md-12 pb-3">
                 <div class="d-flex">
                     <div class=" d-flex align-content-center justify-content-center">
-                         <a href="" class="freebtn">Get My Free Pass</a>
+                         <input type="submit" name="submit" class="freebtn" value="Get My Free Pass">
                     </div>
                 </div>
             </div>

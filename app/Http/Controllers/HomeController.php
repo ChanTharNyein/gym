@@ -56,7 +56,7 @@ class HomeController extends Controller
         $freeform->email = request('email');
         $freeform->phone = request('phone');
         $freeform->save();
-        return redirect()->action('HomeController@index')->with('alert','Success.We Will Contact You in Shortly');
+        return redirect()->action('HomeController@index')->with('success','Success.We Will Contact You in Shortly');
     }
 
 }
