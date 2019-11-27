@@ -38,19 +38,17 @@
                             </span>
                         @enderror
                         <label for="month">Month</label>
-                        <input type="number" value="{{$orderclass->end_date}}" name="month" id="month" class="form-control @error('month') is-invalid @enderror">
+                        <input type="number" value="{{$orderpackage->end_date}}" name="month" id="month" class="form-control @error('month') is-invalid @enderror">
                         @error('month')
                         <span class="invalid-feedback" role="alert">
                                 <strong>{{$message}}</strong>
                             </span>
                         @enderror
                         <label for="status">Status</label>
-                        <input type="text" value="{{$orderpackage->status}}" name="status" id="status" class="form-control @error('status') is-invalid @enderror">
-                        @error('status')
-                        <span class="invalid-feedback" role="alert">
-                                <strong>{{$message}}</strong>
-                            </span>
-                        @enderror
+                        <select name="status" id="status" class="custom-select">
+                            <option value="0">False</option>
+                            <option value="1">True</option>
+                        </select>
                     </div>
                     <div class="form-group " >
                         <input type="submit" name="update_orderclass" value="Update" class="btn btn-info w-25" >
